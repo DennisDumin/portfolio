@@ -1,12 +1,24 @@
 {
-    "header": {
-      "about_me": "Über mich",
-      "skills": "Fähigkeiten",
-      "projects": "Projekte"
+  "header": {
+    "about_me": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte"
+  },
+  "general": {
+    "read_more": "Mehr lesen",
+    "contact": "Kontakt",
+    "imprint": "Impressum"
+  },
+  "hero": {
+    "nav": {
+      "projects": "Meine Projekte",
+      "contact": "Kontaktieren Sie mich"
     },
-    "general": {
-      "read_more": "Mehr lesen",
-      "contact": "Kontakt",
-      "imprint": "Impressum"
+    "marquee": {
+      "frontend": "Frontend-Entwickler",
+      "city": "Wohnhaft in Gelsenkirchen",
+      "remote": "Verfügbar für Remotearbeit",
+      "pixel": "Pixelgenau & performance-optimiert"
     }
   }
+}

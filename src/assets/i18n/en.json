@@ -1,12 +1,24 @@
 {
-    "header": {
-      "about_me": "About me",
-      "skills": "Skills",
-      "projects": "Projects"
+  "header": {
+    "about_me": "About me",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "general": {
+    "read_more": "Read more",
+    "contact": "Contact",
+    "imprint": "Imprint"
+  },
+  "hero": {
+    "nav": {
+      "projects": "My Projects",
+      "contact": "Contact me"
     },
-    "general": {
-      "read_more": "Read more",
-      "contact": "Contact",
-      "imprint": "Imprint"
+    "marquee": {
+      "frontend": "Frontend Developer",
+      "city": "Based in Gelsenkirchen",
+      "remote": "Available for remote work",
+      "pixel": "Pixel-perfect & performance-optimized"
     }
   }
+}

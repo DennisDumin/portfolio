@@ -25,7 +25,7 @@
             </a>
             @if(activeNavItemIndex === i) {
               <div class="hover-indicator">
-                <img src="assets/img/header/hover_point.svg" alt="indicator">
+                <img src="assets/img/icons/hover_point.svg" alt="indicator">
               </div>
             }
           </div>
@@ -36,7 +36,7 @@
         <img 
           (mouseenter)="setLogoHovered(true)" 
           (mouseleave)="setLogoHovered(false)" 
-          [src]="isLogoHovered ? 'assets/img/header/logo_hover.svg' : 'assets/img/header/logo.svg'" 
+          [src]="isLogoHovered ? 'assets/img/logo/logo_hover.svg' : 'assets/img/logo/logo.svg'" 
           alt="Logo" />
       </a>
     } @else {
@@ -45,7 +45,7 @@
         <img 
           (mouseenter)="setLogoHovered(true)" 
           (mouseleave)="setLogoHovered(false)" 
-          [src]="isLogoHovered ? 'assets/img/header/logo_hover.svg' : 'assets/img/header/logo.svg'" 
+          [src]="isLogoHovered ? 'assets/img/logo/logo_hover.svg' : 'assets/img/logo/logo.svg'" 
           alt="Logo" />
       </a>
       
@@ -70,7 +70,7 @@
                   </a>
                   @if(activeNavItemIndex === i) {
                     <div class="hover-indicator mobile">
-                      <img src="assets/img/header/hover_point.svg" alt="indicator">
+                      <img src="assets/img/icons/hover_point.svg" alt="indicator">
                     </div>
                   }
                 </div>
