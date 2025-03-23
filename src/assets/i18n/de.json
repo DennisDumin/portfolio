@@ -1,0 +1,12 @@
+{
+    "header": {
+      "about_me": "Über mich",
+      "skills": "Fähigkeiten",
+      "projects": "Projekte"
+    },
+    "general": {
+      "read_more": "Mehr lesen",
+      "contact": "Kontakt",
+      "imprint": "Impressum"
+    }
+  }

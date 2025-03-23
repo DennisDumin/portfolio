@@ -1,0 +1,12 @@
+{
+    "header": {
+      "about_me": "About me",
+      "skills": "Skills",
+      "projects": "Projects"
+    },
+    "general": {
+      "read_more": "Read more",
+      "contact": "Contact",
+      "imprint": "Imprint"
+    }
+  }
