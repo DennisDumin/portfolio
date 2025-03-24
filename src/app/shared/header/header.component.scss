@@ -52,6 +52,7 @@ $animation-duration: 0.25s;
         font-family: 'Karla', Arial, Helvetica, sans-serif !important;
         color: var(--text-color);
         text-decoration: none;
+        white-space: nowrap;
         margin: 0 15px;
         font-weight: 500;
         transition: color 0.3s;
@@ -162,7 +163,7 @@ $animation-duration: 0.25s;
     >img {
         position: relative;
         object-fit: cover;
-        height: 96px;
+        height: 36px;
         transition: transform 0.2s ease;
 
         &:hover {
@@ -183,8 +184,27 @@ $animation-duration: 0.25s;
     }
 
     .logo>img {
-        height: 80px;
-        top: 10px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 12px;
+    }
+
+    .logo>img {
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    section {
+        padding: 12px;
+    }
+
+    .logo>img {
+        height: 48px;
     }
 }
 
@@ -194,6 +214,6 @@ $animation-duration: 0.25s;
     }
 
     .logo>img {
-        height: 70px;
+        height: 48px;
     }
 }
