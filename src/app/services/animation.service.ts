@@ -4,35 +4,41 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AnimationService {
-  private animations: Map<string, { active: boolean, position: number }> = new Map();
+  private animations: Map<string, { 
+    active: boolean; 
+    position: number; 
+    lastUpdate: number;
+  }> = new Map();
   private animationFrames: Map<string, number> = new Map();
 
-  startAnimation(elementId: string, maxXLeft: number, xRight: number): void {
+  startAnimation(elementId: string, maxXLeft: number, xRight: number, speed: number = 40): void {
     this.stopAnimation(elementId);
-    
-    this.animations.set(elementId, { active: true, position: 0 });
-    
-    const animate = (): void => {
-      if (!this.animations.get(elementId)?.active) return;
-      
+    this.animations.set(elementId, { 
+      active: true, 
+      position: 0,
+      lastUpdate: performance.now()
+    });
+
+    const animate = (timestamp: number) => {
       const current = this.animations.get(elementId);
-      if (!current) return;
+      if (!current || !current.active) return;
+
+      const deltaTime = timestamp - current.lastUpdate;
       
-      if (current.position > maxXLeft) {
-        current.position -= 5;
-        this.animations.set(elementId, current);
+      if (deltaTime > speed) {
+        current.position -= 3;
+        if (current.position < -300) {
+          current.position = 200;
+        }
         
-        const frameId = requestAnimationFrame(animate);
-        this.animationFrames.set(elementId, frameId);
-      } else {
-        current.position = xRight;
-        this.animations.set(elementId, current);
-        
-        const frameId = requestAnimationFrame(animate);
-        this.animationFrames.set(elementId, frameId);
+        current.lastUpdate = timestamp;
+        this.animations.set(elementId, { ...current });
       }
+
+      const frameId = requestAnimationFrame(animate);
+      this.animationFrames.set(elementId, frameId);
     };
-    
+
     const frameId = requestAnimationFrame(animate);
     this.animationFrames.set(elementId, frameId);
   }
@@ -43,8 +49,12 @@ export class AnimationService {
       cancelAnimationFrame(frameId);
       this.animationFrames.delete(elementId);
     }
-    
-    this.animations.set(elementId, { active: false, position: 0 });
+
+    this.animations.set(elementId, { 
+      active: false, 
+      position: 0, 
+      lastUpdate: 0
+    });
   }
 
   getAnimationPosition(elementId: string): number {
