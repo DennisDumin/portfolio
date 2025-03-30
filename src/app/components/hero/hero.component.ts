@@ -105,4 +105,13 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
   getLinkPosition(elementId: string): number {
     return this.animationService.getAnimationPosition(elementId);
   }
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.screenWidth = window.innerWidth;
+      setTimeout(() => {
+        this.animationService.startMarqueeAnimation('hero-marquee', 1.5);
+      }, 100);
+    }
+  }
 }

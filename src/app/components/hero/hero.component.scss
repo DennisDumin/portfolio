@@ -44,7 +44,7 @@
         font-size: 40px;
         font-weight: 400;
         color: var(--hero-text-secondary);
-        font-family: "Fira Code", monospace;
+        font-family: 'Fira Code', monospace !important;
         margin-bottom: 16px;
         cursor: default;
     }
@@ -236,7 +236,7 @@
 
     &__marquee-content {
         display: inline-flex;
-        animation: marquee 15s linear infinite;
+       // animation: marquee 10s linear infinite;
         white-space: nowrap;
     }
 
@@ -273,11 +273,11 @@
 
 @keyframes marquee {
     0% {
-        transform: translateX(0);
+        transform: translateX(-10%);
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-80%);
     }
 }
 
