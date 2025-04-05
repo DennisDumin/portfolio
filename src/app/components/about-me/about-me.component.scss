@@ -10,9 +10,21 @@ section {
 .description {
   display: flex;
   flex-direction: unset;
-  gap: 24px;
+  gap: 16px;
   align-items: flex-start;
-  padding-bottom: 16px;
+}
+
+.content-container {
+  background-color: #3fcfb714;
+  border-radius: 30px;
+  border: 1px solid #3DCFB6;
+  word-break: break-word;
+  padding: 32px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+  flex-direction: column;
 }
 
 .content-am {
