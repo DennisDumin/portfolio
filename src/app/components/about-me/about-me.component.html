@@ -1,1 +1,20 @@
 <app-hero-section></app-hero-section>
+<section class="max-width">
+  <div appScrollAnimate="fade-in" class="profile-picture">
+    <img class="profile-picture_background" src="assets/img/about-me/background.svg" alt=""/>
+    <img class="profile-picture_profil" src="assets/img/about-me/profile.jpeg" alt="Profilbild" />
+  </div>
+  <div appScrollAnimate="slide-in-right" class="content-am">
+    <div>
+      <h4>{{ "main_content.about_me.title" | translate }}</h4>
+      <div class="content-container">
+        <h3>{{ "main_content.about_me.headline" | translate }}</h3>
+        <span>{{ "main_content.about_me.text" | translate }} </span>
+        <div class="description" *ngFor="let description of descriptions">
+          <img src="assets/img/about-me/{{ description.image }}.png" alt="" />
+          <span>{{ description.text | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

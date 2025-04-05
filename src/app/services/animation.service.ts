@@ -10,7 +10,7 @@ export class AnimationService {
     lastUpdate: number;
     properties?: any;
   }> = new Map();
-  
+
   private animationFrames: Map<string, number> = new Map();
   
   constructor(private ngZone: NgZone) {}

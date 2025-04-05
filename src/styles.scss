@@ -111,6 +111,7 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
+    background-color: #1C1C1C; 
 }
 
 a {
@@ -138,6 +139,24 @@ h6 {
     margin-bottom: 1rem;
     line-height: 1.2;
 }
+
+h3{
+    font-size: 64px;
+    font-weight: 700;
+    color: #3DCFB6;
+    font-family: 'Fira Code';
+    font-weight: 700;
+    box-sizing: border-box;
+    cursor: default;
+  }
+
+  h4{
+    font-size: 24px;
+    color: #3DCFB6;
+    padding: 20px 0;
+    font-weight: 500;
+    cursor: default;
+  }
 
 img {
     max-width: 100%;

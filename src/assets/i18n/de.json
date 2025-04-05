@@ -20,5 +20,15 @@
       "remote": "Verfügbar für Remotearbeit",
       "pixel": "Pixelgenau & performance-optimiert"
     }
+  },
+  "main_content": {
+    "about_me": {
+      "title": "Wer ich bin",
+      "headline": "Über mich",
+      "text": "Hi, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Gelsenkirchen. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
+      "description_1": "Ich bin flexibel, was das Arbeitsumfeld angeht, und kann sowohl vor Ort in Gelsenkirchen als auch aus der Ferne effektiv arbeiten.",
+      "description_2": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code. Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, aus komplexen technischen Herausforderungen einfache und benutzerfreundliche Lösungen zu generieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
+      "description_3": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten weiter zu verbessern."
+    }
   }
 }
