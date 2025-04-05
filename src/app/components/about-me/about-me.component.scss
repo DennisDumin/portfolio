@@ -40,6 +40,7 @@ section {
   height: 660px;
   display: flex;
   flex: 0 0 auto;
+  opacity: 0;
 }
 
 .profile-picture_profil {
@@ -61,8 +62,7 @@ section {
 }
 
 .fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
+  transition: opacity 1s ease-in;
 }
 
 .slide-in-right {
