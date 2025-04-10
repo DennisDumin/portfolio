@@ -4,6 +4,7 @@ import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
 import { TranslationService } from '../../services/translate.service';
 import { HeroSectionComponent } from '../hero/hero.component';
+import { SkillsComponent } from "../skills/skills.component";
 
 @Component({
   selector: 'app-about-me',
@@ -14,22 +15,23 @@ import { HeroSectionComponent } from '../hero/hero.component';
     TranslatePipe,
     ScrollAnimateDirective,
     HeroSectionComponent,
-  ],
+    SkillsComponent
+],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent implements OnInit {
   descriptions = [
     {
-      text: 'main_content.about_me.description_1',
+      text: 'about_me.description_1',
       image: 'location',
     },
     {
-      text: 'main_content.about_me.description_2',
+      text: 'about_me.description_2',
       image: 'cognition',
     },
     {
-      text: 'main_content.about_me.description_3',
+      text: 'about_me.description_3',
       image: 'check',
     },
   ];

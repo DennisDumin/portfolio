@@ -1,0 +1,257 @@
+section {
+  display: flex;
+  gap: 30px;
+  padding: 112px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  overflow: hidden;
+  background: radial-gradient(farthest-side at left, #08463b4d 30%, #1c1c1c);
+}
+
+.skills-content {
+  flex: 1;
+}
+
+.skills-grid {
+  min-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5%;
+  align-items: center;
+  flex: auto;
+}
+
+.skill-item {
+  position: relative;
+  width: 25%;
+  height: 95px;
+  text-align: center;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+  >span {
+    display: flex;
+    align-items: flex-start;
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  }
+
+  >img {
+    width: 65px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.content-container {
+  background-color: #3fcfb714;
+  border-radius: 30px;
+  border: 1px solid #3DCFB6;
+  padding: 32px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.highlighted-text {
+  font-size: 24px;
+  margin: 16px 0;
+}
+
+.accent-color {
+  color: #3dcfb6;
+}
+
+.skills-popup {
+  position: absolute;
+  transform: translateY(-100%);
+  left: 36%;
+  background-color: #ffffff;
+  min-width: 200px;
+  padding: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  span {
+    box-sizing: border-box;
+    color: #3dcfb6;
+    font-weight: 500;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    width: 0;
+    border-top: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}
+
+.skills-popup-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.interest-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  .interest-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.contact-link {
+  position: relative;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  color: var(--hero-text);
+  transition: color 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    color: #3dcfb6;
+    border-color: #3dcfb6;
+}
+
+  span {
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+  }
+}
+
+.slide-in-left,
+.slide-in-right {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-left {
+  --slide-direction: -50px;
+  transform: translateX(-50px);
+}
+
+.slide-in-right {
+  --slide-direction: 50px;
+  transform: translateX(50px);
+}
+
+.slide-in-left,
+.slide-in-right {
+  animation: fadeAndSlide 0.8s forwards;
+}
+
+@keyframes fadeAndSlide {
+  from {
+    opacity: 0;
+    transform: translateX(var(--slide-direction, 0));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  section {
+    padding: 64px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  section {
+    flex-direction: column;
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skills-popup {
+    left: 24%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  section {
+    margin-bottom: 32px;
+  }
+
+  .contact-link {
+    width: max-content;
+    padding: 2px 16px;
+
+    >span {
+      font-size: 14px;
+    }
+  }
+
+  .skills-grid {
+    align-items: center;
+  }
+
+  .skill-item {
+    width: 33%;
+    height: 60px;
+    box-sizing: content-box;
+
+    >span {
+      font-size: 14px;
+    }
+
+    >img {
+      width: 40px;
+    }
+  }
+
+  .skills-popup {
+    min-width: 150px;
+    padding: 12px;
+
+    >span {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,1 +1,53 @@
-<p>skills works!</p>
+<section id="skills" class="max-width">
+    <div appScrollAnimate="slide-in-left" class="skills-content">
+      <div>
+        <h4>{{ 'skill.title' | translate}}</h4>
+        <div class="content-container">
+          <h3>{{ 'skill.headline' | translate}}</h3>
+          <span>{{ 'skill.text' | translate}}</span>
+          
+          <div class="highlighted-text">
+            <b>{{ 'skill.text_need_skill' | translate}} 
+              <span class="accent-color">{{ 'skill.text_need_skill_color' | translate}}</span>
+            </b>
+          </div>
+          
+          <span>{{ 'skill.text_contact_me' | translate}}</span>
+          
+          <a class="contact-link"
+            href="#contact"
+            (mouseenter)="startLinkAnimation(contactLinkKey, 200, -150)"
+            (mouseleave)="stopLinkAnimation(contactLinkKey)"
+          >
+            <span [ngStyle]="{ 'right.px': getLinkPosition(contactLinkKey) }">
+              {{ contactLinkKey | translate }}
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div appScrollAnimate="slide-in-right" class="skills-grid">
+      <div class="skill-item" *ngFor="let skill of skillsList; let i = index">
+        <img
+          [src]="'assets/img/skills/' + skill.icon + '.svg'"
+          [alt]="skill.name"
+          (click)="toggleInterestsPopup(i)"
+          (mouseenter)="toggleInterestsPopup(i)"
+          (mouseleave)="isPopupVisible = false"
+        />
+        <span>{{ skill.name }}</span>
+        <div class="skills-popup" *ngIf="i === skillsList.length - 1 && isPopupVisible">
+          <span>{{ 'skill.interests' | translate}}</span>
+          <div class="skills-popup-grid">
+            <div class="interest-item" *ngFor="let interest of interestsList">
+              <div class="interest-icon">
+                <img [src]="'assets/img/skills/' + interest.icon + '.svg'" [alt]="interest.name" />
+              </div>
+              <span>{{ interest.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -21,7 +21,6 @@
       "pixel": "Pixelgenau & performance-optimiert"
     }
   },
-  "main_content": {
     "about_me": {
       "title": "Wer ich bin",
       "headline": "Über mich",
@@ -29,6 +28,15 @@
       "description_1": "Ich bin flexibel, was das Arbeitsumfeld angeht, und kann sowohl vor Ort in Gelsenkirchen als auch aus der Ferne effektiv arbeiten.",
       "description_2": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code. Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, aus komplexen technischen Herausforderungen einfache und benutzerfreundliche Lösungen zu generieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
       "description_3": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten weiter zu verbessern."
-    }
-  }
-}
+    },
+		"skill": {
+			"title": "Technologien",
+      "headline": "Fähigkeiten",
+			"interests": "Ich habe ein besonderes Interesse am Lernen mit",
+      "text_need_skill": "Sie benötigen einen Entwickler mit ",
+      "text_need_skill_color": "speziellen Fähigkeiten?",
+			"text": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten erworben. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und  in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.",
+			"text_contact_me": " Nehmen Sie Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+      "link": "Schreibe mir"
+		}
+	}

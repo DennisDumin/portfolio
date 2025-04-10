@@ -272,7 +272,7 @@ header .background-header {
   }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 765px) {
     section {
         padding: 3rem 0;
     }
@@ -282,7 +282,13 @@ header .background-header {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
+ h3 {
+    font-size: 32px;
+ }
+}
+
+@media screen and (max-width: 575px) {
     section {
         padding: 2rem 0;
     }
