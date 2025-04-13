@@ -21,22 +21,39 @@
       "pixel": "Pixelgenau & performance-optimiert"
     }
   },
-    "about_me": {
-      "title": "Wer ich bin",
-      "headline": "Über mich",
-      "text": "Hi, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Gelsenkirchen. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
-      "description_1": "Ich bin flexibel, was das Arbeitsumfeld angeht, und kann sowohl vor Ort in Gelsenkirchen als auch aus der Ferne effektiv arbeiten.",
-      "description_2": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code. Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, aus komplexen technischen Herausforderungen einfache und benutzerfreundliche Lösungen zu generieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
-      "description_3": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten weiter zu verbessern."
-    },
-		"skill": {
-			"title": "Technologien",
-      "headline": "Fähigkeiten",
-			"interests": "Ich habe ein besonderes Interesse am Lernen mit",
-      "text_need_skill": "Sie benötigen einen Entwickler mit ",
-      "text_need_skill_color": "speziellen Fähigkeiten?",
-			"text": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten erworben. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und  in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.",
-			"text_contact_me": " Nehmen Sie Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
-      "link": "Schreibe mir"
-		}
-	}
+  "about_me": {
+    "title": "Wer ich bin",
+    "headline": "Über mich",
+    "text": "Hi, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Gelsenkirchen. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
+    "description_1": "Ich bin flexibel, was das Arbeitsumfeld angeht, und kann sowohl vor Ort in Gelsenkirchen als auch aus der Ferne effektiv arbeiten.",
+    "description_2": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code. Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, aus komplexen technischen Herausforderungen einfache und benutzerfreundliche Lösungen zu generieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
+    "description_3": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten weiter zu verbessern."
+  },
+  "skill": {
+    "title": "Technologien",
+    "headline": "Fähigkeiten",
+    "interests": "Ich habe ein besonderes Interesse am Lernen mit",
+    "text_need_skill": "Sie benötigen einen Entwickler mit ",
+    "text_need_skill_color": "speziellen Fähigkeiten?",
+    "text": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten erworben. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und  in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.",
+    "text_contact_me": " Nehmen Sie Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "link": "Schreiben Sie mir"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "headline": "Meine Projekte",
+    "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen."
+  },
+  "project_dialog": {
+    "question": "Worum geht es bei diesem Projekt?",
+    "next_project": "Nächstes Projekt",
+    "description_join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "description_el_pollo_loco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+    "description_da_bubble": "DA Bubble ist eine Echtzeit-Messaging-Anwendung ähnlich wie Slack oder Discord. Es bietet Kanäle, Direktnachrichten und Dateifreigabe-Funktionen. Erstellt mit Angular und Firebase, demonstriert es moderne Frontend-Entwicklungspraktiken."
+  },
+  "buttons": {
+    "coming_soon": "Demnächst verfügbar",
+    "github": "Github",
+    "live_test": "Live Test"
+  }
+}

@@ -1,1 +1,100 @@
 
+<section appScrollAnimate="fade-in" class="fade-in">
+    <h4>{{ 'projects.title' | translate }}</h4>
+    <h3>{{ 'projects.headline' | translate }}</h3>
+    <p>{{ 'projects.text' | translate }}</p>
+  
+    <div class="portfolio-item" *ngFor="let work of works; let index = index">
+      <button
+        (mouseenter)="handleMouseEnter(index)"
+        (mouseleave)="handleMouseLeave()"
+        (click)="openModal(index)"
+      >
+        <span>
+          {{ work.title }}
+          <img
+            *ngIf="hoverIndex === index"
+            src="assets/img/portfolio/arrow-outward.png"
+            alt=""
+          />
+        </span>
+  
+        <div class="tech-divider">
+          @for (tech of work.technologies; track tech; let i = $index) {
+          <div>{{ tech }}</div>
+          @if(i <= work.technologies.length - 2){
+          <div class="divider-line"></div>
+          } }
+        </div>
+      </button>
+      <div class="thumbnail-preview" *ngIf="hoverIndex === index && windowWidth > 960">
+        <img
+          class="preview-background"
+          src="assets/img/portfolio/background.png"
+          alt=""
+        />
+        <img class="preview-image" src="assets/img/portfolio/{{ work.image }}{{work.format}}" alt="" />
+      </div>
+    </div>
+  
+    <div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="work-details">
+          <h6>0{{ activeIndex + 1 }}</h6>
+          <span class="content-title">{{ works[activeIndex].title }}</span>
+          <span class="content-headline">{{ 'project_dialog.question' |translate }}</span>
+          <span class="content-description">{{ works[activeIndex].description | translate}}</span>
+          <div class="tech-stack">
+            <div class="tech-item" *ngFor="let item of works[activeIndex].technologies">
+              <img
+                src="assets/img/portfolio/{{ item | lowercase }}.png"
+                alt="technology"
+              />
+              <span>{{ item }}</span>
+            </div>
+          </div>
+  
+          <div class="work-links">
+            @if(works[activeIndex].links[0] === undefined){
+              <button class="link-button">
+                Coming soon
+                <img src="assets/img/portfolio/arrow-outward-green.png" alt=""/>
+              </button>
+            }
+            @else{
+              <a class="link-button" href="{{ works[activeIndex].links[0] }}" target="_blank">
+                Github
+                <img src="assets/img/portfolio/arrow-outward-green.png" alt=""/>
+              </a>
+            }
+            
+            @if(works[activeIndex].links[1] === undefined){
+              <button class="link-button">
+                Coming soon
+                <img src="assets/img/portfolio/arrow-outward-green.png" alt=""/>
+              </button>
+            }
+            @else{
+              <a class="link-button" href="{{ works[activeIndex].links[1] }}" target="_blank">
+                Live Test
+                <img src="assets/img/portfolio/arrow-outward-green.png" alt=""/>
+              </a>
+            }
+          </div>
+        </div>
+        
+        <div class="work-image">
+          <button class="close-button" (click)="closeModal()">
+            <img src="assets/img/portfolio/close.png" alt="close" />
+          </button>
+          <div>
+            <img class="showcase-image" src="assets/img/portfolio/{{formatTitle(works[activeIndex].title)}}{{works[activeIndex].format}}" alt="" />
+          </div>
+          <button class="next-button" (click)="nextWork()">
+            {{ 'project_dialog.next_project' |translate }}
+            <img src="assets/img/portfolio/arrow-right.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>

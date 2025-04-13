@@ -38,5 +38,22 @@
     "text": "My journey has involved working on diverse projects, employing a range  of frontend technologies and concepts. I am open to embracing new  technologies and methodologies to Continously enhance my skills and  stay ahead in the ever-evolving landscape of web development.",
     "text_contact_me": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
     "link": "Lets' Talk"
-  }
+  },
+    "projects": {
+      "title": "Portfolio",
+      "headline": "My Work",
+      "text": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    },
+    "project_dialog": {
+      "question": "What is this project about?",
+      "next_project": "Next Project",
+      "description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "description_el_pollo_loco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "description_da_bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    },
+    "buttons": {
+      "coming_soon": "Coming soon",
+      "github": "Github",
+      "live_test": "Live Test"
+    }
 }

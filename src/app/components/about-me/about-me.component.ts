@@ -5,6 +5,7 @@ import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
 import { TranslationService } from '../../services/translate.service';
 import { HeroSectionComponent } from '../hero/hero.component';
 import { SkillsComponent } from "../skills/skills.component";
+import { PortfolioComponent } from '../portfolio/portfolio.component';
 
 @Component({
   selector: 'app-about-me',
@@ -15,7 +16,8 @@ import { SkillsComponent } from "../skills/skills.component";
     TranslatePipe,
     ScrollAnimateDirective,
     HeroSectionComponent,
-    SkillsComponent
+    SkillsComponent,
+    PortfolioComponent
 ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
