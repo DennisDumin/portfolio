@@ -8,6 +8,7 @@ interface WorkItem {
   title: string;
   technologies: string[];
   image: string;
+  thumbnail?: string;
   format: string;
   description: string;
   links: string[];
@@ -30,7 +31,7 @@ export class PortfolioComponent {
   hoverIndex: number | null = null;
   activeIndex: number = 0;
   windowWidth = window.innerWidth;
-  
+
   works: WorkItem[] = [
     {
       title: 'Join',
@@ -47,9 +48,9 @@ export class PortfolioComponent {
       title: 'El Pollo Loco',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: 'el-pollo-loco',
+      thumbnail: 'el-pollo-loco-thumbnail',
       format: '.svg',
-      description:
-        'project_dialog.description_el_pollo_loco',
+      description: 'project_dialog.description_el_pollo_loco',
       links: [
         'https://github.com/DennisDumin/el_pollo_loco',
         'https://dennis-dumin.net/projects/el_pollo_loco/',
@@ -97,10 +98,16 @@ export class PortfolioComponent {
   openModal(index: number) {
     this.showModal = true;
     this.activeIndex = index;
+    document.body.style.overflow = 'hidden';
   }
 
   closeModal() {
     this.showModal = false;
+    document.body.style.overflow = ''; 
+  }
+
+  ngOnDestroy() {
+    document.body.style.overflow = '';
   }
 
   nextWork() {
@@ -108,6 +115,6 @@ export class PortfolioComponent {
   }
 
   formatTitle(title: string): string {
-    return title.replace(/\s+/g, '').toLowerCase();
+    return title.replace(/\s+/g, '-').toLowerCase();
   }
 }
