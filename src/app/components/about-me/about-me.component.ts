@@ -6,6 +6,7 @@ import { TranslationService } from '../../services/translate.service';
 import { HeroSectionComponent } from '../hero/hero.component';
 import { SkillsComponent } from "../skills/skills.component";
 import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { TestimonialsComponent } from "../testimonials/testimonials.component";
 
 @Component({
   selector: 'app-about-me',
@@ -17,7 +18,8 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
     ScrollAnimateDirective,
     HeroSectionComponent,
     SkillsComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    TestimonialsComponent,
 ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',

@@ -55,5 +55,13 @@
       "coming_soon": "Coming soon",
       "github": "Github",
       "live_test": "Live Test"
-    }
+    },
+      "testimonials": {
+        "section_title": "What others say about me",
+        "quotes": {
+          "robert": "Our project benefited tremendously from Dennis' efficient way of working.",
+          "björn": "Working together was smooth and a lot of fun. It was a great experience coding with such a dedicated and skilled partner.",
+          "markus": "Dennis is a reliable and friendly person. He works in a structured manner and writes clear, easy-to-understand code. I can highly recommend him as a colleague."
+        }
+      }
 }

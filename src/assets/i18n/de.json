@@ -55,5 +55,13 @@
     "coming_soon": "Demnächst verfügbar",
     "github": "Github",
     "live_test": "Live Test"
+  },
+  "testimonials": {
+    "section_title": "Was andere über mich sagen",
+    "quotes": {
+      "robert": "Unser Projekt hat enorm von Dennis' effizienter Arbeitsweise profitiert.",
+      "björn": "Die Zusammenarbeit lief super und hat richtig Spaß gemacht. Es war eine wertvolle Erfahrung, mit einem engagierten und talentierten Partner zu arbeiten.",
+      "markus": "Dennis ist eine zuverlässige und freundliche Person. Er arbeitet strukturiert und schreibt klaren, gut verständlichen Code. Ich kann ihn als Kollegen wärmstens empfehlen."
+    }
   }
 }

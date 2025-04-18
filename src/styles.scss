@@ -103,6 +103,22 @@
 
 html {
     scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #1C1C1C; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #3dcfb6;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #57ffe3;
+  }
 }
 
 body {

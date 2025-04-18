@@ -1,1 +1,76 @@
-
+<section class="testimonial-showcase" appScrollAnimate="fade-in">
+  <h2 class="section-title">{{ "testimonials.section_title" | translate }}</h2>
+  
+  <div class="slider-container">
+    <div class="quotes-fixed"><img src="assets/img/icons/quotes.png" alt="Quotes"/></div>
+    <div class="cards-container" [ngClass]="{'animate-prev': showPrev, 'animate-next': showNext}">
+      <!-- Vorherige Karte (links) -->
+      <div class="testimonial-card card-prev">
+        <p class="quote-text">{{ previousCard.text | translate }}</p>
+        <div class="card-footer">
+          <div class="divider"></div>
+          <div class="author-details">
+            <span class="author-name">{{ previousCard.author }}</span>
+            <span class="author-role">{{ previousCard.role }}</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Aktuelle Karte (in der Mitte) -->
+      <div class="testimonial-card card-active">
+        <p class="quote-text">{{ mainCard.text | translate }}</p>
+        <div class="card-footer">
+          <div class="divider"></div>
+          <div class="author-details">
+            <span class="author-name">{{ mainCard.author }}</span>
+            <span class="author-role">{{ mainCard.role }}</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Nächste Karte (rechts) -->
+      <div class="testimonial-card card-next">
+        <p class="quote-text">{{ nextCard.text | translate }}</p>
+        <div class="card-footer">
+          <div class="divider"></div>
+          <div class="author-details">
+            <span class="author-name">{{ nextCard.author }}</span>
+            <span class="author-role">{{ nextCard.role }}</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Einkommende Karte (nur während der Animation sichtbar) -->
+      <div class="testimonial-card card-incoming" [ngClass]="{'from-left': showPrev, 'from-right': showNext}">
+        <p class="quote-text">{{ incomingCard.text | translate }}</p>
+        <div class="card-footer">
+          <div class="divider"></div>
+          <div class="author-details">
+            <span class="author-name">{{ incomingCard.author }}</span>
+            <span class="author-role">{{ incomingCard.role }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Navigation controls -->
+  <div class="slider-controls">
+    <button class="arrow-button" (click)="navigateToPrevious()">
+      <img src="assets/img/icons/arrow-left-w.svg" alt="Previous" class="arrow-icon" />
+    </button>
+    
+    <div class="indicators">
+      <div 
+        *ngFor="let testimonial of testimonials; let i = index" 
+        class="dot"
+        [ngClass]="{'active': currentIndex === i}"
+        (click)="goToSlide(i)"
+      ></div>
+    </div>
+    
+    <button class="arrow-button" (click)="navigateToNext()">
+      <img src="assets/img/icons/arrow-left-w.svg" alt="Next" class="arrow-icon flip-horizontal" />
+    </button>
+  </div>
+</section>
