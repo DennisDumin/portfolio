@@ -4,7 +4,6 @@
   <div class="slider-container">
     <div class="quotes-fixed"><img src="assets/img/icons/quotes.png" alt="Quotes"/></div>
     <div class="cards-container" [ngClass]="{'animate-prev': showPrev, 'animate-next': showNext}">
-      <!-- Vorherige Karte (links) -->
       <div class="testimonial-card card-prev">
         <p class="quote-text">{{ previousCard.text | translate }}</p>
         <div class="card-footer">
@@ -15,8 +14,7 @@
           </div>
         </div>
       </div>
-      
-      <!-- Aktuelle Karte (in der Mitte) -->
+
       <div class="testimonial-card card-active">
         <p class="quote-text">{{ mainCard.text | translate }}</p>
         <div class="card-footer">
@@ -28,7 +26,6 @@
         </div>
       </div>
       
-      <!-- Nächste Karte (rechts) -->
       <div class="testimonial-card card-next">
         <p class="quote-text">{{ nextCard.text | translate }}</p>
         <div class="card-footer">
@@ -40,7 +37,6 @@
         </div>
       </div>
       
-      <!-- Einkommende Karte (nur während der Animation sichtbar) -->
       <div class="testimonial-card card-incoming" [ngClass]="{'from-left': showPrev, 'from-right': showNext}">
         <p class="quote-text">{{ incomingCard.text | translate }}</p>
         <div class="card-footer">
@@ -54,7 +50,6 @@
     </div>
   </div>
   
-  <!-- Navigation controls -->
   <div class="slider-controls">
     <button class="arrow-button" (click)="navigateToPrevious()">
       <img src="assets/img/icons/arrow-left-w.svg" alt="Previous" class="arrow-icon" />

@@ -1,11 +1,9 @@
-// Base variables
 $dark-bg: #1C1C1C;
 $turquoise-active: #3dcfb74d;
 $turquoise-inactive: #3dcfb71f;
 $card-radius: 20px;
 $transition-duration: 500ms;
 
-// Main container
 .testimonial-showcase {
   display: flex;
   flex-direction: column;
@@ -17,7 +15,6 @@ $transition-duration: 500ms;
   overflow: hidden;
 }
 
-// Section title
 .section-title {
   font-size: 38px;
   font-weight: 600;
@@ -36,14 +33,12 @@ $transition-duration: 500ms;
   }
 }
 
-// Slider container
 .slider-container {
   position: relative;
   width: 100%;
   max-width: 1200px;
   overflow: hidden;
 
-  // Fade masks at edges
   &::before,
   &::after {
     content: "";
@@ -66,7 +61,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Container für die Karten
 .cards-container {
   display: flex;
   justify-content: center;
@@ -75,7 +69,6 @@ $transition-duration: 500ms;
   position: relative;
   height: 320px;
 
-  // Grundpositionen für die drei Karten
   .card-prev {
     position: absolute;
     left: calc(50% - 780px);
@@ -108,7 +101,6 @@ $transition-duration: 500ms;
     z-index: 0;
   }
 
-  // Animation für "prev" (linke Karte kommt zur Mitte)
   &.animate-prev {
     .card-prev {
       animation: left-to-center $transition-duration ease forwards;
@@ -128,7 +120,6 @@ $transition-duration: 500ms;
     }
   }
 
-  // Animation für "next" (rechte Karte kommt zur Mitte)
   &.animate-next {
     .card-prev {
       animation: exit-left $transition-duration ease forwards;
@@ -149,7 +140,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Testimonial card
 .testimonial-card {
   width: 500px;
   height: 240px;
@@ -163,7 +153,6 @@ $transition-duration: 500ms;
   border: 1px solid #3DCFB6;
   transition: box-shadow 0.3s ease;
 
-  // Card content styling
   .quote-text {
     font-size: 16px;
     line-height: 1.5;
@@ -217,7 +206,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Spezielle Karten-Styles
 .card-active {
   background-color: $turquoise-active;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -229,9 +217,6 @@ $transition-duration: 500ms;
   background-color: $turquoise-inactive;
 }
 
-// Animation Keyframes - Umbenennung für Klarheit
-
-// Von links zur Mitte
 @keyframes left-to-center {
   0% {
     left: calc(50% - 780px);
@@ -254,7 +239,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Von rechts zur Mitte
 @keyframes right-to-center {
   0% {
     left: calc(50% + 280px);
@@ -277,7 +261,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Von der Mitte nach links
 @keyframes center-to-left {
   0% {
     left: 50%;
@@ -300,7 +283,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Von der Mitte nach rechts
 @keyframes center-to-right {
   0% {
     left: 50%;
@@ -323,7 +305,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Nach links verschwinden
 @keyframes exit-left {
   0% {
     left: calc(50% - 780px);
@@ -338,7 +319,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Nach rechts verschwinden
 @keyframes exit-right {
   0% {
     left: calc(50% + 280px);
@@ -353,7 +333,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Von links erscheinen
 @keyframes enter-from-left {
   0% {
     left: calc(50% - 1000px);
@@ -368,7 +347,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Von rechts erscheinen
 @keyframes enter-from-right {
   0% {
     left: calc(50% + 780px);
@@ -395,7 +373,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Navigation controls
 .slider-controls {
   display: flex;
   justify-content: center;
@@ -449,7 +426,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Responsive styles
 @media screen and (max-width: 1400px) {
   .testimonial-card {
     width: 440px;
@@ -515,7 +491,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Ab 850px zeigen wir nur noch die aktive Karte an
 @media screen and (max-width: 850px) {
   .slider-container {
     overflow: visible;
@@ -560,7 +535,6 @@ $transition-duration: 500ms;
     }
   }
 
-  // Fade-In Animation für das erstmalige Erscheinen
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -574,14 +548,11 @@ $transition-duration: 500ms;
   }
 
   .testimonial-showcase {
-
-    // Entferne die opacity: 0 hier - wichtig!
     &.fade-in {
       animation: fadeIn 0.8s ease forwards;
     }
   }
 
-  // Du kannst auch gestaffelte Animationen hinzufügen, wenn gewünscht:
   .testimonial-showcase.fade-in {
     .section-title {
       opacity: 0;
