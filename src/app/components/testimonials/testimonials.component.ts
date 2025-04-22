@@ -67,11 +67,6 @@ export class TestimonialsComponent implements OnInit {
   navigateToPrevious(): void {
     if (this.showPrev || this.showNext) return;
     
-    if (this.viewportWidth < 850) {
-      this.currentIndex = this.getPreviousIndex(this.currentIndex);
-      return this.updateCards();
-    }
-    
     this.incomingCard = this.testimonials[this.getPreviousIndex(this.getPreviousIndex(this.currentIndex))];
     
     this.showPrev = true;
@@ -81,14 +76,10 @@ export class TestimonialsComponent implements OnInit {
       this.showPrev = false;
     }, 500);
   }
-
+  
   navigateToNext(): void {
     if (this.showPrev || this.showNext) return;
     
-    if (this.viewportWidth < 850) {
-      this.currentIndex = this.getNextIndex(this.currentIndex);
-      return this.updateCards();
-    }
     this.incomingCard = this.testimonials[this.getNextIndex(this.getNextIndex(this.currentIndex))];
     
     this.showNext = true;
@@ -99,14 +90,9 @@ export class TestimonialsComponent implements OnInit {
       this.showNext = false;
     }, 500);
   }
-
+  
   goToSlide(index: number): void {
     if (this.showPrev || this.showNext || index === this.currentIndex) return;
-    
-    if (this.viewportWidth < 850) {
-      this.currentIndex = index;
-      return this.updateCards();
-    }
     
     const diff = (index - this.currentIndex + this.testimonials.length) % this.testimonials.length;
     const goForward = diff <= this.testimonials.length / 2;

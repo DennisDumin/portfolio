@@ -1,9 +1,11 @@
+// Base variables
 $dark-bg: #1C1C1C;
 $turquoise-active: #3dcfb74d;
 $turquoise-inactive: #3dcfb71f;
 $card-radius: 20px;
 $transition-duration: 500ms;
 
+// Main container
 .testimonial-showcase {
   display: flex;
   flex-direction: column;
@@ -15,6 +17,7 @@ $transition-duration: 500ms;
   overflow: hidden;
 }
 
+// Section title
 .section-title {
   font-size: 38px;
   font-weight: 600;
@@ -33,6 +36,7 @@ $transition-duration: 500ms;
   }
 }
 
+// Slider container
 .slider-container {
   position: relative;
   width: 100%;
@@ -46,12 +50,12 @@ $transition-duration: 500ms;
     top: 0;
     width: 80px;
     height: 100%;
-    z-index: 10;
+    z-index: 15;
     pointer-events: none;
   }
 
   &::before {
-    left: 0;
+    left: 0px;
     background: linear-gradient(90deg, $dark-bg, transparent);
   }
 
@@ -61,6 +65,20 @@ $transition-duration: 500ms;
   }
 }
 
+// Quotes-Grafik - fixiert im Container
+.quotes-fixed {
+  position: absolute;
+  left: calc(50% - 260px);
+  top: 18px;
+  z-index: 100;
+  pointer-events: none;
+
+  >img {
+    width: 60px;
+  }
+}
+
+// Container für die Karten - vereinfachte Struktur
 .cards-container {
   display: flex;
   justify-content: center;
@@ -69,12 +87,14 @@ $transition-duration: 500ms;
   position: relative;
   height: 320px;
 
+  // Grundpositionen der Karten relativ zum Container-Zentrum
   .card-prev {
     position: absolute;
-    left: calc(50% - 780px);
+    left: calc(50% - 1000px);
     transform: scale(0.9);
     opacity: 0.8;
     z-index: 1;
+    background-color: $turquoise-inactive;
   }
 
   .card-active {
@@ -83,14 +103,16 @@ $transition-duration: 500ms;
     transform: translateX(-50%) scale(1.05);
     opacity: 1;
     z-index: 3;
+    background-color: $turquoise-active;
   }
 
   .card-next {
     position: absolute;
-    left: calc(50% + 280px);
+    left: calc(50% + 365px);
     transform: scale(0.9);
     opacity: 0.8;
     z-index: 1;
+    background-color: $turquoise-inactive;
   }
 
   .card-incoming {
@@ -99,23 +121,31 @@ $transition-duration: 500ms;
     transform: scale(0.9);
     background-color: $turquoise-inactive;
     z-index: 0;
+
+    &.from-left {
+      left: calc(50% - 1300px);
+    }
+
+    &.from-right {
+      left: calc(50% + 700px);
+    }
   }
 
+  // Animationsklassen mit eindeutigen Namen
   &.animate-prev {
     .card-prev {
-      animation: left-to-center $transition-duration ease forwards;
+      animation: move-left-to-center $transition-duration ease forwards;
     }
 
     .card-active {
-      animation: center-to-right $transition-duration ease forwards;
+      animation: move-center-to-right $transition-duration ease forwards;
     }
 
     .card-next {
       animation: exit-right $transition-duration ease forwards;
     }
 
-    .card-incoming {
-      left: calc(50% - 1000px);
+    .card-incoming.from-left {
       animation: enter-from-left $transition-duration ease forwards;
     }
   }
@@ -126,23 +156,24 @@ $transition-duration: 500ms;
     }
 
     .card-active {
-      animation: center-to-left $transition-duration ease forwards;
+      animation: move-center-to-left $transition-duration ease forwards;
     }
 
     .card-next {
-      animation: right-to-center $transition-duration ease forwards;
+      animation: move-right-to-center $transition-duration ease forwards;
     }
 
-    .card-incoming {
-      left: calc(50% + 780px);
+    .card-incoming.from-right {
       animation: enter-from-right $transition-duration ease forwards;
     }
   }
 }
 
+// Testimonial card
 .testimonial-card {
-  width: 500px;
-  height: 240px;
+  height: 274px;
+  max-width: 632px;
+  width: 100%;
   position: relative;
   padding: 36px 32px;
   border-radius: $card-radius;
@@ -192,34 +223,12 @@ $transition-duration: 500ms;
       }
     }
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 24px;
-    font-size: 120px;
-    font-family: Georgia, serif;
-    color: rgba(255, 255, 255, 0.1);
-    line-height: 1;
-    z-index: 0;
-  }
 }
 
-.card-active {
-  background-color: $turquoise-active;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.card-prev,
-.card-next,
-.card-incoming {
-  background-color: $turquoise-inactive;
-}
-
-@keyframes left-to-center {
+// ANIMATIONEN mit eindeutigen Namen
+@keyframes move-left-to-center {
   0% {
-    left: calc(50% - 780px);
+    left: calc(50% - 1000px);
     transform: scale(0.9);
     opacity: 0.8;
     z-index: 1;
@@ -239,9 +248,9 @@ $transition-duration: 500ms;
   }
 }
 
-@keyframes right-to-center {
+@keyframes move-right-to-center {
   0% {
-    left: calc(50% + 280px);
+    left: calc(50% + 365px);
     transform: scale(0.9);
     opacity: 0.8;
     z-index: 1;
@@ -261,7 +270,7 @@ $transition-duration: 500ms;
   }
 }
 
-@keyframes center-to-left {
+@keyframes move-center-to-left {
   0% {
     left: 50%;
     transform: translateX(-50%) scale(1.05);
@@ -275,7 +284,7 @@ $transition-duration: 500ms;
   }
 
   100% {
-    left: calc(50% - 780px);
+    left: calc(50% - 1000px);
     transform: scale(0.9);
     opacity: 0.8;
     z-index: 1;
@@ -283,7 +292,7 @@ $transition-duration: 500ms;
   }
 }
 
-@keyframes center-to-right {
+@keyframes move-center-to-right {
   0% {
     left: 50%;
     transform: translateX(-50%) scale(1.05);
@@ -297,7 +306,7 @@ $transition-duration: 500ms;
   }
 
   100% {
-    left: calc(50% + 280px);
+    left: calc(50% + 365px);
     transform: scale(0.9);
     opacity: 0.8;
     z-index: 1;
@@ -307,13 +316,13 @@ $transition-duration: 500ms;
 
 @keyframes exit-left {
   0% {
-    left: calc(50% - 780px);
+    left: calc(50% - 1000px);
     transform: scale(0.9);
     opacity: 0.8;
   }
 
   100% {
-    left: calc(50% - 780px);
+    left: calc(50% - 1300px);
     transform: scale(0.8);
     opacity: 0;
   }
@@ -321,13 +330,13 @@ $transition-duration: 500ms;
 
 @keyframes exit-right {
   0% {
-    left: calc(50% + 280px);
+    left: calc(50% + 365px);
     transform: scale(0.9);
     opacity: 0.8;
   }
 
   100% {
-    left: calc(50% + 780px);
+    left: calc(50% + 700px);
     transform: scale(0.8);
     opacity: 0;
   }
@@ -335,13 +344,13 @@ $transition-duration: 500ms;
 
 @keyframes enter-from-left {
   0% {
-    left: calc(50% - 1000px);
+    left: calc(50% - 1300px);
     transform: scale(0.8);
     opacity: 0;
   }
 
   100% {
-    left: calc(50% - 780px);
+    left: calc(50% - 1000px);
     transform: scale(0.9);
     opacity: 0.8;
   }
@@ -349,30 +358,19 @@ $transition-duration: 500ms;
 
 @keyframes enter-from-right {
   0% {
-    left: calc(50% + 780px);
+    left: calc(50% + 700px);
     transform: scale(0.8);
     opacity: 0;
   }
 
   100% {
-    left: calc(50% + 280px);
+    left: calc(50% + 365px);
     transform: scale(0.9);
     opacity: 0.8;
   }
 }
 
-.quotes-fixed {
-  position: absolute;
-  left: calc(50% - 260px);
-  top: 18px;
-  z-index: 100;
-  pointer-events: none;
-
-  >img {
-    width: 60px;
-  }
-}
-
+// Navigation controls
 .slider-controls {
   display: flex;
   justify-content: center;
@@ -426,41 +424,24 @@ $transition-duration: 500ms;
   }
 }
 
+// Responsive styles
 @media screen and (max-width: 1400px) {
-  .testimonial-card {
-    width: 440px;
-  }
 
-  .cards-container {
-    .card-prev {
-      left: calc(50% - 720px);
-    }
-
-    .card-next {
-      left: calc(50% + 280px);
-    }
+  .quotes-fixed {
+    left: calc(50% - 240px);
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .testimonial-card {
-    width: 380px;
-  }
 
-  .cards-container {
-    .card-prev {
-      left: calc(50% - 650px);
-    }
-
-    .card-next {
-      left: calc(50% + 270px);
-    }
+  .quotes-fixed {
+    left: calc(50% - 210px);
   }
 }
 
 @media screen and (max-width: 1100px) {
   .testimonial-showcase {
-    padding: 80px 20px;
+    padding: 60px 12px;
   }
 
   .section-title {
@@ -468,108 +449,25 @@ $transition-duration: 500ms;
     margin-bottom: 40px;
   }
 
-  .testimonial-card {
-    width: 320px;
-    padding: 30px 25px;
-  }
-
-  .cards-container {
-    .card-prev {
-      left: calc(50% - 550px);
-    }
-
-    .card-next {
-      left: calc(50% + 220px);
-    }
+  .quotes-fixed {
+    left: calc(50% - 180px);
   }
 }
 
 @media screen and (max-width: 992px) {
   .testimonial-card {
-    width: 320px;
     font-size: 14px;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .slider-container {
-    overflow: visible;
 
-    &::before,
-    &::after {
-      display: none;
-    }
-  }
-
-  .quotes {
-    position: absolute;
-    left: -5px;
-    top: -15px;
+  .quotes-fixed {
+    left: 10px;
+    top: 15px;
 
     >img {
       width: 35px;
-    }
-  }
-
-  .cards-container {
-    height: auto;
-  }
-
-  .testimonial-card {
-    width: 100%;
-    max-width: 100%;
-    position: static;
-    transform: none !important;
-    opacity: 1 !important;
-    margin-bottom: 30px;
-
-    &.card-prev,
-    &.card-next,
-    &.card-incoming {
-      display: none;
-    }
-
-    &.card-active {
-      display: block;
-      position: static !important;
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .testimonial-showcase {
-    &.fade-in {
-      animation: fadeIn 0.8s ease forwards;
-    }
-  }
-
-  .testimonial-showcase.fade-in {
-    .section-title {
-      opacity: 0;
-      animation: fadeIn 0.6s ease forwards;
-      animation-delay: 0.2s;
-    }
-
-    .slider-container {
-      opacity: 0;
-      animation: fadeIn 0.6s ease forwards;
-      animation-delay: 0.4s;
-    }
-
-    .slider-controls {
-      opacity: 0;
-      animation: fadeIn 0.6s ease forwards;
-      animation-delay: 0.6s;
     }
   }
 }
