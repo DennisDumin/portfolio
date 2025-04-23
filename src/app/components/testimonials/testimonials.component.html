@@ -2,7 +2,6 @@
   <h2 class="section-title">{{ "testimonials.section_title" | translate }}</h2>
   
   <div class="slider-container">
-    <div class="quotes-fixed"><img src="assets/img/icons/quotes.png" alt="Quotes"/></div>
     <div class="cards-container" [ngClass]="{'animate-prev': showPrev, 'animate-next': showNext}">
       <div class="testimonial-card card-prev">
         <p class="quote-text">{{ previousCard.text | translate }}</p>
@@ -15,6 +14,7 @@
         </div>
       </div>
 
+      <div class="quotes-fixed"><img src="assets/img/icons/quotes.png" alt="Quotes"/></div>
       <div class="testimonial-card card-active">
         <p class="quote-text">{{ mainCard.text | translate }}</p>
         <div class="card-footer">

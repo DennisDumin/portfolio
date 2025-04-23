@@ -67,9 +67,9 @@ $transition-duration: 500ms;
 
 // Quotes-Grafik - fixiert im Container
 .quotes-fixed {
-  position: absolute;
-  left: calc(50% - 260px);
-  top: 18px;
+  position: relative;
+  left: -320px;
+  top: -130px;
   z-index: 100;
   pointer-events: none;
 
@@ -425,19 +425,7 @@ $transition-duration: 500ms;
 }
 
 // Responsive styles
-@media screen and (max-width: 1400px) {
 
-  .quotes-fixed {
-    left: calc(50% - 240px);
-  }
-}
-
-@media screen and (max-width: 1200px) {
-
-  .quotes-fixed {
-    left: calc(50% - 210px);
-  }
-}
 
 @media screen and (max-width: 1100px) {
   .testimonial-showcase {
@@ -448,26 +436,31 @@ $transition-duration: 500ms;
     font-size: 32px;
     margin-bottom: 40px;
   }
-
-  .quotes-fixed {
-    left: calc(50% - 180px);
-  }
 }
 
 @media screen and (max-width: 992px) {
   .testimonial-card {
     font-size: 14px;
   }
+
+  .slider-container {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 992px) {
+  .testimonial-card {
+    max-width: 450px;
+    width: 90%;
+  }
 
   .quotes-fixed {
-    left: 10px;
-    top: 15px;
-
-    >img {
-      width: 35px;
-    }
+    left: -15px;
+    max-width: 450px;
+    width: 90%;
   }
 }
