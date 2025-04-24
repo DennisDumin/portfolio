@@ -179,6 +179,24 @@ $animation-duration: 0.25s;
     transform: scale(1.1);
 }
 
+.language-mobile {
+    width: fit-content;
+  }
+  
+  .header-mobile {
+    .mobile-header-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+  
+      .header-item {
+        margin-bottom: 16px; 
+      }
+    }}
+
 @media screen and (max-width: 768px) {
     section {
         padding: 12px;

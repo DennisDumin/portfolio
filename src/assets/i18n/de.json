@@ -63,5 +63,171 @@
       "björn": "Die Zusammenarbeit lief super und hat richtig Spaß gemacht. Es war eine wertvolle Erfahrung, mit einem engagierten und talentierten Partner zu arbeiten.",
       "markus": "Dennis ist eine zuverlässige und freundliche Person. Er arbeitet strukturiert und schreibt klaren, gut verständlichen Code. Ich kann ihn als Kollegen wärmstens empfehlen."
     }
+  },
+  "contact": {
+    "email_address": "ihremail@email.com",
+    "main_heading": "Lasst uns zusammenarbeiten",
+    "email_missing": "Hoppla! Ihre E-Mail ist erforderlich",
+    "message_missing": "Was möchten Sie entwickeln?",
+    "name_missing": "Ups! Ihr Name scheint zu fehlen",
+    "privacy_missing": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
+    "message_field": "Hallo Dennis, ich bin interessiert an...",
+    "name_field": "Ihr Name kommt hierhin",
+    "intro_text": "Haben Sie ein Problem zu lösen?",
+    "email_placeholder": "Wie lautet Ihre E-Mail?",
+    "message_placeholder": "Wie kann ich Ihnen helfen?",
+    "name_placeholder": "Wie ist Ihr Name?",
+    "dev_question": "Brauchen Sie einen Frontend-Entwickler?",
+    "send_button": "Sag Hallo! ;)",
+    "success_heading": "Danke, dass Sie mich kontaktiert haben.",
+    "success_message": "Ihre Nachricht wurde gesendet.",
+    "success_closing": "Ich werde Ihnen so schnell wie möglich antworten.",
+    "close_button": "Schließen",
+    "email_format": "Bitte verwenden Sie die richtige Syntax (name@email.com)",
+    "privacy_start": "Ich habe die ",
+    "privacy_end": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+    "privacy_policy": "Datenschutzbestimmungen",
+    "about_text": "Kontaktieren Sie mich über dieses Formular, ich bin daran interessiert, von ihren Ideen zu hören und an ihren Projekten mitwirken zu dürfen.",
+    "talk_cta": "Lassen Sie uns reden!",
+    "page_title": "Kontaktieren Sie mich"
+  },
+  "privacy_policy": {
+    "title": "Datenschutzerklärung",
+    "update": "Zuletzt aktualisiert: 24. April 2025",
+    "paragraph_1_1": "Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten bei der Nutzung unserer Webseite. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+    "paragraph_1_2": "Der Schutz Ihrer Daten liegt uns am Herzen. Wir haben diese Datenschutzerklärung erstellt, um Ihnen gemäß der Vorgaben der Datenschutz-Grundverordnung (DSGVO) zu erläutern, welche Informationen wir sammeln und wie wir sie verwenden. Diese Erklärung wurde mit Unterstützung des",
+    "interpretation_definition": {
+      "headline": "Begriffsbestimmungen und rechtliche Grundlagen",
+      "interpretation": {
+        "headline": "Rechtsgrundlagen",
+        "paragraph": "Die Verarbeitung Ihrer personenbezogenen Daten erfolgt auf Basis verschiedener Rechtsgrundlagen der DSGVO: Einwilligung (Art. 6 Abs. 1 lit. a), Vertragserfüllung (Art. 6 Abs. 1 lit. b), rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c) oder berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO)."
+      },
+      "definition": {
+        "headline": "Begriffsdefinitionen",
+        "paragraph": "Im Sinne dieser Datenschutzerklärung verstehen wir unter:",
+        "list": {
+          "account": "Nutzerkonto",
+          "affiliate": "Verbundene Unternehmen",
+          "company": "Betreiber",
+          "cookies": "Cookies",
+          "country": "Standort",
+          "device": "Endgerät",
+          "personal_data": "Personenbezogene Daten",
+          "service": "Dienst",
+          "service_provider": "Auftragsverarbeiter",
+          "using_date": "Nutzungsdaten",
+          "website": "Webseite",
+          "you": "Nutzer",
+          "description": {
+            "account": "ein für Sie persönlich angelegtes Konto zur Nutzung unserer Dienste mit individuellen Einstellungen.",
+            "affiliate": "ein mit uns verbundenes Unternehmen, das unter gemeinsamer Kontrolle steht oder an dem wir beteiligt sind.",
+            "company": "bezieht sich auf Dennis Dumin als verantwortliche Stelle im Sinne der DSGVO, ansässig in Gelsenkirchen, Deutschland.",
+            "cookies": "kleine Textdateien, die beim Besuch unserer Webseite auf Ihrem Gerät gespeichert werden und eine Analyse Ihrer Nutzung ermöglichen.",
+            "country": "Deutschland, wobei die Datenverarbeitung innerhalb der Europäischen Union erfolgt und den Regelungen der DSGVO unterliegt.",
+            "device": "jedes internetfähige Gerät wie Computer, Smartphone, Tablet oder andere Geräte, mit denen auf unsere Dienste zugegriffen werden kann.",
+            "personal_data": "alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen (z.B. Name, E-Mail-Adresse).",
+            "service": "alle Angebote, Funktionen und Dienste, die über unsere Webseite dennis-dumin.net bereitgestellt werden.",
+            "service_provider": "natürliche oder juristische Personen, die in unserem Auftrag personenbezogene Daten verarbeiten (z.B. Hosting-Anbieter).",
+            "using_date": "automatisch erhobene Daten wie IP-Adresse, Browser-Typ, besuchte Seiten und Verweilzeit, die bei der Nutzung unserer Webseite anfallen.",
+            "website": "die unter dennis-dumin.net erreichbare Webpräsenz von Dennis Dumin einschließlich aller Unterseiten.",
+            "you": "die Person, die unsere Webseite besucht oder unsere Dienste nutzt, unabhängig davon, ob sie registriert ist oder nicht."
+          }
+        }
+      }
+    },
+    "collective": {
+      "headline": "Datenerhebung und -verwendung",
+      "types": {
+        "headline": "Kategorien verarbeiteter Daten",
+        "personal_data": {
+          "headline": "Personenbezogene Daten",
+          "paragraph": {
+            "text": "Bei der Nutzung unseres Kontaktformulars oder bei anderen Interaktionen mit unserer Webseite erheben wir nur die Daten, die für die jeweilige Funktion erforderlich sind. Die Angabe dieser Daten erfolgt stets freiwillig. Die folgenden personenbezogenen Daten können erhoben werden:",
+            "email": "E-Mail-Adresse (zur Kontaktaufnahme und Kommunikation)",
+            "name": "Vor- und Nachname (zur persönlichen Ansprache)",
+            "using": "Nutzungsdaten (zur Verbesserung unseres Angebots)"
+          }
+        },
+        "using_data": {
+          "headline": "Nutzungsdaten"
+        },
+        "using": {
+          "paragraph": {
+            "text_1": "Bei jedem Zugriff auf unsere Webseite werden automatisch bestimmte technische Daten erhoben, die für die Bereitstellung unserer Dienste technisch notwendig sind.",
+            "text_2": "Zu diesen Daten gehören: IP-Adresse (in anonymisierter Form), Browsertyp und -version, verwendetes Betriebssystem, URL der zuvor besuchten Seite, Uhrzeit der Serveranfrage sowie übertragene Datenmenge. Diese Daten werden in Logfiles gespeichert und nach 7 Tagen automatisch gelöscht.",
+            "text_3": "Bei Nutzung über mobile Endgeräte können zusätzliche gerätespezifische Informationen erfasst werden, wie Gerätetyp, Bildschirmauflösung und Betriebssystemversion, um eine optimale Darstellung zu gewährleisten. Diese Daten werden nicht mit anderen personenbezogenen Daten zusammengeführt.",
+            "text_4": "Die Erhebung dieser Daten erfolgt auf Grundlage unseres berechtigten Interesses gem. Art. 6 Abs. 1 lit. f DSGVO zur Optimierung und wirtschaftlichen Betreibung unserer Webseite."
+          }
+        }
+      }
+    },
+    "tracking": {
+      "headline": "Cookies und Tracking-Technologien",
+      "pragraph": {
+        "text_1": "Unsere Webseite verwendet nur technisch notwendige Cookies, die für die Funktionalität der Webseite erforderlich sind. Diese Cookies ermöglichen grundlegende Funktionen wie Seitennavigation und Zugriff auf geschützte Bereiche. Die Webseite kann ohne diese Cookies nicht richtig funktionieren.",
+        "text_2": "Wir verwenden keine Tracking-Cookies, Analyse-Tools oder Profiling-Technologien, die Ihr Nutzungsverhalten verfolgen oder ein Profil Ihrer Online-Aktivitäten erstellen würden. Wir respektieren Ihre Privatsphäre und beschränken uns auf das technisch Notwendige.",
+        "text_3": "Die von uns eingesetzten Cookies dienen ausschließlich folgenden Zwecken:"
+      },
+      "list": {
+        "cokies": "Technisch notwendige Cookies",
+        "beacons": "Keine Web Beacons oder Tracking-Pixel",
+        "description": {
+          "cokies": "Diese Cookies sind für den Betrieb der Webseite erforderlich und können in Ihren Systemeinstellungen nicht deaktiviert werden. In der Regel werden diese Cookies nur als Reaktion auf von Ihnen getätigte Aktionen gesetzt, die einer Dienstanforderung entsprechen, wie etwa dem Festlegen Ihrer Datenschutzeinstellungen oder dem Ausfüllen von Formularen. Sie können Ihren Browser so einstellen, dass diese Cookies blockiert oder Sie über diese Cookies benachrichtigt werden, aber einige Teile der Webseite werden dann nicht funktionieren.",
+          "becons": "Wir verzichten bewusst auf den Einsatz von Web Beacons, Tracking-Pixeln und ähnlichen Technologien, die dazu dienen könnten, Nutzeraktivitäten über verschiedene Dienste und Webseiten hinweg zu verfolgen. Unsere Webseite enthält keine Elemente, die ohne Ihr Wissen Daten an Dritte übermitteln."
+        }
+      }
+    },
+    "personal_data": {
+      "headline": "Ihre Rechte als betroffene Person",
+      "paragraph_text_1": "Als betroffene Person stehen Ihnen folgende Rechte zu:",
+      "paragraph_text_2": "Sie haben das Recht, Auskunft über die von uns gespeicherten personenbezogenen Daten zu erhalten (Art. 15 DSGVO).",
+      "paragraph_text_2_strong": "Recht auf Auskunft:",
+      "paragraph_text_3": "Sie haben das Recht, die Berichtigung unrichtiger oder die Vervollständigung unvollständiger Daten zu verlangen (Art. 16 DSGVO).",
+      "paragraph_text_3_strong": "Recht auf Berichtigung:",
+      "paragraph_text_4": "Sie haben das Recht, die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit keine rechtliche Verpflichtung zur Aufbewahrung besteht (Art. 17 DSGVO).",
+      "paragraph_text_4_strong": "Recht auf Löschung:",
+      "paragraph_text_5": "Sie haben das Recht, die Verarbeitung Ihrer personenbezogenen Daten einzuschränken (Art. 18 DSGVO).",
+      "paragraph_text_5_strong": "Recht auf Einschränkung:",
+      "paragraph_text_6": "Sie haben das Recht, Ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen (Art. 20 DSGVO).",
+      "paragraph_text_6_strong": "Recht auf Datenübertragbarkeit:",
+      "paragraph_text_7": "Sie haben das Recht, eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen (Art. 7 Abs. 3 DSGVO).",
+      "paragraph_text_7_strong": "Recht auf Widerruf:",
+      "paragraph_text_8": "Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen (Art. 21 DSGVO).",
+      "paragraph_text_8_strong": "Recht auf Widerspruch:",
+      "paragraph_text_9": "Sie haben das Recht, sich bei einer Aufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt (Art. 77 DSGVO).",
+      "paragraph_text_9_strong": "Beschwerderecht:",
+      "share": {
+        "paragraph": {
+          "headline": "Datenübermittlung an Dritte"
+        },
+        "paragraph_text_1": "Wir übermitteln Ihre Daten nur dann an Dienstleister, wenn dies für die Bereitstellung unserer Dienste erforderlich ist (z.B. Hosting-Provider). Alle Dienstleister sind sorgfältig ausgewählt und vertraglich zur Einhaltung der Datenschutzbestimmungen verpflichtet.",
+        "paragraph_text_1_strong": "Auftragsverarbeiter:",
+        "paragraph_text_2": "Wir verkaufen, handeln oder übertragen Ihre personenbezogenen Daten nicht an Dritte. Dies gilt nicht für vertrauenswürdige Dritte, die uns bei der Betreibung unserer Webseite unterstützen, sofern diese sich verpflichten, die Daten vertraulich zu behandeln.",
+        "paragraph_text_2_strong": "Keine kommerzielle Weitergabe:",
+        "paragraph_text_3": "Eine Datenübermittlung an Dritte findet nur statt, wenn dies gesetzlich vorgeschrieben ist oder Sie ausdrücklich eingewilligt haben.",
+        "paragraph_text_3_strong": "Rechtliche Verpflichtung:",
+        "paragraph_text_4": "Wir setzen keine Dienste ein, die Daten zu Werbezwecken an Dritte weitergeben.",
+        "paragraph_text_4_strong": "Keine Werbepartner:",
+        "paragraph_text_5": "Unsere Webseite enthält keine Komponenten sozialer Netzwerke, die automatisch Daten an diese Plattformen übermitteln würden.",
+        "paragraph_text_5_strong": "Keine Social-Media-Integration:",
+        "paragraph_text_6": "Bei der Kontaktaufnahme über unser Formular werden Ihre Daten vertraulich behandelt und ausschließlich zur Beantwortung Ihrer Anfrage verwendet.",
+        "paragraph_text_6_strong": "Kontaktformular:"
+      }
+    },
+    "personal_security": {
+      "headline": "Datensicherheit",
+      "paragraph_text": "Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre personenbezogenen Daten gegen zufällige oder vorsätzliche Manipulation, Verlust, Zerstörung oder den Zugriff unberechtigter Personen zu schützen. Unsere Sicherheitsverfahren werden regelmäßig überprüft und dem technologischen Fortschritt angepasst. Die Datenübertragung im Internet kann jedoch Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht gewährleistet werden kann.",
+      "changes": {
+        "headline": "Aktualität und Änderung dieser Datenschutzerklärung",
+        "paragraph_text_1": "Diese Datenschutzerklärung ist aktuell gültig und wurde zuletzt am 24. April 2025 aktualisiert.",
+        "paragraph_text_2": "Durch die Weiterentwicklung unserer Webseite oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen.",
+        "paragraph_text_3": "Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf dieser Webseite abgerufen werden. Wir empfehlen Ihnen, sich regelmäßig über den aktuellen Stand zu informieren."
+      },
+      "contact": {
+        "headline": "Kontakt zum Datenschutzbeauftragten",
+        "paragraph_text_1": "Wenn Sie Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte haben, können Sie sich gerne an uns wenden:",
+        "email": "Per E-Mail:"
+      }
+    }
   }
 }

@@ -39,29 +39,195 @@
     "text_contact_me": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
     "link": "Lets' Talk"
   },
-    "projects": {
-      "title": "Portfolio",
-      "headline": "My Work",
-      "text": "Explore a selection of my work here - Interact with projects to see my skills in action."
-    },
-    "project_dialog": {
-      "question": "What is this project about?",
-      "next_project": "Next Project",
-      "description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      "description_el_pollo_loco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      "description_da_bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
-    },
-    "buttons": {
-      "coming_soon": "Coming soon",
-      "github": "Github",
-      "live_test": "Live Test"
-    },
-      "testimonials": {
-        "section_title": "What others say about me",
-        "quotes": {
-          "robert": "Our project benefited tremendously from Dennis' efficient way of working.",
-          "björn": "Working together was smooth and a lot of fun. It was a great experience coding with such a dedicated and skilled partner.",
-          "markus": "Dennis is a reliable and friendly person. He works in a structured manner and writes clear, easy-to-understand code. I can highly recommend him as a colleague."
+  "projects": {
+    "title": "Portfolio",
+    "headline": "My Work",
+    "text": "Explore a selection of my work here - Interact with projects to see my skills in action."
+  },
+  "project_dialog": {
+    "question": "What is this project about?",
+    "next_project": "Next Project",
+    "description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "description_el_pollo_loco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "description_da_bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+  },
+  "buttons": {
+    "coming_soon": "Coming soon",
+    "github": "Github",
+    "live_test": "Live Test"
+  },
+  "testimonials": {
+    "section_title": "What others say about me",
+    "quotes": {
+      "robert": "Our project benefited tremendously from Dennis' efficient way of working.",
+      "björn": "Working together was smooth and a lot of fun. It was a great experience coding with such a dedicated and skilled partner.",
+      "markus": "Dennis is a reliable and friendly person. He works in a structured manner and writes clear, easy-to-understand code. I can highly recommend him as a colleague."
+    }
+  },
+  "contact": {
+    "email_address": "your_email@email.com",
+    "main_heading": "Let's work together",
+    "email_missing": "Oops! Your email is required",
+    "message_missing": "What would you like to develop?",
+    "name_missing": "Oops! Your name seems to be missing",
+    "privacy_missing": "Please accept the privacy policy.",
+    "message_field": "Hello Dennis, I'm interested in...",
+    "name_field": "Your name goes here",
+    "intro_text": "Got a problem to solve?",
+    "email_placeholder": "What is your email?",
+    "message_placeholder": "How can I help you?",
+    "name_placeholder": "What's your name?",
+    "dev_question": "Need a frontend developer?",
+    "send_button": "Say Hello! ;)",
+    "success_heading": "Thank you for contacting me.",
+    "success_message": "Your message has been sent.",
+    "success_closing": "I will respond as soon as possible.",
+    "close_button": "Close",
+    "email_format": "Please use the correct syntax (name@email.com)",
+    "privacy_start": "I have read the ",
+    "privacy_end": " and agree to the processing of my data as described.",
+    "privacy_policy": "Privacy Policy",
+    "about_text": "Contact me through this form, I'm interested in hearing about your ideas and would love to contribute to your projects.",
+    "talk_cta": "Let's talk!",
+    "page_title": "Contact Me"
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy",
+    "update": "Last updated: April 24, 2025",
+    "paragraph_1_1": "This Privacy Policy informs you about the nature, scope, and purpose of the processing of personal data when using our website. We treat your personal data confidentially and in accordance with statutory data protection regulations and this Privacy Policy.",
+    "paragraph_1_2": "The protection of your data is important to us. We have created this Privacy Policy to explain to you, in accordance with the General Data Protection Regulation (GDPR), what information we collect and how we use it. This policy was created with the help of the",
+    "interpretation_definition": {
+      "headline": "Definitions and Legal Basis",
+      "interpretation": {
+        "headline": "Legal Basis",
+        "paragraph": "The processing of your personal data is based on various legal grounds of the GDPR: consent (Art. 6 para. 1 lit. a), contract performance (Art. 6 para. 1 lit. b), legal obligation (Art. 6 para. 1 lit. c), or legitimate interest (Art. 6 para. 1 lit. f GDPR)."
+      },
+      "definition": {
+        "headline": "Definitions",
+        "paragraph": "For the purposes of this Privacy Policy:",
+        "list": {
+          "account": "User Account",
+          "affiliate": "Affiliated Companies",
+          "company": "Operator",
+          "cookies": "Cookies",
+          "country": "Location",
+          "device": "End Device",
+          "personal_data": "Personal Data",
+          "service": "Service",
+          "service_provider": "Data Processor",
+          "using_date": "Usage Data",
+          "website": "Website",
+          "you": "User",
+          "description": {
+            "account": "means a personal account created for you to use our services with individual settings.",
+            "affiliate": "means a company affiliated with us that is under common control or in which we have a stake.",
+            "company": "refers to Dennis Dumin as the responsible entity within the meaning of the GDPR, based in Gelsenkirchen, Germany.",
+            "cookies": "small text files that are stored on your device when you visit our website and enable an analysis of your usage.",
+            "country": "Germany, whereby data processing takes place within the European Union and is subject to the regulations of the GDPR.",
+            "device": "any internet-capable device such as a computer, smartphone, tablet or other device that can access our services.",
+            "personal_data": "any information relating to an identified or identifiable natural person (e.g., name, email address).",
+            "service": "all offers, functions and services provided through our website dennis-dumin.net.",
+            "service_provider": "natural or legal persons who process personal data on our behalf (e.g., hosting providers).",
+            "using_date": "automatically collected data such as IP address, browser type, pages visited and length of stay that arise when using our website.",
+            "website": "the web presence of Dennis Dumin accessible at dennis-dumin.net including all subpages.",
+            "you": "the person visiting our website or using our services, regardless of whether they are registered or not."
+          }
         }
       }
+    },
+    "collective": {
+      "headline": "Data Collection and Use",
+      "types": {
+        "headline": "Categories of Processed Data",
+        "personal_data": {
+          "headline": "Personal Data",
+          "paragraph": {
+            "text": "When using our contact form or during other interactions with our website, we only collect the data that is necessary for the respective function. The provision of this data is always voluntary. The following personal data may be collected:",
+            "email": "Email address (for contact and communication)",
+            "name": "First and last name (for personal address)",
+            "using": "Usage data (to improve our service)"
+          }
+        },
+        "using_data": {
+          "headline": "Usage Data"
+        },
+        "using": {
+          "paragraph": {
+            "text_1": "Certain technical data is automatically collected each time you access our website, which is technically necessary to provide our services.",
+            "text_2": "This data includes: IP address (in anonymized form), browser type and version, operating system used, URL of the previously visited page, time of server request, and amount of data transferred. This data is stored in log files and automatically deleted after 7 days.",
+            "text_3": "When using mobile devices, additional device-specific information may be collected, such as device type, screen resolution, and operating system version, to ensure optimal display. This data is not merged with other personal data.",
+            "text_4": "This data is collected based on our legitimate interest pursuant to Art. 6 para. 1 lit. f GDPR to optimize and economically operate our website."
+          }
+        }
+      }
+    },
+    "tracking": {
+      "headline": "Cookies and Tracking Technologies",
+      "pragraph": {
+        "text_1": "Our website only uses technically necessary cookies that are required for the functionality of the website. These cookies enable basic functions such as page navigation and access to secure areas. The website cannot function properly without these cookies.",
+        "text_2": "We do not use tracking cookies, analytics tools, or profiling technologies that would track your usage behavior or create a profile of your online activities. We respect your privacy and limit ourselves to what is technically necessary.",
+        "text_3": "The cookies we use serve exclusively the following purposes:"
+      },
+      "list": {
+        "cokies": "Technically necessary cookies",
+        "beacons": "No web beacons or tracking pixels",
+        "description": {
+          "cokies": "These cookies are necessary for the operation of the website and cannot be disabled in your system settings. These cookies are usually only set in response to actions you take that correspond to a service request, such as setting your privacy preferences or filling out forms. You can set your browser to block these cookies or to notify you about these cookies, but some parts of the website will then not work.",
+          "becons": "We deliberately refrain from using web beacons, tracking pixels and similar technologies that could be used to track user activities across different services and websites. Our website does not contain elements that transmit data to third parties without your knowledge."
+        }
+      }
+    },
+    "personal_data": {
+      "headline": "Your Rights as a Data Subject",
+      "paragraph_text_1": "As a data subject, you have the following rights:",
+      "paragraph_text_2": "You have the right to obtain information about the personal data we have stored about you (Art. 15 GDPR).",
+      "paragraph_text_2_strong": "Right to information:",
+      "paragraph_text_3": "You have the right to request the correction of inaccurate data or the completion of incomplete data (Art. 16 GDPR).",
+      "paragraph_text_3_strong": "Right to rectification:",
+      "paragraph_text_4": "You have the right to request the deletion of your personal data stored by us, insofar as there is no legal obligation to retain it (Art. 17 GDPR).",
+      "paragraph_text_4_strong": "Right to erasure:",
+      "paragraph_text_5": "You have the right to restrict the processing of your personal data (Art. 18 GDPR).",
+      "paragraph_text_5_strong": "Right to restriction:",
+      "paragraph_text_6": "You have the right to receive your data in a structured, commonly used and machine-readable format or to request the transfer to another controller (Art. 20 GDPR).",
+      "paragraph_text_6_strong": "Right to data portability:",
+      "paragraph_text_7": "You have the right to withdraw a given consent at any time with effect for the future (Art. 7 para. 3 GDPR).",
+      "paragraph_text_7_strong": "Right to withdraw consent:",
+      "paragraph_text_8": "You have the right to object at any time to the processing of your personal data for reasons arising from your particular situation (Art. 21 GDPR).",
+      "paragraph_text_8_strong": "Right to object:",
+      "paragraph_text_9": "You have the right to lodge a complaint with a supervisory authority if you believe that the processing of your personal data violates the GDPR (Art. 77 GDPR).",
+      "paragraph_text_9_strong": "Right to lodge a complaint:",
+      "share": {
+        "paragraph": {
+          "headline": "Data Transfer to Third Parties"
+        },
+        "paragraph_text_1": "We only transfer your data to service providers if this is necessary for the provision of our services (e.g., hosting providers). All service providers are carefully selected and contractually obligated to comply with data protection regulations.",
+        "paragraph_text_1_strong": "Data processors:",
+        "paragraph_text_2": "We do not sell, trade, or otherwise transfer your personal information to third parties. This does not apply to trusted third parties who assist us in operating our website, provided they agree to keep the information confidential.",
+        "paragraph_text_2_strong": "No commercial sharing:",
+        "paragraph_text_3": "Data will only be transferred to third parties if this is legally required or if you have expressly consented.",
+        "paragraph_text_3_strong": "Legal obligation:",
+        "paragraph_text_4": "We do not use services that share data with third parties for advertising purposes.",
+        "paragraph_text_4_strong": "No advertising partners:",
+        "paragraph_text_5": "Our website does not contain components of social networks that would automatically transmit data to these platforms.",
+        "paragraph_text_5_strong": "No social media integration:",
+        "paragraph_text_6": "When contacting us via our form, your data will be treated confidentially and used exclusively to answer your inquiry.",
+        "paragraph_text_6_strong": "Contact form:"
+      }
+    },
+    "personal_security": {
+      "headline": "Data Security",
+      "paragraph_text": "We use technical and organizational security measures to protect your personal data against accidental or intentional manipulation, loss, destruction, or access by unauthorized persons. Our security procedures are regularly reviewed and adapted to technological progress. However, data transmission on the internet may have security vulnerabilities, so absolute protection cannot be guaranteed.",
+      "changes": {
+        "headline": "Updates and Changes to this Privacy Policy",
+        "paragraph_text_1": "This Privacy Policy is currently valid and was last updated on April 24, 2025.",
+        "paragraph_text_2": "Due to the further development of our website or due to changed legal or regulatory requirements, it may become necessary to amend this Privacy Policy.",
+        "paragraph_text_3": "The current Privacy Policy can be accessed at any time on this website. We recommend that you regularly check the current status."
+      },
+      "contact": {
+        "headline": "Contact the Data Protection Officer",
+        "paragraph_text_1": "If you have questions about data protection or exercising your rights, please feel free to contact us:",
+        "email": "By email:"
+      }
+    }
+  }
 }

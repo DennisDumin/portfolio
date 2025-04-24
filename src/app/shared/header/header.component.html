@@ -1,84 +1,94 @@
 <div class="section">
-    @if(isDesktopView) {
-      <!-- Desktop Navigation -->
-      <div class="header-desktop">
-        <div class="language">
-          <button 
-            [ngClass]="{ chosen: !isGermanActive }" 
-            (click)="switchLanguage(Language.ENGLISH)">
-            EN
-          </button>
-          <button 
-            [ngClass]="{ chosen: isGermanActive }" 
-            (click)="switchLanguage(Language.GERMAN)">
-            DE
-          </button>
+  @if(isDesktopView) {
+    <div class="header-desktop">
+      <div class="language">
+        <button 
+          [ngClass]="{ chosen: !isGermanActive }" 
+          (click)="switchLanguage(Language.ENGLISH)">
+          EN
+        </button>
+        <button 
+          [ngClass]="{ chosen: isGermanActive }" 
+          (click)="switchLanguage(Language.GERMAN)">
+          DE
+        </button>
+      </div>
+      
+      @for (item of navigationItems; track $index; let i = $index) {
+        <div class="header-item">
+          <a 
+            (mouseenter)="setNavItemActive(i)" 
+            (mouseleave)="clearActiveNavItem()" 
+            href="#{{ item.anchor }}">
+              {{ item.translationKey | translate }}
+          </a>
+          @if(activeNavItemIndex === i) {
+            <div class="hover-indicator">
+              <img src="assets/img/icons/hover_point.svg" alt="indicator">
+            </div>
+          }
         </div>
+      }
+    </div>
+    
+    <a href="#" class="logo">
+      <img 
+        (mouseenter)="setLogoHovered(true)" 
+        (mouseleave)="setLogoHovered(false)" 
+        [src]="isLogoHovered ? 'assets/img/logo/logo_white_hover.png' : 'assets/img/logo/logo_white.png'" 
+        alt="Logo" />
+    </a>
+  } @else {
+    <a href="#" class="logo">
+      <img 
+        (mouseenter)="setLogoHovered(true)" 
+        (mouseleave)="setLogoHovered(false)" 
+        [src]="isLogoHovered ? 'assets/img/logo/logo_white_hover.svg' : 'assets/img/logo/logo_white.svg'" 
+        alt="Logo" />
+    </a>
+    
+    <div class="mobile-menu-container">
+      <img 
+        class="menu-icon" 
+        [src]="!isMobileMenuOpen ? 'assets/img/header/burger_icon.svg' : 'assets/img/header/burger_icon_green.svg'" 
+        alt="Menu" 
+        (click)="toggleMobileMenu()" />
         
-        @for (item of navigationItems; track $index; let i = $index) {
-          <div class="header-item">
-            <a 
-              (mouseenter)="setNavItemActive(i)" 
-              (mouseleave)="clearActiveNavItem()" 
-              href="#{{ item.anchor }}">
-                {{ item.translationKey | translate }}
-            </a>
-            @if(activeNavItemIndex === i) {
-              <div class="hover-indicator">
-                <img src="assets/img/icons/hover_point.svg" alt="indicator">
+      @if(isMobileMenuOpen) {
+        <div class="header-mobile">
+          <div class="mobile-header-content">
+            @for (item of navigationItems; track $index; let i = $index) {
+              <div class="header-item">
+                <a 
+                  (mouseenter)="setNavItemActive(i)" 
+                  (mouseleave)="clearActiveNavItem()" 
+                  (click)="closeMobileMenu()" 
+                  href="#{{ item.anchor }}">
+                    {{ item.translationKey | translate }}
+                </a>
+                @if(activeNavItemIndex === i) {
+                  <div class="hover-indicator mobile">
+                    <img src="assets/img/icons/hover_point.svg" alt="indicator">
+                  </div>
+                }
               </div>
             }
-          </div>
-        }
-      </div>
       
-      <a href="#" class="logo">
-        <img 
-          (mouseenter)="setLogoHovered(true)" 
-          (mouseleave)="setLogoHovered(false)" 
-          [src]="isLogoHovered ? 'assets/img/logo/logo_white_hover.png' : 'assets/img/logo/logo_white.png'" 
-          alt="Logo" />
-      </a>
-    } @else {
-      <!-- Mobile Navigation -->
-      <a href="#" class="logo">
-        <img 
-          (mouseenter)="setLogoHovered(true)" 
-          (mouseleave)="setLogoHovered(false)" 
-          [src]="isLogoHovered ? 'assets/img/logo/logo_white_hover.svg' : 'assets/img/logo/logo_white.svg'" 
-          alt="Logo" />
-      </a>
-      
-      <div class="mobile-menu-container">
-        <img 
-          class="menu-icon" 
-          [src]="!isMobileMenuOpen ? 'assets/img/header/burger_icon.svg' : 'assets/img/header/burger_icon_green.svg'" 
-          alt="Menu" 
-          (click)="toggleMobileMenu()" />
-          
-        @if(isMobileMenuOpen) {
-          <div class="header-mobile">
-            <div class="mobile-header-content">
-              @for (item of navigationItems; track $index; let i = $index) {
-                <div class="header-item">
-                  <a 
-                    (mouseenter)="setNavItemActive(i)" 
-                    (mouseleave)="clearActiveNavItem()" 
-                    (click)="closeMobileMenu()" 
-                    href="#{{ item.anchor }}">
-                      {{ item.translationKey | translate }}
-                  </a>
-                  @if(activeNavItemIndex === i) {
-                    <div class="hover-indicator mobile">
-                      <img src="assets/img/icons/hover_point.svg" alt="indicator">
-                    </div>
-                  }
-                </div>
-              }
+            <div class="language language-mobile">
+              <button 
+                [ngClass]="{ chosen: !isGermanActive }" 
+                (click)="switchLanguage(Language.ENGLISH)">
+                EN
+              </button>
+              <button 
+                [ngClass]="{ chosen: isGermanActive }" 
+                (click)="switchLanguage(Language.GERMAN)">
+                DE
+              </button>
             </div>
           </div>
-        }
-      </div>
-    }
-  </div>
-  
+        </div>
+      }
+    </div>
+  }
+</div>

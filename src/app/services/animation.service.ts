@@ -12,6 +12,7 @@ export class AnimationService {
   }> = new Map();
 
   private animationFrames: Map<string, number> = new Map();
+  marqueeLinkX: any;
   
   constructor(private ngZone: NgZone) {}
   startAnimation(elementId: string, maxXLeft: number, xRight: number, speed: number = 40): void {

@@ -1,11 +1,9 @@
-// Base variables
 $dark-bg: #1C1C1C;
 $turquoise-active: #3dcfb74d;
 $turquoise-inactive: #3dcfb71f;
 $card-radius: 20px;
 $transition-duration: 500ms;
 
-// Main container
 .testimonial-showcase {
   display: flex;
   flex-direction: column;
@@ -17,7 +15,6 @@ $transition-duration: 500ms;
   overflow: hidden;
 }
 
-// Section title
 .section-title {
   font-size: 38px;
   font-weight: 600;
@@ -36,7 +33,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Slider container
 .slider-container {
   position: relative;
   width: 100%;
@@ -65,7 +61,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Quotes-Grafik - fixiert im Container
 .quotes-fixed {
   position: relative;
   left: -320px;
@@ -78,7 +73,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Container für die Karten - vereinfachte Struktur
 .cards-container {
   display: flex;
   justify-content: center;
@@ -87,7 +81,6 @@ $transition-duration: 500ms;
   position: relative;
   height: 320px;
 
-  // Grundpositionen der Karten relativ zum Container-Zentrum
   .card-prev {
     position: absolute;
     left: calc(50% - 1000px);
@@ -131,7 +124,6 @@ $transition-duration: 500ms;
     }
   }
 
-  // Animationsklassen mit eindeutigen Namen
   &.animate-prev {
     .card-prev {
       animation: move-left-to-center $transition-duration ease forwards;
@@ -169,7 +161,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Testimonial card
 .testimonial-card {
   height: 274px;
   max-width: 632px;
@@ -225,7 +216,6 @@ $transition-duration: 500ms;
   }
 }
 
-// ANIMATIONEN mit eindeutigen Namen
 @keyframes move-left-to-center {
   0% {
     left: calc(50% - 1000px);
@@ -370,7 +360,6 @@ $transition-duration: 500ms;
   }
 }
 
-// Navigation controls
 .slider-controls {
   display: flex;
   justify-content: center;
@@ -423,9 +412,6 @@ $transition-duration: 500ms;
     }
   }
 }
-
-// Responsive styles
-
 
 @media screen and (max-width: 1100px) {
   .testimonial-showcase {

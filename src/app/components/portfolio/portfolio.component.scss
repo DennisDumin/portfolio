@@ -272,6 +272,11 @@ button.next-button:hover {
     height: 370px;
 }
 
+.showcase-image[src$=".png"] {
+    object-fit: contain; 
+    box-sizing: border-box;
+  }
+
 @keyframes slideIn {
     from {
         left: 100%;

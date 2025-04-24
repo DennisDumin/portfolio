@@ -254,16 +254,6 @@ main {
     padding-top: 100px;
 }
 
-header .background-header {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
-    display: flex;
-    position: sticky;
-    top: 0;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-  }
-
 .custom-cursor {
     position: fixed;
     width: 1px;

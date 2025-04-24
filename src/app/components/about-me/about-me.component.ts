@@ -7,6 +7,7 @@ import { HeroSectionComponent } from '../hero/hero.component';
 import { SkillsComponent } from "../skills/skills.component";
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { TestimonialsComponent } from "../testimonials/testimonials.component";
+import { ContactComponent } from "../contact/contact.component";
 
 @Component({
   selector: 'app-about-me',
@@ -20,6 +21,7 @@ import { TestimonialsComponent } from "../testimonials/testimonials.component";
     SkillsComponent,
     PortfolioComponent,
     TestimonialsComponent,
+    ContactComponent
 ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
