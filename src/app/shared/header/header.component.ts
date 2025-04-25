@@ -1,6 +1,6 @@
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID, OnInit } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../../app/services/translate.service';
 
 interface NavigationItem {
@@ -20,13 +20,13 @@ enum Language {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   Language = Language;
   
   private readonly MOBILE_BREAKPOINT = 700;
   
   isLogoHovered = false;
-  isGermanActive = true;
+  isGermanActive = false;
   activeNavItemIndex: number | null = null;
   isMobileMenuOpen = false;
   viewportWidth = 0;
@@ -47,19 +47,23 @@ export class HeaderComponent {
   ];
 
   constructor(
-    private translationService: TranslationService, 
-    private translateService: TranslateService,
+    private translationService: TranslationService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     if (isPlatformBrowser(this.platformId)) {
       this.viewportWidth = window.innerWidth;
     }
-    
+  }
+  
+  ngOnInit(): void {
     this.translationService.initializeTranslation();
-  }  
+    this.translationService.switchLanguage(Language.ENGLISH);
+    this.isGermanActive = false;
+  }
 
   switchLanguage(language: Language): void {
-    this.translateService.use(language);
+    this.translationService.switchLanguage(language);
+    
     this.isGermanActive = language === Language.GERMAN;
   }
 

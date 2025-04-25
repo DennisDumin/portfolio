@@ -11,17 +11,14 @@ export class TranslationService {
 
   initializeTranslation(): void {
     this.translate.addLangs(this.langs);
-    this.translate.setDefaultLang('de'); 
-   
+    this.translate.setDefaultLang('en');
     const savedLang = localStorage.getItem('preferredLanguage');
     
     if (savedLang && this.langs.includes(savedLang)) {
-      console.log('Using saved language preference:', savedLang);
       this.translate.use(savedLang);
     } else {
       const browserLang = this.translate.getBrowserLang();
-      const userLanguage = browserLang && this.langs.includes(browserLang) ? browserLang : 'de';
-      console.log('Using detected/default language:', userLanguage);
+      const userLanguage = browserLang && this.langs.includes(browserLang) ? browserLang : 'en';
       this.translate.use(userLanguage);
       localStorage.setItem('preferredLanguage', userLanguage);
     }
@@ -29,10 +26,13 @@ export class TranslationService {
 
   switchLanguage(lang: string): void {
     if (this.langs.includes(lang)) {
-      console.log('Switching language to:', lang);
       this.translate.use(lang);
       localStorage.setItem('preferredLanguage', lang);
     }
+  }
+
+  getCurrentLang(): string {
+    return this.translate.currentLang || localStorage.getItem('preferredLanguage') || 'en';
   }
 
   getTranslation(key: string): string {
