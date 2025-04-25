@@ -229,5 +229,39 @@
         "email": "Per E-Mail:"
       }
     }
+  },
+  "legal_notice": {
+    "contact": {
+      "email": "E-Mail-Adresse:",
+      "phone": "Telefon:"
+    },
+    "data_mining": {
+      "text": "Vorbehalt der Nutzung für Text und Data Mining: Der Inhaber dieser Website gestattet die Nutzung oder das Herunterladen von Inhalten dieser Website durch Dritte für die Entwicklung, das Training oder den Betrieb von künstlicher Intelligenz oder anderen maschinellen Lernsystemen (\"Text und Data Mining\") ausschließlich mit ausdrücklicher schriftlicher Zustimmung des Inhabers. Ohne eine solche Zustimmung ist es untersagt, die Inhalte für Text und Data Mining zu verwenden. Dies gilt auch, wenn auf der Website keine Meta-Angaben vorhanden sind, die entsprechende Verfahren aussperren, und selbst dann, wenn Bots, die den Zweck haben, die Website zu Zwecken des Text und Data Mining auszulesen, nicht ausgesperrt werden."
+    },
+    "genaerator_text": "Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke",
+    "headline": {
+      "contact": "Kontaktmöglichkeiten",
+      "data_mining": "Vorbehalt der Nutzung für Text und Data Mining",
+      "law": "Streitschlichtung und Verbraucherstreitbeilegung",
+      "name": "Diensteanbieter",
+      "picture": "Bildnachweise",
+      "rights": "Haftungs- und Schutzrechtshinweise",
+      "social_media": "Social Media und andere Onlinepräsenzen"
+    },
+    "law": {
+      "text": "Wir sind nicht bereit und nicht verpflichtet an einem Streitbeilegungsverfahren vor einer Verbraucherstreitschlichtungsstelle teilzunehmen."
+    },
+    "picture": {
+      "text_1": "Bildquellen und Urheberrechtshinweise:",
+      "text_2": "Profilbild / Quelle und Urheberrecht:"
+    },
+    "rights": {
+      "text_1": "Urheberrechte und Markenrechte: Alle auf dieser Website dargestellten Inhalte, wie Texte, Fotografien, Grafiken, Marken und Warenzeichen sind durch die jeweiligen Schutzrechte (Urheberrechte, Markenrechte) geschützt. Die Verwendung, Vervielfältigung usw. unterliegen unseren Rechten oder den Rechten der jeweiligen Urheber bzw. Rechteinhaber.",
+      "text_2": "Hinweise auf Rechtsverstöße: Sollten Sie innerhalb unseres Internetauftritts Rechtsverstöße bemerken, bitten wir Sie uns auf diese hinzuweisen. Wir werden rechtswidrige Inhalte und Links nach Kenntnisnahme unverzüglich entfernen."
+    },
+    "social_media": {
+      "text": "Dieses Impressum gilt auch für die folgenden Social-Media-Präsenzen und Onlineprofile:"
+    },
+    "title": "Impressum"
   }
 }

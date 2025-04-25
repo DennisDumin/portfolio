@@ -229,5 +229,39 @@
         "email": "By email:"
       }
     }
+  },
+  "legal_notice": {
+    "contact": {
+      "email": "Email address:",
+      "phone": "Phone:"
+    },
+    "data_mining": {
+      "text": "Reservation of use for text and data mining: The owner of this website permits the use or downloading of content from this website by third parties for the development, training, or operation of artificial intelligence or other machine learning systems (\"text and data mining\") exclusively with the explicit written consent of the owner. Without such consent, it is prohibited to use the content for text and data mining. This also applies if there are no meta-specifications on the website that exclude corresponding procedures, and even if bots that have the purpose of reading the website for text and data mining purposes are not blocked."
+    },
+    "genaerator_text": "Created with free privacy generator by Dr. Thomas Schwenke",
+    "headline": {
+      "contact": "Contact Options",
+      "data_mining": "Reservation of Use for Text and Data Mining",
+      "law": "Dispute Resolution and Consumer Dispute Settlement",
+      "name": "Service Provider",
+      "picture": "Image Credits",
+      "rights": "Liability and Rights Notices",
+      "social_media": "Social Media and Other Online Presences"
+    },
+    "law": {
+      "text": "We are neither willing nor obligated to participate in dispute resolution proceedings before a consumer arbitration board."
+    },
+    "picture": {
+      "text_1": "Image sources and copyright notices:",
+      "text_2": "Profile picture / Source and copyright:"
+    },
+    "rights": {
+      "text_1": "Copyright and trademark rights: All content displayed on this website, such as texts, photographs, graphics, brands, and trademarks, are protected by the respective protective rights (copyrights, trademark rights). The use, reproduction, etc. are subject to our rights or the rights of the respective authors or rights holders.",
+      "text_2": "Notices of legal violations: Should you notice legal violations within our website, we ask you to inform us about them. We will remove illegal content and links immediately upon notification."
+    },
+    "social_media": {
+      "text": "This imprint also applies to the following social media presences and online profiles:"
+    },
+    "title": "Legal Notice"
   }
 }

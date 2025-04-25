@@ -52,8 +52,8 @@ export class PortfolioComponent {
       format: '.svg',
       description: 'project_dialog.description_el_pollo_loco',
       links: [
-        'https://github.com/DennisDumin/el_pollo_loco',
-        'https://dennis-dumin.net/projects/el_pollo_loco/',
+        'https://github.com/DennisDumin/el-pollo-loco',
+        'https://dennis-dumin.net/projects/el-pollo-loco/',
       ],
     },
     {

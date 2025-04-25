@@ -316,6 +316,7 @@ button.next-button:hover {
     section {
         flex-direction: column;
         padding: 16px;
+        align-items: center;
 
         >img {
             width: 100%;
@@ -335,6 +336,10 @@ button.next-button:hover {
 
     .tech-divider {
         font-size: 14px;
+    }
+
+    p {
+        width: 80%;
     }
 }
 
