@@ -47,7 +47,7 @@ $animation-duration: 0.25s;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
     a {
         font-family: var(--font-code) !important;
@@ -63,6 +63,9 @@ $animation-duration: 0.25s;
         }
     }
 
+    .hover-indicator {
+        position: fixed;
+    }
 }
 
 .header-desktop {
@@ -173,21 +176,22 @@ $animation-duration: 0.25s;
 
 .language-mobile {
     width: fit-content;
-  }
-  
-  .header-mobile {
+}
+
+.header-mobile {
     .mobile-header-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-  
-      .header-item {
-        margin-bottom: 16px; 
-      }
-    }}
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        .header-item {
+            margin-bottom: 16px;
+        }
+    }
+}
 
 @media screen and (max-width: 768px) {
     section {

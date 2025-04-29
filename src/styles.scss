@@ -103,6 +103,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -127,7 +128,8 @@ body {
     font-family: var(--font-main);
     overflow-x: hidden;
     background-color: #1C1C1C; 
-    max-width: 1440px;
+    max-width: 2040px;
+    margin: 0 auto
 }
 
 a {
