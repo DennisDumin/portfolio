@@ -65,6 +65,13 @@ section {
   align-items: start;
   gap: 8px;
   flex-direction: column;
+
+  h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%; // Wichtig für korrektes Wrapping
+    hyphens: auto; // Erlaubt Silbentrennung
+  }
 }
 
 .highlighted-text {
@@ -205,6 +212,14 @@ section {
     padding: 64px;
   }
 }
+
+@media screen and (max-width: 1150px) {
+
+  .skills-grid {
+    padding-top: 7%;
+  }
+}
+
 
 @media screen and (max-width: 960px) {
   section {
