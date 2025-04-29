@@ -102,7 +102,6 @@ export class ContactComponent implements OnInit {
 
   submitForm(form: NgForm) {
     if (form.submitted && form.form.valid && this.privacyConsent) {
-      // Prevent duplicate submissions
       if (this.isSubmitting) return;
       this.isSubmitting = true;
       
@@ -118,7 +117,6 @@ export class ContactComponent implements OnInit {
         .post(this.apiConfig.endpoint, this.apiConfig.body(this.formData))
         .subscribe({
           next: (response: any) => {
-            console.log('Form submitted successfully:', response);
             form.resetForm();
             this.privacyConsent = false;
             this.showSuccessModal = true;
@@ -127,11 +125,9 @@ export class ContactComponent implements OnInit {
             }, 8000);
           },
           error: (error) => {
-            console.error('Form submission error:', error);
             alert('There was an error sending your message. Please try again later.');
           },
           complete: () => {
-            console.info('Form submission completed');
             this.isSubmitting = false;
           },
         });
