@@ -1,18 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit, OnDestroy } from '@angular/core';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
 import { TranslationService } from '../../services/translate.service';
-
-interface WorkItem {
-  title: string;
-  technologies: string[];
-  image: string;
-  thumbnail?: string;
-  format: string;
-  description: string;
-  links: string[];
-}
+import { ModalService, WorkItem } from '../../services/modal.service'; 
 
 @Component({
   selector: 'app-portfolio',
@@ -26,11 +17,11 @@ interface WorkItem {
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent {
-  showModal = false;
+export class PortfolioComponent implements OnInit, OnDestroy {
   hoverIndex: number | null = null;
   activeIndex: number = 0;
   windowWidth = window.innerWidth;
+  private nextWorkListener: any;
 
   works: WorkItem[] = [
     {
@@ -66,8 +57,21 @@ export class PortfolioComponent {
     },
   ];
 
-  constructor(translationService: TranslationService) {
+  constructor(
+    translationService: TranslationService,
+    private modalService: ModalService
+  ) {
     translationService.initializeTranslation();
+  }
+
+  ngOnInit() {
+    this.nextWorkListener = () => this.nextWork();
+    document.addEventListener('nextWorkRequested', this.nextWorkListener);
+  }
+
+  ngOnDestroy() {
+    document.body.style.overflow = '';
+    document.removeEventListener('nextWorkRequested', this.nextWorkListener);
   }
 
   handleMouseEnter(index: number) {
@@ -78,40 +82,29 @@ export class PortfolioComponent {
     this.hoverIndex = null;
   }
 
-  @HostListener('wheel', ['$event'])
-  onWheel(event: Event) {
-    if (this.showModal) event.preventDefault();
-  }
-
-  @HostListener('touchmove', ['$event'])
-  onTouchMove(event: TouchEvent) {
-    if (this.showModal) {
-      event.preventDefault();
-    }
-  }
-
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.windowWidth = window.innerWidth;
   }
 
   openModal(index: number) {
-    this.showModal = true;
     this.activeIndex = index;
-    document.body.style.overflow = 'hidden';
-  }
 
-  closeModal() {
-    this.showModal = false;
-    document.body.style.overflow = ''; 
-  }
+    const work = {
+      ...this.works[index],
+      index
+    };
 
-  ngOnDestroy() {
-    document.body.style.overflow = '';
+    this.modalService.openModal(work);
   }
 
   nextWork() {
     this.activeIndex = (this.activeIndex + 1) % this.works.length;
+    const nextWork = {
+      ...this.works[this.activeIndex], 
+      index: this.activeIndex
+    };
+    this.modalService.nextWork(nextWork);
   }
 
   formatTitle(title: string): string {
