@@ -47,6 +47,7 @@ export class PortfolioComponent implements OnInit, OnDestroy {
         'https://dennis-dumin.net/projects/el-pollo-loco/',
       ],
     },
+    /*
     {
       title: 'DA Bubble',
       technologies: ['Angular', 'Firebase', 'TypeScript'],
@@ -55,6 +56,7 @@ export class PortfolioComponent implements OnInit, OnDestroy {
       description: 'project_dialog.description_da_bubble',
       links: [],
     },
+    */
   ];
 
   constructor(
