@@ -57,13 +57,12 @@ export class HeaderComponent implements OnInit {
   
   ngOnInit(): void {
     this.translationService.initializeTranslation();
-    this.translationService.switchLanguage(Language.ENGLISH);
-    this.isGermanActive = false;
+    const currentLang = this.translationService.getCurrentLang();
+    this.isGermanActive = currentLang === Language.GERMAN;
   }
 
   switchLanguage(language: Language): void {
     this.translationService.switchLanguage(language);
-    
     this.isGermanActive = language === Language.GERMAN;
   }
 
