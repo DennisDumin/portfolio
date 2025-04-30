@@ -1,10 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    RouterModule 
+  ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
@@ -30,7 +34,7 @@ export class FooterComponent {
       external: true
     },
     {
-      url: 'legal-notice',
+      url: '/legal-notice',
       label: 'Legal Notice',
       external: false
     },

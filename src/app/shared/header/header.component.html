@@ -19,7 +19,8 @@
           <a 
             (mouseenter)="setNavItemActive(i)" 
             (mouseleave)="clearActiveNavItem()" 
-            href="#{{ item.anchor }}">
+            (click)="navigateToSection(item.anchor)"
+            style="cursor: pointer">
               {{ item.translationKey | translate }}
           </a>
           @if(activeNavItemIndex === i) {
@@ -31,7 +32,7 @@
       }
     </div>
     
-    <a href="#" class="logo">
+    <a (click)="navigateToHome()" class="logo" style="cursor: pointer">
       <img 
         (mouseenter)="setLogoHovered(true)" 
         (mouseleave)="setLogoHovered(false)" 
@@ -39,7 +40,7 @@
         alt="Logo" />
     </a>
   } @else {
-    <a href="#" class="logo">
+    <a (click)="navigateToHome()" class="logo" style="cursor: pointer">
       <img 
         (mouseenter)="setLogoHovered(true)" 
         (mouseleave)="setLogoHovered(false)" 
@@ -62,8 +63,8 @@
                 <a 
                   (mouseenter)="setNavItemActive(i)" 
                   (mouseleave)="clearActiveNavItem()" 
-                  (click)="closeMobileMenu()" 
-                  href="#{{ item.anchor }}">
+                  (click)="navigateToSection(item.anchor)"
+                  style="cursor: pointer">
                     {{ item.translationKey | translate }}
                 </a>
                 @if(activeNavItemIndex === i) {

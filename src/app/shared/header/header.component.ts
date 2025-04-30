@@ -2,6 +2,8 @@ import { Component, HostListener, Inject, PLATFORM_ID, OnInit } from '@angular/c
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../../app/services/translate.service';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 interface NavigationItem {
   anchor: string;
@@ -16,15 +18,13 @@ enum Language {
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   Language = Language;
-  
   private readonly MOBILE_BREAKPOINT = 700;
-  
   isLogoHovered = false;
   isGermanActive = false;
   activeNavItemIndex: number | null = null;
@@ -48,17 +48,48 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private translationService: TranslationService,
+    private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     if (isPlatformBrowser(this.platformId)) {
       this.viewportWidth = window.innerWidth;
     }
   }
-  
+
   ngOnInit(): void {
     this.translationService.initializeTranslation();
     const currentLang = this.translationService.getCurrentLang();
     this.isGermanActive = currentLang === Language.GERMAN;
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
+      const fragment = this.router.getCurrentNavigation()?.extras.fragment;
+      if (fragment) {
+        this.scrollToElement(fragment);
+      }
+    });
+  }
+
+  scrollToElement(anchor: string): void {
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        const element = document.getElementById(anchor);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }
+
+  navigateToHome(): void {
+    this.router.navigate(['/']);
+  }
+
+  navigateToSection(anchor: string): void {
+    if (this.router.url !== '/' && this.router.url !== '/home') {
+      this.router.navigate(['/'], { fragment: anchor });
+    } else {
+      this.scrollToElement(anchor);
+    }
+    this.closeMobileMenu();
   }
 
   switchLanguage(language: Language): void {
@@ -94,7 +125,6 @@ export class HeaderComponent implements OnInit {
   onViewportResize(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.viewportWidth = window.innerWidth;
-      
       if (this.isDesktopView) {
         this.closeMobileMenu();
       }
@@ -107,7 +137,7 @@ export class HeaderComponent implements OnInit {
       event.preventDefault();
     }
   }
-   
+
   @HostListener('touchmove', ['$event'])
   preventTouchWhenMenuOpen(event: TouchEvent): void {
     if (this.isMobileMenuOpen) {
