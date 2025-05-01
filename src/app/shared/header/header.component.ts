@@ -80,7 +80,12 @@ export class HeaderComponent implements OnInit {
   }
 
   navigateToHome(): void {
-    this.router.navigate(['/']);
+    if (this.router.url !== '/' && this.router.url !== '/home') {
+      this.router.navigate(['/'], { fragment: 'hero' });
+    } else {
+      this.scrollToElement('hero');
+    }
+    this.closeMobileMenu();
   }
 
   navigateToSection(anchor: string): void {

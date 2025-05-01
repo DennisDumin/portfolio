@@ -1,88 +1,93 @@
-
-<main class="legal-container">
-    <div class="legal-content">
-      <header>
-        <h1 class="page-title">{{ 'legal_notice.title' | translate }}</h1>
-      </header>
-      
-      <article>
-        <section class="legal-section">
-          <h2 class="section-legal">{{ 'legal_notice.headline.name' | translate }}</h2>
-          <address class="contact-details">
-            <p>Dennis Dumin</p>
-            <p>Tepeweg 11</p>
-            <p>45897 Gelsenkirchen</p>
-            <p>Germany</p>
-          </address>
-        </section>
-  
-        <section class="legal-section">
-          <h2 class="section-legal">{{ 'legal_notice.headline.contact' | translate }}</h2>
-          <div class="contact-links">
-            <p>
-              <span>{{ 'legal_notice.contact.email' | translate }}</span>
-              <a href="mailto:info@dennis-dumin.net" class="contact-link">info&#64;dennis-dumin.net</a>
-            </p>
-            <p>
-              <span>{{ 'legal_notice.contact.phone' | translate }}</span>
-              <a href="tel:+491775016295" class="contact-link">+49 177 5016295</a>
-            </p>
-          </div>
-        </section>
-  
-        <section class="legal-section">
-          <h2 class="section-legal">{{ 'legal_notice.headline.law' | translate }}</h2>
-          <p class="legal-text">{{ 'legal_notice.law.text' | translate }}</p>
-        </section>
-  
-        <section class="legal-section">
-          <h2 class="section-legal">{{ 'legal_notice.headline.social_media' | translate }}</h2>
-          <p class="legal-text">{{ 'legal_notice.social_media.text' | translate }}</p>
-          
-          <ul class="social-profiles">
-            <li *ngFor="let profile of socialProfiles">
-              <a [href]="profile.url" target="_blank" rel="noopener noreferrer" class="social-link">
-                {{ profile.label }}
-              </a>
-            </li>
-          </ul>
-        </section>
-  
-        <section class="legal-section">
-          <h2 class="section-legal">{{ 'legal_notice.headline.data_mining' | translate }}</h2>
-          <p class="legal-text">{{ 'legal_notice.data_mining.text' | translate }}</p>
-        </section>
-  
-        <section class="legal-section">
-          <h2 class="section-legal">{{ 'legal_notice.headline.rights' | translate }}</h2>
-          <div class="legal-text-group">
-            <p>{{ 'legal_notice.rights.text_1' | translate }}</p>
-            <p>{{ 'legal_notice.rights.text_2' | translate }}</p>
-          </div>
-        </section>
-  
-        <section class="legal-section">
-          <h2 class="section-legal">{{ 'legal_notice.headline.picture' | translate }}</h2>
-          <div class="legal-text-group">
-            <p>{{ 'legal_notice.picture.text_1' | translate }}</p>
-            <p>{{ 'legal_notice.picture.text_2' | translate }} Dennis Dumin</p>
-          </div>
-        </section>
-      </article>
-  
-      <footer class="legal-footer">
-        <p class="generator-attribution">
-          <a
-            href="https://datenschutz-generator.de/"
-            title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            class="attribution-link"
-          >
-            {{ 'legal_notice.genaerator_text' | translate }}
-          </a>
-        </p>
-        <p class="copyright">© {{ pageYear }} Dennis Dumin</p>
-      </footer>
-    </div>
-  </main>
+<div class="section-container">
+  <div class="background-element">
+  </div>
+  <div class="content-wrapper">
+    <main class="legal-container">
+      <div class="legal-content">
+        <header>
+          <h1 class="page-title">{{ 'legal_notice.title' | translate }}</h1>
+        </header>
+        
+        <article>
+          <section class="legal-section">
+            <h2 class="section-legal">{{ 'legal_notice.headline.name' | translate }}</h2>
+            <address class="contact-details">
+              <p>Dennis Dumin</p>
+              <p>Tepeweg 11</p>
+              <p>45897 Gelsenkirchen</p>
+              <p>Germany</p>
+            </address>
+          </section>
+    
+          <section class="legal-section">
+            <h2 class="section-legal">{{ 'legal_notice.headline.contact' | translate }}</h2>
+            <div class="contact-links">
+              <p>
+                <span>{{ 'legal_notice.contact.email' | translate }}</span>
+                <a href="mailto:info@dennis-dumin.net" class="contact-link">info&#64;dennis-dumin.net</a>
+              </p>
+              <p>
+                <span>{{ 'legal_notice.contact.phone' | translate }}</span>
+                <a href="tel:+491775016295" class="contact-link">+49 177 5016295</a>
+              </p>
+            </div>
+          </section>
+    
+          <section class="legal-section">
+            <h2 class="section-legal">{{ 'legal_notice.headline.law' | translate }}</h2>
+            <p class="legal-text">{{ 'legal_notice.law.text' | translate }}</p>
+          </section>
+    
+          <section class="legal-section">
+            <h2 class="section-legal">{{ 'legal_notice.headline.social_media' | translate }}</h2>
+            <p class="legal-text">{{ 'legal_notice.social_media.text' | translate }}</p>
+            
+            <ul class="social-profiles">
+              <li *ngFor="let profile of socialProfiles">
+                <a [href]="profile.url" target="_blank" rel="noopener noreferrer" class="social-link">
+                  {{ profile.label }}
+                </a>
+              </li>
+            </ul>
+          </section>
+    
+          <section class="legal-section">
+            <h2 class="section-legal">{{ 'legal_notice.headline.data_mining' | translate }}</h2>
+            <p class="legal-text">{{ 'legal_notice.data_mining.text' | translate }}</p>
+          </section>
+    
+          <section class="legal-section">
+            <h2 class="section-legal">{{ 'legal_notice.headline.rights' | translate }}</h2>
+            <div class="legal-text-group">
+              <p>{{ 'legal_notice.rights.text_1' | translate }}</p>
+              <p>{{ 'legal_notice.rights.text_2' | translate }}</p>
+            </div>
+          </section>
+    
+          <section class="legal-section">
+            <h2 class="section-legal">{{ 'legal_notice.headline.picture' | translate }}</h2>
+            <div class="legal-text-group">
+              <p>{{ 'legal_notice.picture.text_1' | translate }}</p>
+              <p>{{ 'legal_notice.picture.text_2' | translate }} Dennis Dumin</p>
+            </div>
+          </section>
+        </article>
+    
+        <footer class="legal-footer">
+          <p class="generator-attribution">
+            <a
+              href="https://datenschutz-generator.de/"
+              title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              class="attribution-link"
+            >
+              {{ 'legal_notice.genaerator_text' | translate }}
+            </a>
+          </p>
+          <p class="copyright">© {{ pageYear }} Dennis Dumin</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+</div>

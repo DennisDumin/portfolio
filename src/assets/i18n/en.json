@@ -169,10 +169,10 @@
         "text_3": "The cookies we use serve exclusively the following purposes:"
       },
       "list": {
-        "cokies": "Technically necessary cookies",
+        "cookies": "Technically necessary cookies",
         "beacons": "No web beacons or tracking pixels",
         "description": {
-          "cokies": "These cookies are necessary for the operation of the website and cannot be disabled in your system settings. These cookies are usually only set in response to actions you take that correspond to a service request, such as setting your privacy preferences or filling out forms. You can set your browser to block these cookies or to notify you about these cookies, but some parts of the website will then not work.",
+          "cookies": "These cookies are necessary for the operation of the website and cannot be disabled in your system settings. These cookies are usually only set in response to actions you take that correspond to a service request, such as setting your privacy preferences or filling out forms. You can set your browser to block these cookies or to notify you about these cookies, but some parts of the website will then not work.",
           "becons": "We deliberately refrain from using web beacons, tracking pixels and similar technologies that could be used to track user activities across different services and websites. Our website does not contain elements that transmit data to third parties without your knowledge."
         }
       }

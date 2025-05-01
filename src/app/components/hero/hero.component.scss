@@ -9,6 +9,22 @@
     --hero-animation-duration: 0.3s;
 }
 
+.section-container.hero-container {
+    position: relative;
+    min-height: 100vh;
+    top: -80px;
+    overflow: hidden;
+}
+
+.background-element.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, var(--hero-dark), 80%, var(--hero-dark-gradient));
+    z-index: -1;
+}
 .hero {
     min-height: 100vh;
     width: 100%;
@@ -16,10 +32,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top right, var(--hero-dark), 80%, var(--hero-dark-gradient));
     position: relative;
-    top: -80px;
-    overflow: hidden;
     box-sizing: border-box;
     color: var(--hero-text);
 
@@ -206,16 +219,18 @@
     }
 
     &__marquee {
-        width: 100%;
+        width: 100%; 
         position: absolute;
         bottom: 0;
+        left: 0;
         background-color: var(--hero-overlay);
         padding: 12px 32px;
         transform-origin: left bottom;
-        transform: rotate(-3deg);
+        transform: rotate(-3deg) scale(1.05);
         overflow: hidden;
         backdrop-filter: blur(1px);
         z-index: 1;
+        box-sizing: border-box;
 
         mask-image: linear-gradient(to right,
                 transparent 0%,
@@ -236,7 +251,6 @@
 
     &__marquee-content {
         display: inline-flex;
-       // animation: marquee 10s linear infinite;
         white-space: nowrap;
     }
 
@@ -271,16 +285,6 @@
     }
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(-10%);
-    }
-
-    100% {
-        transform: translateX(-80%);
-    }
-}
-
 @media screen and (max-width: 1350px) {
     .hero {
         padding: 18px;
@@ -288,9 +292,11 @@
 }
 
 @media screen and (max-width: 960px) {
-    .hero {
+    .section-container.hero-container {
         top: -81px;
+    }
 
+    .hero {
         &__title {
             font-size: 76px;
         }
@@ -298,13 +304,13 @@
 }
 
 @media screen and (max-width: 770px) {
-    .hero {
+    .section-container.hero-container {
         top: -65px;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .hero {
+    .section-container.hero-container {
         top: -92px;
     }
 }
@@ -335,10 +341,12 @@
 }
 
 @media screen and (max-width: 460px) {
-    .hero {
+    .section-container.hero-container {
         top: -92px;
         padding: 0;
+    }
 
+    .hero {
         &__title {
             font-size: 38px;
         }

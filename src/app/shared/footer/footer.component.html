@@ -1,44 +1,50 @@
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-brand">
-      <a href="#" class="brand-logo">
-        <img
-          (mouseenter)="toggleLogoState(true)"
-          (mouseleave)="toggleLogoState(false)"
-          [src]="logoActive ? 'assets/img/logo/logo_white_hover.png' : 'assets/img/logo/logo_white.png'"
-          alt="Dennis Dumin Logo"
-        />
-      </a>
-      <div class="brand-info">
-        <p class="title">Web Developer</p>
-        <p class="location">Gelsenkirchen Germany</p>
-      </div>
-    </div>
+<div class="section-container">
+  <div class="background-element">
+  </div>
+  <div class="content-wrapper">
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <img
+              (mouseenter)="toggleLogoState(true)"
+              (mouseleave)="toggleLogoState(false)"
+              [src]="logoActive ? 'assets/img/logo/logo_white_hover.png' : 'assets/img/logo/logo_white.png'"
+              alt="Dennis Dumin Logo"
+            />
+          </a>
+          <div class="brand-info">
+            <p class="title">Web Developer</p>
+            <p class="location">Gelsenkirchen Germany</p>
+          </div>
+        </div>
 
-    <div class="footer-links" *ngIf="viewportWidth > 900">
-      <p class="copyright">&copy; Dennis Dumin 2025</p>
-    </div>
+        <div class="footer-links" *ngIf="viewportWidth > 900">
+          <p class="copyright">&copy; Dennis Dumin 2025</p>
+        </div>
 
-    <div class="footer-social">
-      <div *ngFor="let link of socialLinks; let i = index" class="social-link-wrapper">
-        <a 
-          (mouseenter)="activateLink(i)" 
-          (mouseleave)="deactivateLink()" 
-          class="social-link" 
-          [routerLink]="link.external ? null : link.url" 
-          [href]="link.external ? link.url : null" 
-          [attr.target]="link.external ? '_blank' : null"
-        >
-          {{ link.label }}
-        </a>
-        <div class="indicator" *ngIf="activeLink === i">
-          <img src="assets/img/icons/hover_point.svg" alt="" />
+        <div class="footer-social">
+          <div *ngFor="let link of socialLinks; let i = index" class="social-link-wrapper">
+            <a 
+              (mouseenter)="activateLink(i)" 
+              (mouseleave)="deactivateLink()" 
+              class="social-link" 
+              [routerLink]="link.external ? null : link.url" 
+              [href]="link.external ? link.url : null" 
+              [attr.target]="link.external ? '_blank' : null"
+            >
+              {{ link.label }}
+            </a>
+            <div class="indicator" *ngIf="activeLink === i">
+              <img src="assets/img/icons/hover_point.svg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      
+      <div class="mobile-copyright" *ngIf="viewportWidth <= 900">
+        <p class="copyright">&copy; Dennis Dumin 2025</p>
+      </div>
+    </footer>
   </div>
-  
-  <div class="mobile-copyright" *ngIf="viewportWidth <= 900">
-    <p class="copyright">&copy; Dennis Dumin 2025</p>
-  </div>
-</footer>
+</div>

@@ -169,10 +169,10 @@
         "text_3": "Die von uns eingesetzten Cookies dienen ausschließlich folgenden Zwecken:"
       },
       "list": {
-        "cokies": "Technisch notwendige Cookies",
+        "cookies": "Technisch notwendige Cookies",
         "beacons": "Keine Web Beacons oder Tracking-Pixel",
         "description": {
-          "cokies": "Diese Cookies sind für den Betrieb der Webseite erforderlich und können in Ihren Systemeinstellungen nicht deaktiviert werden. In der Regel werden diese Cookies nur als Reaktion auf von Ihnen getätigte Aktionen gesetzt, die einer Dienstanforderung entsprechen, wie etwa dem Festlegen Ihrer Datenschutzeinstellungen oder dem Ausfüllen von Formularen. Sie können Ihren Browser so einstellen, dass diese Cookies blockiert oder Sie über diese Cookies benachrichtigt werden, aber einige Teile der Webseite werden dann nicht funktionieren.",
+          "cookies": "Diese Cookies sind für den Betrieb der Webseite erforderlich und können in Ihren Systemeinstellungen nicht deaktiviert werden. In der Regel werden diese Cookies nur als Reaktion auf von Ihnen getätigte Aktionen gesetzt, die einer Dienstanforderung entsprechen, wie etwa dem Festlegen Ihrer Datenschutzeinstellungen oder dem Ausfüllen von Formularen. Sie können Ihren Browser so einstellen, dass diese Cookies blockiert oder Sie über diese Cookies benachrichtigt werden, aber einige Teile der Webseite werden dann nicht funktionieren.",
           "becons": "Wir verzichten bewusst auf den Einsatz von Web Beacons, Tracking-Pixeln und ähnlichen Technologien, die dazu dienen könnten, Nutzeraktivitäten über verschiedene Dienste und Webseiten hinweg zu verfolgen. Unsere Webseite enthält keine Elemente, die ohne Ihr Wissen Daten an Dritte übermitteln."
         }
       }

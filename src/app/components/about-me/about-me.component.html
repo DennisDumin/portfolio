@@ -1,23 +1,30 @@
-<app-hero-section></app-hero-section>
-<section id="aboutMe" class="max-width">
-  <div appScrollAnimate="fade-in" class="profile-picture">
-    <img class="profile-picture_background" src="assets/img/about-me/background.svg" alt=""/>
-    <img class="profile-picture_profil" src="assets/img/about-me/profile.jpeg" alt="Profilbild" />
+<app-hero-section id="hero"></app-hero-section>
+<div class="section-container" id="aboutMe">
+  <div class="background-element">
   </div>
-  <div appScrollAnimate="slide-in-right" class="content-am">
-    <div>
-      <h4>{{ "about_me.title" | translate }}</h4>
-      <div class="content-container">
-        <h3>{{ "about_me.headline" | translate }}</h3>
-        <span>{{ "about_me.text" | translate }} </span>
-        <div class="description" *ngFor="let description of descriptions">
-          <img src="assets/img/about-me/{{ description.image }}.png" alt="" />
-          <span>{{ description.text | translate }}</span>
+  <div class="content-wrapper">
+    <section class="max-width">
+      <div appScrollAnimate="fade-in" class="profile-picture">
+        <img class="profile-picture_background" src="assets/img/about-me/background.svg" alt=""/>
+        <img class="profile-picture_profil" src="assets/img/about-me/profile.jpeg" alt="Profilbild" />
+      </div>
+      <div appScrollAnimate="slide-in-right" class="content-am">
+        <div>
+          <h4>{{ "about_me.title" | translate }}</h4>
+          <div class="content-container">
+            <h3>{{ "about_me.headline" | translate }}</h3>
+            <span>{{ "about_me.text" | translate }} </span>
+            <div class="description" *ngFor="let description of descriptions">
+              <img src="assets/img/about-me/{{ description.image }}.png" alt="" />
+              <span>{{ description.text | translate }}</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
-</section>
+</div>
+
 <app-skills id="skills"></app-skills>
 <app-portfolio id="projects"></app-portfolio>
 <app-testimonials></app-testimonials>
