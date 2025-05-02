@@ -24,7 +24,7 @@ import { ProjectModalComponent } from '../portfolio/portfolio.modal.component';
     TestimonialsComponent,
     ContactComponent,
     ProjectModalComponent
-],
+  ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
@@ -44,7 +44,7 @@ export class AboutMeComponent implements OnInit {
     },
   ];
 
-  constructor(private translationService: TranslationService) {}
+  constructor(private translationService: TranslationService) { }
 
   ngOnInit(): void {
     this.translationService.initializeTranslation();

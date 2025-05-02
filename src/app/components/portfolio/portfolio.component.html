@@ -1,7 +1,7 @@
 <div class="section-container" id="projects">
   <div class="background-element">
   </div>
-  
+
   <div class="content-wrapper">
     <section appScrollAnimate="fade-in">
       <h4>{{ 'projects.title' | translate }}</h4>
@@ -17,18 +17,19 @@
 
           <div class="tech-divider">
             @for (tech of work.technologies; track tech; let i = $index) {
-              <div>{{ tech }}</div>
-              @if(i <= work.technologies.length - 2) {
-                <div class="divider-line"></div>
-              }
-            }
+            <div>{{ tech }}</div>
+            @if(i <= work.technologies.length - 2) { <div class="divider-line">
           </div>
-        </button>
-        <div class="thumbnail-preview" *ngIf="hoverIndex === index && windowWidth > 960">
-          <img class="preview-background" src="assets/img/portfolio/background.png" alt="" />
-          <img class="preview-image" src="assets/img/portfolio/{{ work.thumbnail || work.image }}{{work.format}}" alt="" />
-        </div>
+          }
+          }
       </div>
-    </section>
+      </button>
+      <div class="thumbnail-preview" *ngIf="hoverIndex === index && windowWidth > 960">
+        <img class="preview-background" src="assets/img/portfolio/background.png" alt="" />
+        <img class="preview-image" src="assets/img/portfolio/{{ work.thumbnail || work.image }}{{work.format}}"
+          alt="" />
+      </div>
   </div>
+  </section>
+</div>
 </div>

@@ -15,58 +15,33 @@
     </p>
   </div>
 
-  <form appScrollAnimate="animated" class="slide-in-right" (ngSubmit)="submitForm(contactForm)"
-    #contactForm="ngForm">
+  <form appScrollAnimate="animated" class="slide-in-right" (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
     <div class="form-field">
       <label for="userName">{{ "contact.name_field" | translate }}</label>
-      <input 
-        #userName="ngModel" 
-        id="userName" 
-        name="userName" 
-        type="text"
-        autocomplete="name"
-        placeholder="{{ 'contact.name_placeholder' | translate }}" 
-        [(ngModel)]="formData.userName" 
-        required
-        minlength="3" 
-        pattern="^[A-Za-zÄÖÜäöüß\s\-]+$" />
+      <input #userName="ngModel" id="userName" name="userName" type="text" autocomplete="name"
+        placeholder="{{ 'contact.name_placeholder' | translate }}" [(ngModel)]="formData.userName" required
+        minlength="3" pattern="^[A-Za-zÄÖÜäöüß\s\-]+$" />
       <div class="error-message" [hidden]="userName.valid || (!userName.touched && !contactForm.submitted)">
         {{ "contact.name_missing" | translate }}
       </div>
     </div>
-    
+
     <div class="form-field">
       <label for="userEmail">{{ "contact.email_address" | translate }}</label>
-      <input 
-        #userEmail="ngModel" 
-        id="userEmail" 
-        name="userEmail" 
-        type="email"
-        autocomplete="email"
-        placeholder="{{ 'contact.email_placeholder' | translate }}" 
-        [(ngModel)]="formData.userEmail"
-        required 
+      <input #userEmail="ngModel" id="userEmail" name="userEmail" type="email" autocomplete="email"
+        placeholder="{{ 'contact.email_placeholder' | translate }}" [(ngModel)]="formData.userEmail" required
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
       <div class="error-message" [hidden]="userEmail.valid || (!userEmail.touched && !contactForm.submitted)">
         <span *ngIf="userEmail.hasError('required')">{{ "contact.email_missing" | translate }}</span>
         <span *ngIf="userEmail.hasError('pattern')">{{ "contact.email_format" | translate }}</span>
       </div>
     </div>
-    
+
     <div class="form-field">
       <label for="userMessage">{{ "contact.message_field" | translate }}</label>
-      <textarea 
-        #userMessage="ngModel" 
-        id="userMessage" 
-        name="userMessage" 
-        autocomplete="off"
-        placeholder="{{ 'contact.message_placeholder' | translate }}" 
-        [(ngModel)]="formData.userMessage" 
-        required 
-        matInput 
-        cdkTextareaAutosize 
-        #autosize="cdkTextareaAutosize"
-        cdkAutosizeMinRows="1" 
+      <textarea #userMessage="ngModel" id="userMessage" name="userMessage" autocomplete="off"
+        placeholder="{{ 'contact.message_placeholder' | translate }}" [(ngModel)]="formData.userMessage" required
+        matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
         cdkAutosizeMaxRows="5"></textarea>
       <div class="error-message" [hidden]="userMessage.valid || (!userMessage.touched && !contactForm.submitted)">
         {{ "contact.message_missing" | translate }}
@@ -74,10 +49,7 @@
     </div>
 
     <div class="privacy-check">
-      <div 
-        class="checkbox-button" 
-        (click)="togglePrivacyConsent()"
-        [class.checked]="privacyConsent">
+      <div class="checkbox-button" (click)="togglePrivacyConsent()" [class.checked]="privacyConsent">
         <img [src]="privacyImage" alt="Privacy checkbox" />
       </div>
       <label for="privacyConsent">
@@ -86,13 +58,12 @@
         {{ "contact.privacy_end" | translate }}
       </label>
     </div>
-    
+
     <div class="error-message privacy-error" [hidden]="privacyConsent || !contactForm.submitted">
       {{ "contact.privacy_missing" | translate }}
     </div>
-    
-    <button type="submit" class="submit-button" 
-      (mouseenter)="startButtonAnimation(submitButtonText, 200, -150)"
+
+    <button type="submit" class="submit-button" (mouseenter)="startButtonAnimation(submitButtonText, 200, -150)"
       (mouseleave)="stopButtonAnimation(submitButtonText)">
       <span [ngStyle]="{ 'right.px': getButtonPosition(submitButtonText) }">
         {{ submitButtonText | translate }}
