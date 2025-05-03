@@ -1,79 +1,77 @@
 <div class="section-container hero-container">
-    <div class="background-element hero-background">
-    </div>
-    <div class="content-wrapper">
-      <section class="hero">
-        <div class="hero__content">
-          <h2 class="hero__subtitle">Frontend Developer</h2>
-          <h1 class="hero__title">Dennis Dumin</h1>
-  
-          <div class="hero__nav">
-            <a *ngFor="let link of navigationLinks; let i = index" 
-               href="#{{ link.anchor }}" 
-               class="hero__nav-link"
-               (mouseenter)="animateLink(link.id, 100, -100)" 
-               (mouseleave)="stopLinkAnimation(link.id)">
-                <div class="link-text-wrapper">
-                  <span class="link-text" [style.transform]="'translateX(' + getLinkPosition(link.id) + 'px)'">
-                    {{ link.labelKey | translate }}
-                  </span>
-                </div>
-            </a>
-          </div>
+  <div class="background-element hero-background">
+  </div>
+  <div class="content-wrapper">
+    <section class="hero">
+      <div class="hero__content">
+        <h2 class="hero__subtitle">Frontend Developer</h2>
+        <h1 class="hero__title">Dennis Dumin</h1>
+
+        <div class="hero__nav">
+          <a *ngFor="let link of navigationLinks; let i = index" href="#{{ link.anchor }}" class="hero__nav-link"
+            (mouseenter)="animateLink(link.id, 100, -100)" (mouseleave)="stopLinkAnimation(link.id)">
+            <div class="link-text-wrapper">
+              <span class="link-text" [style.transform]="'translateX(' + getLinkPosition(link.id) + 'px)'">
+                {{ link.labelKey | translate }}
+              </span>
+            </div>
+          </a>
         </div>
-  
-        <div class="hero__footer">
-          <div class="hero__navigation">
-            <a class="hero__next-button" href="#aboutMe">
-              <img src="assets/img/icons/arrow_bottom.svg" alt="Scroll down" />
-            </a>
-            <div class="hero__divider hero__divider--accent"></div>
-          </div>
-  
-          <div class="hero__social">
-            <a class="hero__contact" [class.hero__contact--active]="isEmailHovered" (mouseenter)="isEmailHovered = true"
-                (mouseleave)="isEmailHovered = false" href="mailto:contact@dennis-dumin.net">
-                <ng-container *ngIf="screenWidth > 1100; else mobileEmail">
-                  <span class="hero__email">contact&#64;dennis-dumin.net</span>
-                </ng-container>
-                <ng-template #mobileEmail>
-                  <img [src]="isEmailHovered ? 'assets/img/social-icons/mail_hover.svg' : 'assets/img/social-icons/mail.svg'"
-                      alt="Email" />
-                </ng-template>
-                <div class="hero__indicator" *ngIf="isEmailHovered">
-                  <img src="assets/img/icons/hover_point.svg" alt="" />
-                </div>
-            </a>
-  
-            <a *ngFor="let social of socialLinks; let i = index" class="hero__social-link"
-                [class.hero__social-link--active]="hoveredSocialIndex === i" (mouseenter)="hoveredSocialIndex = i"
-                (mouseleave)="hoveredSocialIndex = null" [href]="social.url" [attr.aria-label]="social.name"
-                target="_blank" rel="noopener noreferrer">
-                <img [src]="hoveredSocialIndex === i 
+      </div>
+
+      <div class="hero__footer">
+        <div class="hero__navigation">
+          <a class="hero__next-button" href="#aboutMe">
+            <img src="assets/img/icons/arrow_bottom.svg" alt="Scroll down" />
+          </a>
+          <div class="hero__divider hero__divider--accent"></div>
+        </div>
+
+        <div class="hero__social">
+          <a class="hero__contact" [class.hero__contact--active]="isEmailHovered" (mouseenter)="isEmailHovered = true"
+            (mouseleave)="isEmailHovered = false" href="mailto:contact@dennis-dumin.net">
+            <ng-container *ngIf="screenWidth > 1100; else mobileEmail">
+              <span class="hero__email">contact&#64;dennis-dumin.net</span>
+            </ng-container>
+            <ng-template #mobileEmail>
+              <img
+                [src]="isEmailHovered ? 'assets/img/social-icons/mail_hover.svg' : 'assets/img/social-icons/mail.svg'"
+                alt="Email" />
+            </ng-template>
+            <div class="hero__indicator" *ngIf="isEmailHovered">
+              <img src="assets/img/icons/hover_point.svg" alt="" />
+            </div>
+          </a>
+
+          <a *ngFor="let social of socialLinks; let i = index" class="hero__social-link"
+            [class.hero__social-link--active]="hoveredSocialIndex === i" (mouseenter)="hoveredSocialIndex = i"
+            (mouseleave)="hoveredSocialIndex = null" [href]="social.url" [attr.aria-label]="social.name" target="_blank"
+            rel="noopener noreferrer">
+            <img [src]="hoveredSocialIndex === i 
                ? 'assets/img/social-icons/' + social.icon + '_hover.svg' 
                : 'assets/img/social-icons/' + social.icon + '.svg'" [alt]="social.name" />
-                <div class="hero__indicator" *ngIf="hoveredSocialIndex === i">
-                  <img src="assets/img/icons/hover_point.svg" alt="" />
-                </div>
-            </a>
-  
-            <div class="hero__divider"></div>
-          </div>
+            <div class="hero__indicator" *ngIf="hoveredSocialIndex === i">
+              <img src="assets/img/icons/hover_point.svg" alt="" />
+            </div>
+          </a>
+
+          <div class="hero__divider"></div>
         </div>
-        <div class="hero__marquee" id="hero-marquee">
-          <div class="hero__marquee-container">
-            <div class="hero__marquee-content">
-              <div *ngFor="let item of marqueeItems" class="hero__marquee-item">
-                <span class="hero__marquee-text">{{ item.textKey | translate }}</span>
-                <img src="assets/img/icons/hover_point.svg" alt="" class="hero__marquee-icon" />
-              </div>
-              <div *ngFor="let item of marqueeItems" class="hero__marquee-item">
-                <span class="hero__marquee-text">{{ item.textKey | translate }}</span>
-                <img src="assets/img/icons/hover_point.svg" alt="" class="hero__marquee-icon" />
-              </div>
+      </div>
+      <div class="hero__marquee" id="hero-marquee">
+        <div class="hero__marquee-container">
+          <div class="hero__marquee-content">
+            <div *ngFor="let item of marqueeItems" class="hero__marquee-item">
+              <span class="hero__marquee-text">{{ item.textKey | translate }}</span>
+              <img src="assets/img/icons/hover_point.svg" alt="" class="hero__marquee-icon" />
+            </div>
+            <div *ngFor="let item of marqueeItems" class="hero__marquee-item">
+              <span class="hero__marquee-text">{{ item.textKey | translate }}</span>
+              <img src="assets/img/icons/hover_point.svg" alt="" class="hero__marquee-icon" />
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
+</div>
