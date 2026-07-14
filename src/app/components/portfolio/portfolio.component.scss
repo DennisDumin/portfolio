@@ -181,7 +181,7 @@ p {
     }
 
     p {
-        width: 80%;
+        width: 100%;
     }
 
     .project-group-heading {
@@ -191,6 +191,47 @@ p {
 
         &:not(:first-of-type) {
             margin-top: 48px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        padding: 16px;
+    }
+
+    p {
+        max-width: none;
+        padding: 16px 0 24px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .project-group-heading {
+        margin-top: 24px;
+        font-size: 19px;
+
+        &:not(:first-of-type) {
+            margin-top: 40px;
+        }
+    }
+
+    .portfolio-item > button {
+        padding: 20px 0;
+    }
+
+    .tech-divider {
+        gap: 6px;
+    }
+
+    .technology-name {
+        padding: 4px 8px;
+        border: 1px solid rgba(61, 207, 182, 0.45);
+        border-radius: 999px;
+        font-size: 13px;
+
+        &::after {
+            display: none;
         }
     }
 }
