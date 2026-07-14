@@ -8,28 +8,37 @@
       <h3>{{ 'projects.headline' | translate }}</h3>
       <p>{{ 'projects.text' | translate }}</p>
 
-      <div class="portfolio-item" *ngFor="let work of works; let index = index">
-        <button (mouseenter)="handleMouseEnter(index)" (mouseleave)="handleMouseLeave()" (click)="openModal(index)">
-          <span>
-            {{ work.title }}
-            <img *ngIf="hoverIndex === index" src="assets/img/portfolio/arrow-outward.png" alt="" />
-          </span>
+      @for (work of works; track work.title; let index = $index) {
+        @if (work.groupLabel) {
+          <h5 class="project-group-heading">{{ work.groupLabel | translate }}</h5>
+        }
 
-          <div class="tech-divider">
-            @for (tech of work.technologies; track tech; let i = $index) {
-            <div>{{ tech }}</div>
-            @if(i <= work.technologies.length - 2) { <div class="divider-line">
+        <div class="portfolio-item">
+          <button (mouseenter)="handleMouseEnter(index)" (mouseleave)="handleMouseLeave()" (click)="openModal(index)"
+            [attr.aria-label]="('projects.open_project' | translate) + ': ' + work.title">
+            <span class="project-title">
+              <span>
+                {{ work.title }}
+              </span>
+              <img *ngIf="hoverIndex === index" src="assets/img/portfolio/arrow-outward.png" alt="" />
+              <small>{{ work.role | translate }}</small>
+            </span>
+
+            <div class="tech-divider">
+              @for (tech of work.technologies; track tech) {
+                <div class="technology-name">{{ tech }}</div>
+              }
+            </div>
+          </button>
+          <div class="thumbnail-preview" *ngIf="hoverIndex === index && windowWidth > 960">
+            <img class="preview-background" src="assets/img/portfolio/background.png" alt="" />
+            <img class="preview-image" src="assets/img/portfolio/{{ work.thumbnail || work.image }}{{work.format}}"
+              [alt]="work.title + ' - ' + ('projects.preview' | translate)" />
           </div>
-          }
-          }
-      </div>
-      </button>
-      <div class="thumbnail-preview" *ngIf="hoverIndex === index && windowWidth > 960">
-        <img class="preview-background" src="assets/img/portfolio/background.png" alt="" />
-        <img class="preview-image" src="assets/img/portfolio/{{ work.thumbnail || work.image }}{{work.format}}"
-          alt="" />
-      </div>
+        </div>
+      }
+    </section>
   </div>
-  </section>
 </div>
-</div>
+
+<app-project-modal></app-project-modal>

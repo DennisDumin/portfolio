@@ -145,7 +145,11 @@ a:hover {
 button {
     cursor: pointer;
     border: none;
-    outline: none;
+}
+
+:where(a, button, input, textarea):focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 h1,
@@ -391,4 +395,19 @@ main {
 
 .align-center {
     align-items: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }

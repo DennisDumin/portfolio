@@ -11,7 +11,7 @@
 section {
   display: flex;
   gap: 30px;
-  padding: 112px;
+  padding: 112px 112px 64px;
   box-sizing: border-box;
   align-items: flex-start;
   overflow: hidden;
@@ -54,9 +54,11 @@ section {
   }
 
   >img {
-    width: 65px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
     transition: transform 0.2s ease;
-    cursor: pointer;
 
     &:hover {
       transform: scale(1.1);
@@ -90,65 +92,6 @@ section {
 
 .accent-color {
   color: #3dcfb6;
-}
-
-.skills-popup {
-  position: absolute;
-  transform: translateY(-100%);
-  left: 36%;
-  background-color: #ffffff;
-  min-width: 200px;
-  padding: 16px;
-  text-align: center;
-  box-sizing: border-box;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-
-  span {
-    box-sizing: border-box;
-    color: #3dcfb6;
-    font-weight: 500;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 20px;
-    width: 0;
-    border-top: 10px solid white;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-  }
-}
-
-.skills-popup-grid {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.interest-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-
-  .interest-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 40px;
-      height: 40px;
-    }
-  }
 }
 
 .contact-link {
@@ -218,7 +161,7 @@ section {
 
 @media screen and (max-width: 1350px) {
   section {
-    padding: 64px;
+    padding: 64px 64px 40px;
   }
 }
 
@@ -243,12 +186,6 @@ section {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .skills-popup {
-    left: 24%;
-  }
-}
-
 @media screen and (max-width: 425px) {
   section {
     margin-bottom: 32px;
@@ -269,7 +206,8 @@ section {
 
   .skill-item {
     width: 33%;
-    height: 60px;
+    height: auto;
+    min-height: 80px;
     box-sizing: content-box;
 
     >span {
@@ -278,15 +216,7 @@ section {
 
     >img {
       width: 40px;
-    }
-  }
-
-  .skills-popup {
-    min-width: 150px;
-    padding: 12px;
-
-    >span {
-      font-size: 14px;
+      height: 40px;
     }
   }
 }

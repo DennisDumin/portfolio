@@ -1,8 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +12,13 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  screenWidth = window.innerWidth
+  screenWidth = 0;
   title = 'portfolio';
   mouseX: number = 0;
   mouseY: number = 0;
 
-  constructor() {
-    if (typeof window !== 'undefined') {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
       this.screenWidth = window.innerWidth;
     }
   }
@@ -31,6 +31,8 @@ export class AppComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.screenWidth = window.innerWidth;
+    if (isPlatformBrowser(this.platformId)) {
+      this.screenWidth = window.innerWidth;
+    }
   }
 }

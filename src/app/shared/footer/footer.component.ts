@@ -1,13 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule 
+    RouterModule,
+    TranslateModule
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
@@ -15,12 +18,18 @@ import { RouterModule } from '@angular/router';
 export class FooterComponent {
   logoActive = false;
   activeLink: number | null = null;
-  viewportWidth = window.innerWidth;
+  viewportWidth = 0;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.viewportWidth = window.innerWidth;
+    }
+  }
   
   socialLinks = [
     {
       url: 'https://github.com/DennisDumin',
-      label: 'Github',
+      label: 'GitHub',
       external: true
     },
     {
@@ -30,19 +39,21 @@ export class FooterComponent {
     },
     {
       url: 'mailto:contact@dennis-dumin.net',
-      label: 'Email',
+      label: 'footer.email',
       external: true
     },
     {
       url: '/legal-notice',
-      label: 'Legal Notice',
+      label: 'footer.legal_notice',
       external: false
     },
   ];
 
   @HostListener('window:resize')
   onWindowResize() {
-    this.viewportWidth = window.innerWidth;
+    if (isPlatformBrowser(this.platformId)) {
+      this.viewportWidth = window.innerWidth;
+    }
   }
 
   activateLink(index: number) {

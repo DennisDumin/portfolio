@@ -149,4 +149,9 @@ export class HeaderComponent implements OnInit {
       event.preventDefault();
     }
   }
+
+  @HostListener('document:keydown.escape')
+  closeMenuWithEscape(): void {
+    this.closeMobileMenu();
+  }
 }

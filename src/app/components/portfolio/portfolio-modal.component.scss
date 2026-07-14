@@ -51,17 +51,42 @@
     width: 50%;
 }
 
-h6 {
-    font-size: 128px;
+.project-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.project-number {
+    font-family: "Fira Code", monospace;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
     color: #3dcfb6;
-    margin: 0;
+    opacity: 0.78;
 }
 
 .content-title {
     font-family: "Fira Code", monospace;
     font-weight: 700;
-    font-size: 64px;
-    padding: 8px 0;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+    color: #fff;
+    margin: 0;
+    padding: 12px 0 18px;
+}
+
+.project-role {
+    display: inline-flex;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid rgba(61, 207, 182, 0.65);
+    border-radius: 999px;
+    color: #3dcfb6;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
 }
 
 .content-headline {
@@ -74,6 +99,24 @@ h6 {
 
 .content-description {
     padding: 8px 0;
+    line-height: 1.5;
+}
+
+.contribution-note {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 12px 0 16px;
+    padding: 14px 16px;
+    border-left: 3px solid #3dcfb6;
+    background: rgba(61, 207, 182, 0.08);
+    line-height: 1.4;
+
+    >strong {
+        color: #3dcfb6;
+        font-family: "Fira Code", monospace;
+        font-size: 14px;
+    }
 }
 
 .tech-stack {
@@ -86,10 +129,15 @@ h6 {
     display: flex;
     align-items: center;
     gap: 4px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
 
     >span {
         width: max-content;
-        padding: 8px 0;
+        padding: 0;
+        font-size: 14px;
     }
 }
 
@@ -214,18 +262,18 @@ h6 {
 }
 
 @media screen and (max-width: 1300px) {
-    h6 {
-        font-size: 96px;
+    .project-number {
+        font-size: 38px;
     }
 
     .content-title {
-        font-size: 52px;
+        font-size: 54px;
     }
 }
 
 @media screen and (max-width: 900px) {
     .modal-content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 32px 16px 60px 16px;
         gap: 16px;
         width: 95%;
@@ -233,7 +281,7 @@ h6 {
         max-height: 90vh;
         padding-top: 0;
         padding-right: 0;
-        overflow: hidden;
+        overflow-y: auto;
     }
 
     .work-details {
@@ -244,20 +292,21 @@ h6 {
 
     .work-image {
         width: 100%;
-        padding-top: 40px;
+        padding: 0 8px 8px;
         position: relative;
+        box-sizing: border-box;
 
         >div {
             max-width: 100%;
         }
     }
 
-    h6 {
-        font-size: 64px;
+    .project-number {
+        font-size: 34px;
     }
 
     .content-title {
-        font-size: 40px;
+        font-size: 44px;
     }
 
     .showcase-image {
@@ -271,13 +320,12 @@ h6 {
     }
 
     .next-button {
-        position: fixed;
-        bottom: 104px;
+        position: static;
+        margin-top: 16px;
         background-color: rgba(28, 28, 28, 0.8);
         padding: 10px 16px;
         border-radius: 30px;
         border: 1px solid #3DCFB6;
-        z-index: 10000;
     }
 }
 
@@ -296,12 +344,12 @@ h6 {
         overflow-y: auto;
     }
 
-    h6 {
-        font-size: 48px;
+    .project-number {
+        font-size: 30px;
     }
 
     .content-title {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .content-headline {
@@ -327,11 +375,6 @@ h6 {
         padding-top: 16px;
     }
 
-    .next-button {
-        bottom: 20px;
-        right: 20px;
-    }
-
     .work-details {
         justify-content: flex-start;
     }
@@ -354,8 +397,8 @@ h6 {
         padding-top: 40px;
     }
 
-    h6 {
-        font-size: 36px;
+    .project-number {
+        font-size: 28px;
     }
 
     .content-title {
@@ -370,6 +413,11 @@ h6 {
     .content-description {
         max-height: 100px;
         overflow-y: auto;
+    }
+
+    .contribution-note {
+        margin: 6px 0 10px;
+        padding: 10px 12px;
     }
 
     .showcase-image {

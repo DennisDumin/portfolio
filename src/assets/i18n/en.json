@@ -1,5 +1,7 @@
 {
   "header": {
+    "home": "Home",
+    "menu": "Open or close menu",
     "about_me": "About me",
     "skills": "Skills",
     "projects": "Projects"
@@ -10,12 +12,13 @@
     "imprint": "Imprint"
   },
   "hero": {
+    "role": "Junior Full-Stack Developer",
     "nav": {
       "projects": "My Projects",
       "contact": "Contact me"
     },
     "marquee": {
-      "frontend": "Frontend Developer",
+      "frontend": "Junior Full-Stack Developer",
       "city": "Based in Gelsenkirchen",
       "remote": "Available for remote work",
       "pixel": "Pixel-perfect & performance-optimized"
@@ -24,7 +27,7 @@
   "about_me": {
     "title": "Who I Am",
     "headline": "About me",
-    "text": "Hi, I’m a german speaking Frontend Developer based in Gelsenkirchen. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+    "text": "Hi, I’m a German-speaking Junior Full-Stack Developer based in Gelsenkirchen. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
     "description_1": "Flexible in terms of working environments, I can work effectively both on-site in Gelsenkirchen and remotely.",
     "description_2": "In my profession, programming isn't just about writing code. It's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.",
     "description_3": "I am open-minded and always looking for personal challenges to further improve my knowledge and skills."
@@ -32,29 +35,55 @@
   "skill": {
     "title": "Technologies",
     "headline": "Skill Set",
-    "interests": "I have a special interest in learning",
-    "text_need_skill": "You need",
-    "text_need_skill_color": "another skill?",
-    "text": "My journey has involved working on diverse projects, employing a range  of frontend technologies and concepts. I am open to embracing new  technologies and methodologies to Continously enhance my skills and  stay ahead in the ever-evolving landscape of web development.",
-    "text_contact_me": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
-    "link": "Lets' Talk"
+    "interests": "Technologies in focus",
+    "text_need_skill": "Frontend and backend ",
+    "text_need_skill_color": "working together.",
+    "text": "My stack combines Angular and TypeScript in the frontend with Python, Django and REST APIs in the backend, supported by relational databases, Redis, Docker and a structured Git workflow.",
+    "text_contact_me": "I am looking for a junior role where I can contribute this foundation in production and continue growing with an experienced team.",
+    "link": "Let’s talk"
   },
   "projects": {
     "title": "Portfolio",
-    "headline": "My Work",
-    "text": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    "headline": "Selected Projects",
+    "text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "backend_group": "Backend Projects",
+    "frontend_group": "Additional Frontend Projects",
+    "open_project": "Open project details",
+    "preview": "project preview"
   },
   "project_dialog": {
     "question": "What is this project about?",
     "next_project": "Next Project",
+    "role_backend": "Backend · REST API",
+    "role_frontend": "Frontend · Individual project",
+    "role_frontend_team": "Frontend · Team project",
+    "contribution_label": "My contribution",
+    "contribution_videoflix": "I implemented the Django/DRF backend with account activation, password reset, JWT authentication through HTTP-only cookies and protected HLS streaming. Asynchronous video conversion uses ffmpeg, Redis and RQ, with PostgreSQL and Docker providing the infrastructure. The frontend was supplied by Developer Akademie. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_quizly": "I implemented the REST API and processing pipeline from a YouTube URL through yt-dlp and Whisper to quiz generation with Gemini. This includes JWT cookies, user-specific CRUD, ownership checks and automated API tests. The frontend was supplied by Developer Akademie. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_coderr": "I implemented the marketplace API with customer and business roles, profiles, three-tier offers, orders and reviews. Filtering, pagination and object-level permissions are the main technical focus. The frontend was supplied by Developer Akademie. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_kanmind": "I implemented the API for boards, tasks and comments, including token authentication, member roles and object-level permissions. I optimised database access with select_related and prefetch_related. The frontend was supplied by Developer Akademie. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_join": "Frontend implementation as a team project with a shared Git workflow and task organisation.",
+    "contribution_el_pollo_loco": "Independent frontend implementation using object-oriented JavaScript.",
+    "description_videoflix": "Django backend for a video streaming platform with account activation, JWT in HTTP-only cookies, uploads, asynchronous HLS transcoding through Redis/RQ and protected media delivery.",
+    "description_quizly": "REST backend that processes YouTube audio, transcribes it with Whisper and uses Gemini to generate user-specific quizzes, including authentication, CRUD, ownership and API tests.",
+    "description_coderr": "Marketplace API with customer and business roles, profiles, tiered offers, orders, reviews, search, filtering and role-based permissions.",
+    "description_kanmind": "Kanban API for boards, tasks and comments with member roles, guest access, object-level permissions and optimised database queries.",
     "description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-    "description_el_pollo_loco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-    "description_da_bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    "description_el_pollo_loco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
   },
   "buttons": {
     "coming_soon": "Coming soon",
-    "github": "Github",
-    "live_test": "Live Test"
+    "github": "GitHub",
+    "backend_github": "Backend on GitHub",
+    "frontend_template": "Frontend template",
+    "live_test": "Live demo",
+    "close": "Close dialog"
+  },
+  "footer": {
+    "role": "Junior Full-Stack Developer",
+    "location": "Gelsenkirchen, Germany",
+    "email": "Email",
+    "legal_notice": "Legal Notice"
   },
   "testimonials": {
     "section_title": "What others say about me",
@@ -62,10 +91,19 @@
       "robert": "Our project benefited tremendously from Dennis' efficient way of working.",
       "björn": "Working together was smooth and a lot of fun. It was a great experience coding with such a dedicated and skilled partner.",
       "markus": "Dennis is a reliable and friendly person. He works in a structured manner and writes clear, easy-to-understand code. I can highly recommend him as a colleague."
+    },
+    "roles": {
+      "project_partner": "Project partner",
+      "frontend_developer": "Frontend developer"
+    },
+    "contexts": {
+      "collaborative_development": "Collaborative development",
+      "efficient_project_work": "Efficient project work",
+      "collaboration_code_quality": "Collaboration & code quality"
     }
   },
   "contact": {
-    "email_address": "your_email@email.com",
+    "email_address": "Your email address",
     "main_heading": "Let's work together",
     "email_missing": "Oops! Your email is required",
     "message_missing": "What would you like to develop?",
@@ -73,12 +111,14 @@
     "privacy_missing": "Please accept the privacy policy.",
     "message_field": "Hello Dennis, I'm interested in...",
     "name_field": "Your name goes here",
-    "intro_text": "Got a problem to solve?",
+    "intro_text": "Looking to strengthen your development team?",
     "email_placeholder": "What is your email?",
     "message_placeholder": "How can I help you?",
     "name_placeholder": "What's your name?",
-    "dev_question": "Need a frontend developer?",
-    "send_button": "Say Hello! ;)",
+    "dev_question": "Looking for a Junior Full-Stack Developer?",
+    "send_button": "Send message",
+    "sending": "Sending …",
+    "submit_error": "Your message could not be sent. Please try again or contact me directly by email.",
     "success_heading": "Thank you for contacting me.",
     "success_message": "Your message has been sent.",
     "success_closing": "I will respond as soon as possible.",
@@ -87,7 +127,7 @@
     "privacy_start": "I have read the ",
     "privacy_end": " and agree to the processing of my data as described.",
     "privacy_policy": "Privacy Policy",
-    "about_text": "Contact me through this form, I'm interested in hearing about your ideas and would love to contribute to your projects.",
+    "about_text": "I am looking for a permanent Junior Full-Stack Developer role and a team where I can take ownership, contribute and keep growing.",
     "talk_cta": "Let's talk!",
     "page_title": "Contact Me"
   },

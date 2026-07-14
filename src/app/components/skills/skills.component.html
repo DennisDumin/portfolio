@@ -36,22 +36,8 @@
           <img
             [src]="'assets/img/skills/' + skill.icon + '.svg'"
             [alt]="skill.name"
-            (click)="toggleInterestsPopup(i)"
-            (mouseenter)="toggleInterestsPopup(i)"
-            (mouseleave)="isPopupVisible = false"
           />
           <span>{{ skill.name }}</span>
-          <div class="skills-popup" *ngIf="i === skillsList.length - 1 && isPopupVisible">
-            <span>{{ 'skill.interests' | translate}}</span>
-            <div class="skills-popup-grid">
-              <div class="interest-item" *ngFor="let interest of interestsList">
-                <div class="interest-icon">
-                  <img [src]="'assets/img/skills/' + interest.icon + '.svg'" [alt]="interest.name" />
-                </div>
-                <span>{{ interest.name }}</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

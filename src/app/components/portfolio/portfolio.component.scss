@@ -3,7 +3,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 64px;
+    padding: 48px 64px 64px;
     width: 100%;
     max-width: 1920px;
     box-sizing: border-box;
@@ -19,6 +19,21 @@ p {
     font-size: 18px;
     font-weight: 400;
     width: 45%;
+}
+
+.project-group-heading {
+    width: 65%;
+    margin: 32px 0 14px;
+    padding: 0 32px;
+    box-sizing: border-box;
+    color: #3dcfb6;
+    font-family: "Fira Code", monospace;
+    font-size: 21px;
+    font-weight: 700;
+
+    &:not(:first-of-type) {
+        margin-top: 64px;
+    }
 }
 
 .portfolio-item {
@@ -41,13 +56,33 @@ p {
         font-size: 18px;
         font-weight: 400;
 
-        >span {
+        >.project-title {
             font-family: "Fira Code", monospace;
             font-size: 24px;
             font-weight: 700;
-            width: max-content;
+            width: min(100%, 300px);
             padding: 8px 0;
             color: white;
+            display: grid;
+            grid-template-columns: auto 18px;
+            align-items: center;
+            justify-content: start;
+            column-gap: 10px;
+            text-align: left;
+
+            >small {
+                grid-column: 1 / -1;
+                color: #3dcfb6;
+                font-family: "Karla", sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                padding-top: 6px;
+            }
+
+            >img {
+                width: 16px;
+                height: 16px;
+            }
         }
 
         &:hover {
@@ -58,14 +93,26 @@ p {
 
 .tech-divider {
     display: flex;
-    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px 14px;
     color: white;
+    max-width: 55%;
+    text-align: right;
 }
 
-.divider-line {
-    width: 1px;
-    height: 20px;
-    background-color: #3dcfb6;
+.technology-name {
+    position: relative;
+
+    &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -8px;
+        top: 2px;
+        width: 1px;
+        height: 16px;
+        background-color: #3dcfb6;
+    }
 }
 
 .thumbnail-preview {
@@ -100,7 +147,7 @@ p {
     }
 
     section {
-        padding: 80px;
+        padding: 48px 80px 80px;
     }
 }
 
@@ -128,9 +175,22 @@ p {
 
     .tech-divider {
         font-size: 14px;
+        justify-content: flex-start;
+        max-width: 100%;
+        text-align: left;
     }
 
     p {
         width: 80%;
+    }
+
+    .project-group-heading {
+        width: 100%;
+        padding: 0;
+        align-self: stretch;
+
+        &:not(:first-of-type) {
+            margin-top: 48px;
+        }
     }
 }

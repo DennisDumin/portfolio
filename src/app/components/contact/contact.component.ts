@@ -71,21 +71,12 @@ export class ContactComponent implements OnInit {
   };
 
   privacyConsent: boolean = false;
-  
-  get privacyImage(): string {
-    return this.privacyConsent
-      ? 'assets/img/icons/checkbox-checked.png'
-      : 'assets/img/icons/checkbox.png';
-  }
-
-  togglePrivacyConsent() {
-    this.privacyConsent = !this.privacyConsent;
-  }
 
   http = inject(HttpClient);
   testMode = false;
   showSuccessModal = false;
   isSubmitting = false;
+  submitError = false;
   
   apiConfig = {
     endpoint: 'https://dennis-dumin.net/sendMail.php',
@@ -104,6 +95,7 @@ export class ContactComponent implements OnInit {
     if (form.submitted && form.form.valid && this.privacyConsent) {
       if (this.isSubmitting) return;
       this.isSubmitting = true;
+      this.submitError = false;
       
       if (this.testMode) {
         form.resetForm();
@@ -125,7 +117,8 @@ export class ContactComponent implements OnInit {
             }, 8000);
           },
           error: (error) => {
-            alert('There was an error sending your message. Please try again later.');
+            this.submitError = true;
+            this.isSubmitting = false;
           },
           complete: () => {
             this.isSubmitting = false;

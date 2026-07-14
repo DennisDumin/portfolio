@@ -1,5 +1,7 @@
 {
   "header": {
+    "home": "Startseite",
+    "menu": "Menü öffnen oder schließen",
     "about_me": "Über mich",
     "skills": "Fähigkeiten",
     "projects": "Projekte"
@@ -10,12 +12,13 @@
     "imprint": "Impressum"
   },
   "hero": {
+    "role": "Junior Full-Stack Developer",
     "nav": {
       "projects": "Meine Projekte",
       "contact": "Kontaktieren Sie mich"
     },
     "marquee": {
-      "frontend": "Frontend-Entwickler",
+      "frontend": "Junior Full-Stack Developer",
       "city": "Wohnhaft in Gelsenkirchen",
       "remote": "Verfügbar für Remotearbeit",
       "pixel": "Pixelgenau & performance-optimiert"
@@ -24,7 +27,7 @@
   "about_me": {
     "title": "Wer ich bin",
     "headline": "Über mich",
-    "text": "Hi, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Gelsenkirchen. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
+    "text": "Hi, ich bin ein deutschsprachiger Junior Full-Stack Developer mit Sitz in Gelsenkirchen. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
     "description_1": "Ich bin flexibel, was das Arbeitsumfeld angeht, und kann sowohl vor Ort in Gelsenkirchen als auch aus der Ferne effektiv arbeiten.",
     "description_2": "In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code. Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, aus komplexen technischen Herausforderungen einfache und benutzerfreundliche Lösungen zu generieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
     "description_3": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten weiter zu verbessern."
@@ -32,29 +35,55 @@
   "skill": {
     "title": "Technologien",
     "headline": "Fähigkeiten",
-    "interests": "Ich habe ein besonderes Interesse am Lernen mit",
-    "text_need_skill": "Sie benötigen einen Entwickler mit ",
-    "text_need_skill_color": "speziellen Fähigkeiten?",
-    "text": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten erworben. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und  in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.",
-    "text_contact_me": " Nehmen Sie Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "interests": "Technologien im Fokus",
+    "text_need_skill": "Frontend und Backend ",
+    "text_need_skill_color": "aus einer Hand.",
+    "text": "Mein Stack verbindet Angular und TypeScript im Frontend mit Python, Django und REST APIs im Backend. Dazu kommen relationale Datenbanken, Redis, Docker und ein strukturierter Git-Workflow.",
+    "text_contact_me": "Ich suche eine Junior-Position, in der ich diese Basis produktiv einbringen und gemeinsam mit einem erfahrenen Team weiter ausbauen kann.",
     "link": "Schreiben Sie mir"
   },
   "projects": {
     "title": "Portfolio",
-    "headline": "Meine Projekte",
-    "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen."
+    "headline": "Ausgewählte Projekte",
+    "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "backend_group": "Backend-Projekte",
+    "frontend_group": "Weitere Frontend-Projekte",
+    "open_project": "Projektdetails öffnen",
+    "preview": "Projektvorschau"
   },
   "project_dialog": {
     "question": "Worum geht es bei diesem Projekt?",
     "next_project": "Nächstes Projekt",
+    "role_backend": "Backend · REST API",
+    "role_frontend": "Frontend · Einzelprojekt",
+    "role_frontend_team": "Frontend · Teamprojekt",
+    "contribution_label": "Mein Beitrag",
+    "contribution_videoflix": "Ich habe das Django/DRF-Backend mit Kontoaktivierung, Passwort-Reset, JWT-Authentifizierung über HTTP-only Cookies und geschütztem HLS-Streaming umgesetzt. Die asynchrone Videokonvertierung läuft mit ffmpeg, Redis und RQ; PostgreSQL und Docker bilden die Infrastruktur. Das Frontend wurde von der Developer Akademie bereitgestellt. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_quizly": "Ich habe die REST API und die Verarbeitungskette von der YouTube-URL über yt-dlp und Whisper bis zur Quizgenerierung mit Gemini umgesetzt. Dazu gehören JWT-Cookies, nutzerbezogenes CRUD, Ownership-Prüfungen und automatisierte API-Tests. Das Frontend wurde von der Developer Akademie bereitgestellt. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_coderr": "Ich habe die Marketplace-API mit Kunden- und Business-Rollen, Profilen, dreistufigen Angeboten, Bestellungen und Reviews umgesetzt. Filterung, Pagination und objektbezogene Berechtigungen bilden die zentralen Schwerpunkte. Das Frontend wurde von der Developer Akademie bereitgestellt. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_kanmind": "Ich habe die API für Boards, Aufgaben und Kommentare einschließlich Token-Authentifizierung, Mitgliederrollen und objektbezogenen Berechtigungen umgesetzt. Datenbankzugriffe habe ich mit select_related und prefetch_related optimiert. Das Frontend wurde von der Developer Akademie bereitgestellt. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_join": "Frontend-Umsetzung im Teamprojekt mit gemeinsamem Git-Workflow und Aufgabenorganisation.",
+    "contribution_el_pollo_loco": "Eigenständige Frontend-Umsetzung mit objektorientiertem JavaScript.",
+    "description_videoflix": "Django-Backend für eine Video-Streaming-Plattform mit Kontoaktivierung, JWT in HTTP-only Cookies, Uploads, asynchroner HLS-Transkodierung über Redis/RQ und geschützter Medienauslieferung.",
+    "description_quizly": "REST-Backend, das YouTube-Audio verarbeitet, mit Whisper transkribiert und über Gemini nutzerspezifische Quizze erzeugt. Enthalten sind Authentifizierung, CRUD, Ownership und API-Tests.",
+    "description_coderr": "Marketplace-API mit Kunden- und Business-Rollen, Profilen, dreistufigen Angeboten, Bestellungen, Reviews, Suche, Filtern und rollenbasierten Berechtigungen.",
+    "description_kanmind": "Kanban-API für Boards, Aufgaben und Kommentare mit Mitgliederrollen, Gastzugang, objektbezogenen Berechtigungen und optimierten Datenbankabfragen.",
     "description_join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
-    "description_el_pollo_loco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
-    "description_da_bubble": "DA Bubble ist eine Echtzeit-Messaging-Anwendung ähnlich wie Slack oder Discord. Es bietet Kanäle, Direktnachrichten und Dateifreigabe-Funktionen. Erstellt mit Angular und Firebase, demonstriert es moderne Frontend-Entwicklungspraktiken."
+    "description_el_pollo_loco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen."
   },
   "buttons": {
     "coming_soon": "Demnächst verfügbar",
-    "github": "Github",
-    "live_test": "Live Test"
+    "github": "GitHub",
+    "backend_github": "Backend auf GitHub",
+    "frontend_template": "Frontend-Vorlage",
+    "live_test": "Live-Demo",
+    "close": "Dialog schließen"
+  },
+  "footer": {
+    "role": "Junior Full-Stack Developer",
+    "location": "Gelsenkirchen, Deutschland",
+    "email": "E-Mail",
+    "legal_notice": "Impressum"
   },
   "testimonials": {
     "section_title": "Was andere über mich sagen",
@@ -62,23 +91,34 @@
       "robert": "Unser Projekt hat enorm von Dennis' effizienter Arbeitsweise profitiert.",
       "björn": "Die Zusammenarbeit lief super und hat richtig Spaß gemacht. Es war eine wertvolle Erfahrung, mit einem engagierten und talentierten Partner zu arbeiten.",
       "markus": "Dennis ist eine zuverlässige und freundliche Person. Er arbeitet strukturiert und schreibt klaren, gut verständlichen Code. Ich kann ihn als Kollegen wärmstens empfehlen."
+    },
+    "roles": {
+      "project_partner": "Projektpartner",
+      "frontend_developer": "Frontend-Entwickler"
+    },
+    "contexts": {
+      "collaborative_development": "Gemeinsame Entwicklungsarbeit",
+      "efficient_project_work": "Effiziente Projektarbeit",
+      "collaboration_code_quality": "Zusammenarbeit & Codequalität"
     }
   },
   "contact": {
-    "email_address": "ihremail@email.com",
-    "main_heading": "Lasst uns zusammenarbeiten",
+    "email_address": "Ihre E-Mail-Adresse",
+    "main_heading": "Lassen Sie uns zusammenarbeiten",
     "email_missing": "Hoppla! Ihre E-Mail ist erforderlich",
     "message_missing": "Was möchten Sie entwickeln?",
     "name_missing": "Ups! Ihr Name scheint zu fehlen",
     "privacy_missing": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
     "message_field": "Hallo Dennis, ich bin interessiert an...",
     "name_field": "Ihr Name kommt hierhin",
-    "intro_text": "Haben Sie ein Problem zu lösen?",
+    "intro_text": "Verstärkung für Ihr Entwicklungsteam?",
     "email_placeholder": "Wie lautet Ihre E-Mail?",
     "message_placeholder": "Wie kann ich Ihnen helfen?",
     "name_placeholder": "Wie ist Ihr Name?",
-    "dev_question": "Brauchen Sie einen Frontend-Entwickler?",
-    "send_button": "Sag Hallo! ;)",
+    "dev_question": "Sie suchen einen Junior Full-Stack Developer?",
+    "send_button": "Nachricht senden",
+    "sending": "Wird gesendet …",
+    "submit_error": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt per E-Mail.",
     "success_heading": "Danke, dass Sie mich kontaktiert haben.",
     "success_message": "Ihre Nachricht wurde gesendet.",
     "success_closing": "Ich werde Ihnen so schnell wie möglich antworten.",
@@ -87,7 +127,7 @@
     "privacy_start": "Ich habe die ",
     "privacy_end": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
     "privacy_policy": "Datenschutzbestimmungen",
-    "about_text": "Kontaktieren Sie mich über dieses Formular, ich bin daran interessiert, von ihren Ideen zu hören und an ihren Projekten mitwirken zu dürfen.",
+    "about_text": "Ich suche eine Festanstellung als Junior Full-Stack Developer und freue mich auf ein Team, in dem ich Verantwortung übernehmen und weiter wachsen kann.",
     "talk_cta": "Lassen Sie uns reden!",
     "page_title": "Kontaktieren Sie mich"
   },

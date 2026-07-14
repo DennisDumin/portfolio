@@ -8,7 +8,6 @@ import { SkillsComponent } from "../skills/skills.component";
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { TestimonialsComponent } from "../testimonials/testimonials.component";
 import { ContactComponent } from "../contact/contact.component";
-import { ProjectModalComponent } from '../portfolio/portfolio.modal.component';
 
 @Component({
   selector: 'app-about-me',
@@ -22,8 +21,7 @@ import { ProjectModalComponent } from '../portfolio/portfolio.modal.component';
     SkillsComponent,
     PortfolioComponent,
     TestimonialsComponent,
-    ContactComponent,
-    ProjectModalComponent
+    ContactComponent
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',

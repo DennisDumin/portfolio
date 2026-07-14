@@ -7,10 +7,10 @@ import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.componen
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
-  { path: '', component: AboutMeComponent },
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'legal-notice', component: LegalNoticeComponent },
-  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: '', component: AboutMeComponent, title: 'Dennis Dumin | Junior Full-Stack Developer' },
+  { path: 'portfolio', component: PortfolioComponent, title: 'Projects | Dennis Dumin' },
+  { path: 'contact', component: ContactComponent, title: 'Contact | Dennis Dumin' },
+  { path: 'legal-notice', component: LegalNoticeComponent, title: 'Legal Notice | Dennis Dumin' },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy Policy | Dennis Dumin' },
   { path: '**', redirectTo: '' }
 ];

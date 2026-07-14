@@ -23,26 +23,20 @@ interface Skill {
 })
 export class SkillsComponent implements OnInit {
   readonly contactLinkKey: string = 'skill.link';
-  
-  isPopupVisible: boolean = false;
-  
+
   skillsList: Skill[] = [
     { icon: 'html', name: 'HTML' },
-    { icon: 'css', name: 'CSS' },
+    { icon: 'css', name: 'SCSS' },
     { icon: 'javascript', name: 'JavaScript' },
-    { icon: 'materialdesign', name: 'Material Design' },
     { icon: 'typescript', name: 'TypeScript' },
     { icon: 'angular', name: 'Angular' },
-    { icon: 'firebase', name: 'Firebase' },
+    { icon: 'python', name: 'Python' },
+    { icon: 'django', name: 'Django' },
+    { icon: 'api', name: 'REST API' },
+    { icon: 'postgresql', name: 'PostgreSQL' },
+    { icon: 'redis', name: 'Redis' },
+    { icon: 'docker', name: 'Docker' },
     { icon: 'git', name: 'Git' },
-    { icon: 'api', name: 'Rest-Api' },
-    { icon: 'scrum', name: 'Scrum' },
-    { icon: 'growth', name: 'Growth mindset' },
-  ];
-  
-  interestsList: Skill[] = [
-    { icon: 'react', name: 'React' },
-    { icon: 'vue', name: 'Vue Js' },
   ];
 
   constructor(
@@ -64,11 +58,5 @@ export class SkillsComponent implements OnInit {
 
   getLinkPosition(contentKey: string): number {
     return this.animationService.getAnimationPosition(contentKey);
-  }
-  
-  toggleInterestsPopup(index: number): void {
-    if (index === this.skillsList.length - 1) {
-      this.isPopupVisible = !this.isPopupVisible;
-    }
   }
 }

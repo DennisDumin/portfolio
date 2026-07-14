@@ -9,6 +9,7 @@ interface Testimonial {
   text: string;
   author: string;
   role: string;
+  context: string;
 }
 
 @Component({
@@ -26,9 +27,24 @@ interface Testimonial {
 })
 export class TestimonialsComponent implements OnInit {
   testimonials: Testimonial[] = [
-    { text: 'testimonials.quotes.björn', author: 'Björn M.', role: 'Project Partner' },
-    { text: 'testimonials.quotes.robert', author: 'Robert K.', role: 'Project Partner' },
-    { text: 'testimonials.quotes.markus', author: 'Markus S.', role: 'Frontend Developer' },
+    {
+      text: 'testimonials.quotes.björn',
+      author: 'Björn M.',
+      role: 'testimonials.roles.project_partner',
+      context: 'testimonials.contexts.collaborative_development',
+    },
+    {
+      text: 'testimonials.quotes.robert',
+      author: 'Robert K.',
+      role: 'testimonials.roles.project_partner',
+      context: 'testimonials.contexts.efficient_project_work',
+    },
+    {
+      text: 'testimonials.quotes.markus',
+      author: 'Markus S.',
+      role: 'testimonials.roles.frontend_developer',
+      context: 'testimonials.contexts.collaboration_code_quality',
+    },
   ];
 
   currentIndex = 0;

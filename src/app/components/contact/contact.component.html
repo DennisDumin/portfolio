@@ -20,7 +20,7 @@
       <label for="userName">{{ "contact.name_field" | translate }}</label>
       <input #userName="ngModel" id="userName" name="userName" type="text" autocomplete="name"
         placeholder="{{ 'contact.name_placeholder' | translate }}" [(ngModel)]="formData.userName" required
-        minlength="3" pattern="^[A-Za-zÄÖÜäöüß\s\-]+$" />
+        minlength="3" maxlength="100" pattern="^[A-Za-zÄÖÜäöüß\s\-]+$" />
       <div class="error-message" [hidden]="userName.valid || (!userName.touched && !contactForm.submitted)">
         {{ "contact.name_missing" | translate }}
       </div>
@@ -30,7 +30,7 @@
       <label for="userEmail">{{ "contact.email_address" | translate }}</label>
       <input #userEmail="ngModel" id="userEmail" name="userEmail" type="email" autocomplete="email"
         placeholder="{{ 'contact.email_placeholder' | translate }}" [(ngModel)]="formData.userEmail" required
-        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+        maxlength="254" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
       <div class="error-message" [hidden]="userEmail.valid || (!userEmail.touched && !contactForm.submitted)">
         <span *ngIf="userEmail.hasError('required')">{{ "contact.email_missing" | translate }}</span>
         <span *ngIf="userEmail.hasError('pattern')">{{ "contact.email_format" | translate }}</span>
@@ -41,7 +41,7 @@
       <label for="userMessage">{{ "contact.message_field" | translate }}</label>
       <textarea #userMessage="ngModel" id="userMessage" name="userMessage" autocomplete="off"
         placeholder="{{ 'contact.message_placeholder' | translate }}" [(ngModel)]="formData.userMessage" required
-        matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+        maxlength="3000" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
         cdkAutosizeMaxRows="5"></textarea>
       <div class="error-message" [hidden]="userMessage.valid || (!userMessage.touched && !contactForm.submitted)">
         {{ "contact.message_missing" | translate }}
@@ -49,9 +49,8 @@
     </div>
 
     <div class="privacy-check">
-      <div class="checkbox-button" (click)="togglePrivacyConsent()" [class.checked]="privacyConsent">
-        <img [src]="privacyImage" alt="Privacy checkbox" />
-      </div>
+      <input class="privacy-input" id="privacyConsent" name="privacyConsent" type="checkbox"
+        [(ngModel)]="privacyConsent" required />
       <label for="privacyConsent">
         {{ "contact.privacy_start" | translate }}
         <a [routerLink]="['/privacy-policy']" class="privacy-link">{{ "contact.privacy_policy" | translate }}</a>
@@ -63,18 +62,22 @@
       {{ "contact.privacy_missing" | translate }}
     </div>
 
-    <button type="submit" class="submit-button" (mouseenter)="startButtonAnimation(submitButtonText, 200, -150)"
+    <p class="submit-error" *ngIf="submitError" role="alert">{{ 'contact.submit_error' | translate }}</p>
+
+    <button type="submit" class="submit-button" [disabled]="isSubmitting" [attr.aria-busy]="isSubmitting"
+      (mouseenter)="startButtonAnimation(submitButtonText, 200, -150)"
       (mouseleave)="stopButtonAnimation(submitButtonText)">
       <span [ngStyle]="{ 'right.px': getButtonPosition(submitButtonText) }">
-        {{ submitButtonText | translate }}
+        {{ (isSubmitting ? 'contact.sending' : submitButtonText) | translate }}
       </span>
     </button>
   </form>
 
-  <div class="success-modal" *ngIf="showSuccessModal">
-    <p>{{ "contact.success_heading" | translate }}</p>
+  <div class="success-modal" *ngIf="showSuccessModal" role="dialog" aria-modal="true"
+    aria-labelledby="contact-success-heading">
+    <p id="contact-success-heading">{{ "contact.success_heading" | translate }}</p>
     <p>{{ "contact.success_message" | translate }}</p>
     <p>{{ "contact.success_closing" | translate }}</p>
-    <button (click)="showSuccessModal=false">{{ "contact.close_button" | translate }}</button>
+    <button type="button" (click)="closeSuccessModal()">{{ "contact.close_button" | translate }}</button>
   </div>
 </section>

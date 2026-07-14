@@ -14,8 +14,8 @@
             />
           </a>
           <div class="brand-info">
-            <p class="title">Web Developer</p>
-            <p class="location">Gelsenkirchen Germany</p>
+            <p class="title">{{ 'footer.role' | translate }}</p>
+            <p class="location">{{ 'footer.location' | translate }}</p>
           </div>
         </div>
 
@@ -32,8 +32,9 @@
               [routerLink]="link.external ? null : link.url" 
               [href]="link.external ? link.url : null" 
               [attr.target]="link.external ? '_blank' : null"
+              [attr.rel]="link.external ? 'noopener noreferrer' : null"
             >
-              {{ link.label }}
+              {{ link.label | translate }}
             </a>
             <div class="indicator" *ngIf="activeLink === i">
               <img src="assets/img/icons/hover_point.svg" alt="" />

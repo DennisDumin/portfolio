@@ -1,14 +1,22 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+export interface WorkLink {
+  label: string;
+  url: string;
+}
+
 export interface WorkItem {
   title: string;
+  groupLabel?: string;
   technologies: string[];
   image: string;
   thumbnail?: string;
   format: string;
   description: string;
-  links: string[];
+  role: string;
+  contribution: string;
+  links: WorkLink[];
   index?: number;
 }
 

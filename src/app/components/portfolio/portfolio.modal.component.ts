@@ -10,41 +10,48 @@ import { ModalService, WorkItem } from '../../services/modal.service';
   imports: [CommonModule, TranslateModule],
   template: `
     <div *ngIf="isOpen" class="modal-overlay" (click)="closeModal()">
-      <div class="modal-content" (click)="$event.stopPropagation()">
-        <button class="close-button" (click)="closeModal()">
-          <img src="assets/img/portfolio/close.png" alt="close">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="project-dialog-title"
+        (click)="$event.stopPropagation()">
+        <button class="close-button" (click)="closeModal()" [attr.aria-label]="'buttons.close' | translate">
+          <img src="assets/img/portfolio/close.png" alt="">
         </button>
 
         <div class="work-details" *ngIf="workItem">
-          <h6>{{ (currentIndex + 1) < 10 ? '0' + (currentIndex + 1) : currentIndex + 1 }}</h6>
-          <span class="content-title">{{ workItem.title }}</span>
+          <div class="project-meta">
+            <span class="project-number" aria-hidden="true">{{ (currentIndex + 1) < 10 ? '0' + (currentIndex + 1) : currentIndex + 1 }}</span>
+            <span class="project-role">{{ workItem.role | translate }}</span>
+          </div>
+          <h2 id="project-dialog-title" class="content-title">{{ workItem.title }}</h2>
           <span class="content-headline">{{ 'project_dialog.question' | translate }}</span>
           <span class="content-description">{{ workItem.description | translate }}</span>
 
+          <div class="contribution-note">
+            <strong>{{ 'project_dialog.contribution_label' | translate }}</strong>
+            <span>{{ workItem.contribution | translate }}</span>
+          </div>
+
           <div class="tech-stack">
             <div class="tech-item" *ngFor="let tech of workItem.technologies">
-              <img [src]="'assets/img/portfolio/' + tech.toLowerCase() + '.png'" alt="technology">
               <span>{{ tech }}</span>
             </div>
           </div>
 
           <div class="work-links" *ngIf="workItem.links && workItem.links.length > 0">
-            <a *ngIf="workItem.links[0]" [href]="workItem.links[0]" target="_blank" class="link-button">
-              Github <img src="assets/img/portfolio/arrow-outward-green.png" alt="">
-            </a>
-            <a *ngIf="workItem.links[1]" [href]="workItem.links[1]" target="_blank" class="link-button">
-              Live Test <img src="assets/img/portfolio/arrow-outward-green.png" alt="">
+            <a *ngFor="let link of workItem.links" [href]="link.url" target="_blank" rel="noopener noreferrer"
+              class="link-button">
+              {{ link.label | translate }} <img src="assets/img/portfolio/arrow-outward-green.png" alt="">
             </a>
           </div>
         </div>
 
         <div class="work-image" *ngIf="workItem">
           <div>
-            <img class="showcase-image" [src]="'assets/img/portfolio/' + workItem.image + workItem.format" alt="">
+            <img class="showcase-image" [src]="'assets/img/portfolio/' + workItem.image + workItem.format"
+              [alt]="workItem.title + ' - ' + ('projects.preview' | translate)">
           </div>
           
           <button class="next-button" (click)="nextWorkRequested()">
-            Next Project <img src="assets/img/portfolio/arrow-right.png" alt="">
+            {{ 'project_dialog.next_project' | translate }} <img src="assets/img/portfolio/arrow-right.png" alt="">
           </button>
         </div>
       </div>
@@ -76,13 +83,12 @@ export class ProjectModalComponent implements OnInit, OnDestroy {
       })
     );
 
-    document.addEventListener('keydown', this.handleKeyDown.bind(this));
   }
 
   ngOnDestroy(): void {
     this.subscriptions.forEach(sub => sub.unsubscribe());
     
-    document.removeEventListener('keydown', this.handleKeyDown.bind(this));
+    this.modalService.closeModal();
   }
 
   closeModal(): void {
@@ -93,10 +99,9 @@ export class ProjectModalComponent implements OnInit, OnDestroy {
     document.dispatchEvent(new CustomEvent('nextWorkRequested'));
   }
 
-  private handleKeyDown(event: KeyboardEvent): void {
-    if (event.key === 'Escape' && this.isOpen) {
-      this.closeModal();
-    }
+  @HostListener('document:keydown.escape')
+  handleEscape(): void {
+    if (this.isOpen) this.closeModal();
   }
 
   @HostListener('wheel', ['$event'])

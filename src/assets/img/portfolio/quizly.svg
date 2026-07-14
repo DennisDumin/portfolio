@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title description">
+  <title id="title">Quizly backend project</title>
+  <desc id="description">Abstract artificial intelligence workflow that turns a video into a validated quiz.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#101827"/>
+      <stop offset="1" stop-color="#2b1b58"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3dcfb6"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="34" fill="url(#background)"/>
+  <circle cx="676" cy="102" r="184" fill="#a78bfa" opacity=".1"/>
+  <text x="58" y="82" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">QUIZLY</text>
+  <rect x="58" y="105" width="152" height="34" rx="17" fill="#3dcfb6" opacity=".16" stroke="#3dcfb6"/>
+  <text x="78" y="128" fill="#7ff7e2" font-family="Arial, sans-serif" font-size="16" font-weight="700">BACKEND · AI</text>
+  <circle cx="400" cy="258" r="96" fill="none" stroke="url(#accent)" stroke-width="5"/>
+  <text x="400" y="292" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="104" font-weight="700">?</text>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="3">
+    <path d="M125 385H675"/>
+    <path d="m238 375 12 10-12 10M408 375l12 10-12 10M578 375l12 10-12 10"/>
+  </g>
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">
+    <text x="145" y="430">YouTube</text><text x="315" y="430">Whisper</text><text x="485" y="430">Gemini</text><text x="655" y="430">Quiz API</text>
+  </g>
+  <g fill="#3dcfb6"><circle cx="145" cy="385" r="12"/><circle cx="315" cy="385" r="12"/></g>
+  <g fill="#a78bfa"><circle cx="485" cy="385" r="12"/><circle cx="655" cy="385" r="12"/></g>
+</svg>

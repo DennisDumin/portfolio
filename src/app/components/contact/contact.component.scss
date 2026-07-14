@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Variables
 $background-color: #1C1C1C;
 $accent-color: #3dcfb6;
@@ -93,7 +95,7 @@ form {
     }
 
     &:focus {
-      color: lighten($accent-color, 10%);
+      color: color.adjust($accent-color, $lightness: 10%);
     }
   }
 
@@ -146,6 +148,19 @@ form {
   align-items: center;
   padding-top: 30px;
   border-top: rgba(61, 207, 183, 0.5) 1px solid;
+}
+
+.privacy-input {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  accent-color: $accent-color;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 3px solid rgba(61, 207, 183, 0.45);
+    outline-offset: 4px;
+  }
 }
 
 .checkbox-button {
@@ -219,6 +234,17 @@ form {
   &:active {
     transform: scale(0.98);
   }
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.65;
+  }
+}
+
+.submit-error {
+  color: $error-color;
+  text-align: center;
+  margin-top: 16px;
 }
 
 .left-content {

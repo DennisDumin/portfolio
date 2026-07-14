@@ -46,9 +46,10 @@ $animation-duration: 0.25s;
     align-items: center;
     justify-content: flex-end;
 
-    a {
+    .navigation-button {
         font-family: var(--font-code) !important;
         color: var(--text-color);
+        background: transparent;
         text-decoration: none;
         white-space: nowrap;
         margin: 0 15px;
@@ -75,6 +76,13 @@ $animation-duration: 0.25s;
 .mobile-menu-container {
     position: relative;
 
+    .menu-button {
+        display: flex;
+        padding: 4px;
+        background: transparent;
+        border-radius: 8px;
+    }
+
     .menu-icon {
         cursor: pointer;
         width: 40px;
@@ -84,7 +92,8 @@ $animation-duration: 0.25s;
 .header-mobile {
     position: absolute;
     width: 200px;
-    height: 200px;
+    height: auto;
+    min-height: 220px;
     background: linear-gradient(to top right, $background-dark, 70%, #08463b);
     border-radius: $border-radius-standard;
     border: 1px solid $primary-color;
@@ -104,7 +113,7 @@ $animation-duration: 0.25s;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        height: 100%;
+        min-height: 154px;
         width: 100%;
 
         .header-item {
@@ -153,6 +162,11 @@ $animation-duration: 0.25s;
 }
 
 .logo {
+    display: flex;
+    padding: 0;
+    background: transparent;
+    border-radius: 8px;
+
     >img {
         position: relative;
         object-fit: cover;
