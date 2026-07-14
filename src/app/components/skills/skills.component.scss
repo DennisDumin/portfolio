@@ -80,8 +80,8 @@ section {
   h3 {
     word-wrap: break-word;
     overflow-wrap: break-word;
-    width: 100%; // Wichtig für korrektes Wrapping
-    hyphens: auto; // Erlaubt Silbentrennung
+    width: 100%;
+    hyphens: auto;
   }
 }
 
