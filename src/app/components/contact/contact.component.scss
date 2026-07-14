@@ -15,7 +15,7 @@ section.container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start; 
-  gap: 120px;
+  gap: 64px;
   padding: 112px;
   box-sizing: border-box;
   position: relative;
@@ -31,7 +31,14 @@ section.container {
 
 // Typography
 h3 {
+  max-width: 100%;
+  font-size: clamp(40px, 2.5vw, 46px);
+  line-height: 1.12;
   margin-bottom: 16px;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+  text-wrap: balance;
 }
 
 h4 {
@@ -62,15 +69,14 @@ form {
   flex-direction: column;
 }
 
-// Überarbeitete Form-Field Styles
 .form-field {
-  position: relative;  // Für absolute Positionierung der Fehlermeldungen
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
   padding: 32px;
-  padding-bottom: 42px;  // Extra Platz für Fehlermeldung
+  padding-bottom: 42px;
   border-top: $accent-transparent 1px solid;
   transition: border-color $transition-speed ease;
 
@@ -105,14 +111,13 @@ form {
     resize: vertical;
   }
   
-  // Neuer Fehlermeldungsstil
   .error-message {
     position: absolute;
     bottom: 10px;
     left: 32px;
     color: $error-color;
     font-size: 14px;
-    height: 18px;  // Feste Höhe
+    height: 18px;
     transition: opacity $transition-speed ease;
     
     &[hidden] {
@@ -208,7 +213,8 @@ form {
   border: 1px solid #ffffff;
   border-radius: $border-radius;
   padding: 12px 24px;
-  top: 32px;
+  min-height: 44px;
+  margin-top: 32px;
   box-sizing: border-box;
   width: fit-content;
   align-self: center;
@@ -251,8 +257,8 @@ form {
   flex: 0 0 auto;
   max-width: 568px;
   word-break: normal;
-  overflow-wrap: anywhere;
-  hyphens: auto;
+  overflow-wrap: normal;
+  hyphens: none;
 }
 
 // Success modal
@@ -408,7 +414,7 @@ form {
 
   .form-field {
     padding: 24px;
-    padding-bottom: 36px;  // Weniger Padding aber immer noch Platz für Fehler
+    padding-bottom: 36px;
 
     input,
     textarea {
@@ -429,7 +435,7 @@ form {
 
   .form-field {
     padding: 16px;
-    padding-bottom: 32px;  // Anpassung für mobile
+    padding-bottom: 32px;
     
     .error-message {
       left: 16px;
@@ -437,7 +443,12 @@ form {
   }
 
   h3 {
-    font-size: 56px;
+    font-size: clamp(26px, 7vw, 32px);
+    line-height: 1.2;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
+    text-wrap: balance;
   }
 
   .success-modal {
@@ -469,12 +480,8 @@ form {
     padding: 16px 12px;
   }
   
-  h3 {
-    font-size: 42px; // Kleinere Überschriften
-  }
-  
   h4 {
-    font-size: 16px; // Kleinere Überschriften
+    font-size: 16px;
   }
   
   .accent-text {
@@ -482,7 +489,7 @@ form {
   }
   
   .form-field {
-    padding: 14px 12px 28px; // Kompakteres Padding
+    padding: 14px 12px 28px;
     
     label {
       font-size: 14px;
@@ -499,18 +506,19 @@ form {
     }
   }
   
-  // Kompaktere Privacy-Check-Sektion
   .privacy-check {
     padding-top: 20px;
     gap: 8px;
+    min-height: 44px;
     
     label {
-      font-size: 12px;
+      font-size: 14px;
+      line-height: 1.45;
     }
   }
   
   .checkbox-button {
-    width: 40px; // Kleinerer Checkbox-Button
+    width: 40px;
     
     img {
       width: 85%;
@@ -518,7 +526,6 @@ form {
     }
   }
   
-  // Kompakterer Submit-Button
   .submit-button {
     padding: 8px 18px;
     margin-top: 12px;
@@ -535,18 +542,13 @@ form {
     padding: 12px 8px;
   }
   
-  h3 {
-    font-size: 36px;
-    margin-bottom: 12px;
-  }
-  
   .form-field {
     padding: 12px 10px 26px;
     gap: 6px;
     
     input, 
     textarea {
-      font-size: 15px !important;
+      font-size: 16px !important;
     }
   }
   
@@ -554,17 +556,16 @@ form {
     padding-top: 16px;
     
     label {
-      font-size: 11px;
-      line-height: 1.3;
+      font-size: 14px;
+      line-height: 1.45;
     }
   }
   
   .error-message.privacy-error {
     margin-top: 4px;
-    font-size: 11px;
+    font-size: 13px;
   }
   
-  // Vertikale Abstände verkleinern
   .left-content {
     margin-bottom: 24px !important;
     
@@ -576,16 +577,12 @@ form {
 
 // Extra kleine Bildschirme wie alte iPhones im Portrait-Modus
 @media screen and (max-width: 320px) {
-  h3 {
-    font-size: 32px;
-  }
-  
   .form-field {
     padding: 10px 8px 24px;
   }
   
   .privacy-check {
-    flex-wrap: wrap; // Erlaubt Umbruch bei sehr kleinen Bildschirmen
+    flex-wrap: wrap;
     
     .checkbox-button {
       width: 32px;
