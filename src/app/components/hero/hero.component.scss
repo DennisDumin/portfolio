@@ -311,7 +311,14 @@
 
 @media screen and (max-width: 700px) {
     .section-container.hero-container {
-        top: -92px;
+        top: 0;
+        margin-top: -64px;
+        min-height: 100svh;
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding-top: 64px;
     }
 }
 
@@ -342,17 +349,37 @@
 
 @media screen and (max-width: 460px) {
     .section-container.hero-container {
-        top: -92px;
         padding: 0;
     }
 
     .hero {
+        padding-inline: 0;
+
+        &__content {
+            width: 100%;
+            padding-inline: 16px;
+            box-sizing: border-box;
+        }
+
         &__title {
             font-size: 38px;
         }
 
         &__subtitle {
             font-size: 16px;
+        }
+
+        &__nav {
+            width: 100%;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        &__nav-link {
+            min-height: 44px;
+            padding: 10px 12px;
+            display: inline-flex;
+            align-items: center;
         }
 
         &__next-button img {

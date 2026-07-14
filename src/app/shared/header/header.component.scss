@@ -205,40 +205,20 @@ $animation-duration: 0.25s;
 }
 
 @media screen and (max-width: 768px) {
-    section {
-        padding: 12px;
-    }
-
-    .logo>img {
-        height: 20px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    section {
-        padding: 12px;
-    }
-
-    .logo>img {
-        height: 20px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    section {
-        padding: 12px;
+    .section {
+        padding: 0;
     }
 
     .logo>img {
         height: 48px;
     }
+
+    .header-mobile {
+        top: 56px;
+    }
 }
 
 @media screen and (max-width: 425px) {
-    section {
-        padding: 8px;
-    }
-
     .logo>img {
         height: 48px;
     }

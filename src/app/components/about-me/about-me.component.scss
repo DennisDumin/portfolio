@@ -18,7 +18,8 @@ section {
   background-color: #3fcfb714;
   border-radius: 30px;
   border: 1px solid #3DCFB6;
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
   padding: 32px;
   display: flex;
   justify-content: start;
@@ -116,6 +117,7 @@ section {
 
   .content-am {
     width: 100%;
+    margin-top: 0;
   }
 
   .profile-picture_background {
@@ -128,5 +130,20 @@ section {
     >span {
       font-size: 14px;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-picture {
+    height: auto;
+    aspect-ratio: 1179 / 1730;
+  }
+
+  .profile-picture_profil {
+    height: 100%;
+  }
+
+  .content-container {
+    padding: 24px 20px;
   }
 }
