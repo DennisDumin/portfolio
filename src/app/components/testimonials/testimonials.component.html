@@ -51,21 +51,24 @@
   </div>
   
   <div class="slider-controls">
-    <button class="arrow-button" (click)="navigateToPrevious()">
-      <img src="assets/img/icons/arrow-left-w.svg" alt="Previous" class="arrow-icon" />
+    <button class="arrow-button" (click)="navigateToPrevious()" [attr.aria-label]="'testimonials.previous' | translate">
+      <img src="assets/img/icons/arrow-left-w.svg" alt="" class="arrow-icon" />
     </button>
     
     <div class="indicators">
-      <div 
+      <button
         *ngFor="let testimonial of testimonials; let i = index" 
+        type="button"
         class="dot"
         [ngClass]="{'active': currentIndex === i}"
+        [attr.aria-label]="('testimonials.slide' | translate) + ' ' + (i + 1)"
+        [attr.aria-current]="currentIndex === i ? 'true' : null"
         (click)="goToSlide(i)"
-      ></div>
+      ></button>
     </div>
     
-    <button class="arrow-button" (click)="navigateToNext()">
-      <img src="assets/img/icons/arrow-left-w.svg" alt="Next" class="arrow-icon flip-horizontal" />
+    <button class="arrow-button" (click)="navigateToNext()" [attr.aria-label]="'testimonials.next' | translate">
+      <img src="assets/img/icons/arrow-left-w.svg" alt="" class="arrow-icon flip-horizontal" />
     </button>
   </div>
 </section>

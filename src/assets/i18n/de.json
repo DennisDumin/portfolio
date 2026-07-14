@@ -87,6 +87,9 @@
   },
   "testimonials": {
     "section_title": "Was andere über mich sagen",
+    "previous": "Vorherige Referenz",
+    "next": "Nächste Referenz",
+    "slide": "Referenz",
     "quotes": {
       "robert": "Unser Projekt hat enorm von Dennis' effizienter Arbeitsweise profitiert.",
       "björn": "Die Zusammenarbeit lief super und hat richtig Spaß gemacht. Es war eine wertvolle Erfahrung, mit einem engagierten und talentierten Partner zu arbeiten.",
