@@ -47,7 +47,7 @@
     "headline": "Ausgewählte Projekte",
     "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
     "backend_group": "Backend-Projekte",
-    "frontend_group": "Weitere Frontend-Projekte",
+    "frontend_group": "Frontend-Projekte",
     "open_project": "Projektdetails öffnen",
     "preview": "Projektvorschau"
   },
@@ -58,16 +58,16 @@
     "role_frontend": "Frontend · Einzelprojekt",
     "role_frontend_team": "Frontend · Teamprojekt",
     "contribution_label": "Mein Beitrag",
-    "contribution_videoflix": "Ich habe das Django/DRF-Backend mit Kontoaktivierung, Passwort-Reset, JWT-Authentifizierung über HTTP-only Cookies und geschütztem HLS-Streaming umgesetzt. Die asynchrone Videokonvertierung läuft mit ffmpeg, Redis und RQ; PostgreSQL und Docker bilden die Infrastruktur. Das Frontend wurde von der Developer Akademie bereitgestellt. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
-    "contribution_quizly": "Ich habe die REST API und die Verarbeitungskette von der YouTube-URL über yt-dlp und Whisper bis zur Quizgenerierung mit Gemini umgesetzt. Dazu gehören JWT-Cookies, nutzerbezogenes CRUD, Ownership-Prüfungen und automatisierte API-Tests. Das Frontend wurde von der Developer Akademie bereitgestellt. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
-    "contribution_coderr": "Ich habe die Marketplace-API mit Kunden- und Business-Rollen, Profilen, dreistufigen Angeboten, Bestellungen und Reviews umgesetzt. Filterung, Pagination und objektbezogene Berechtigungen bilden die zentralen Schwerpunkte. Das Frontend wurde von der Developer Akademie bereitgestellt. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
-    "contribution_kanmind": "Ich habe die API für Boards, Aufgaben und Kommentare einschließlich Token-Authentifizierung, Mitgliederrollen und objektbezogenen Berechtigungen umgesetzt. Datenbankzugriffe habe ich mit select_related und prefetch_related optimiert. Das Frontend wurde von der Developer Akademie bereitgestellt. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_videoflix": "Ich habe das Django/DRF-Backend mit Kontoaktivierung, Passwort-Reset, JWT-Authentifizierung über HTTP-only Cookies und geschütztem HLS-Streaming umgesetzt. Die asynchrone Videokonvertierung läuft mit ffmpeg, Redis und RQ; PostgreSQL und Docker bilden die Infrastruktur. Das Frontend war vorgegeben und diente zur Integration der API.",
+    "contribution_quizly": "Ich habe die REST API und die Verarbeitungskette von der YouTube-URL über yt-dlp und Whisper bis zur Quizgenerierung mit Gemini umgesetzt. Dazu gehören JWT-Cookies, nutzerbezogenes CRUD, Ownership-Prüfungen und automatisierte API-Tests. Das Frontend war vorgegeben und diente zur Integration der API.",
+    "contribution_coderr": "Ich habe die Marketplace-API mit Kunden- und Business-Rollen, Profilen, dreistufigen Angeboten, Bestellungen und Reviews umgesetzt. Filterung, Pagination und objektbezogene Berechtigungen bilden die zentralen Schwerpunkte. Das Frontend war vorgegeben und diente zur Integration der API.",
+    "contribution_kanmind": "Ich habe die API für Boards, Aufgaben und Kommentare einschließlich Token-Authentifizierung, Mitgliederrollen und objektbezogenen Berechtigungen umgesetzt. Datenbankzugriffe habe ich mit select_related und prefetch_related optimiert. Das Frontend war vorgegeben und diente zur Integration der API.",
     "contribution_join": "Frontend-Umsetzung im Teamprojekt mit gemeinsamem Git-Workflow und Aufgabenorganisation.",
     "contribution_el_pollo_loco": "Eigenständige Frontend-Umsetzung mit objektorientiertem JavaScript.",
-    "description_videoflix": "Django-Backend für eine Video-Streaming-Plattform mit Kontoaktivierung, JWT in HTTP-only Cookies, Uploads, asynchroner HLS-Transkodierung über Redis/RQ und geschützter Medienauslieferung.",
-    "description_quizly": "REST-Backend, das YouTube-Audio verarbeitet, mit Whisper transkribiert und über Gemini nutzerspezifische Quizze erzeugt. Enthalten sind Authentifizierung, CRUD, Ownership und API-Tests.",
-    "description_coderr": "Marketplace-API mit Kunden- und Business-Rollen, Profilen, dreistufigen Angeboten, Bestellungen, Reviews, Suche, Filtern und rollenbasierten Berechtigungen.",
-    "description_kanmind": "Kanban-API für Boards, Aufgaben und Kommentare mit Mitgliederrollen, Gastzugang, objektbezogenen Berechtigungen und optimierten Datenbankabfragen.",
+    "description_videoflix": "Ein Django-Backend für Video-Streaming mit JWT-Authentifizierung, asynchroner HLS-Transkodierung, Redis/RQ und geschützter Medienauslieferung.",
+    "description_quizly": "Ein Django-Backend, das YouTube-Audio mit Whisper transkribiert und daraus über Gemini nutzerspezifische Quizze erzeugt.",
+    "description_coderr": "Eine REST-API für einen Freelancer-Marktplatz mit Rollen, Profilen, gestaffelten Angeboten, Bestellungen, Bewertungen und objektbezogenen Berechtigungen.",
+    "description_kanmind": "Eine Kanban-REST-API für Boards, Aufgaben und Kommentare mit Mitgliederrollen, Gastzugang und objektbezogenen Berechtigungen.",
     "description_join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
     "description_el_pollo_loco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen."
   },
@@ -75,7 +75,6 @@
     "coming_soon": "Demnächst verfügbar",
     "github": "GitHub",
     "backend_github": "Backend auf GitHub",
-    "frontend_template": "Frontend-Vorlage",
     "live_test": "Live-Demo",
     "close": "Dialog schließen"
   },
@@ -98,11 +97,6 @@
     "roles": {
       "project_partner": "Projektpartner",
       "frontend_developer": "Frontend-Entwickler"
-    },
-    "contexts": {
-      "collaborative_development": "Gemeinsame Entwicklungsarbeit",
-      "efficient_project_work": "Effiziente Projektarbeit",
-      "collaboration_code_quality": "Zusammenarbeit & Codequalität"
     }
   },
   "contact": {

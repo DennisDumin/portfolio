@@ -47,7 +47,7 @@
     "headline": "Selected Projects",
     "text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
     "backend_group": "Backend Projects",
-    "frontend_group": "Additional Frontend Projects",
+    "frontend_group": "Frontend Projects",
     "open_project": "Open project details",
     "preview": "project preview"
   },
@@ -58,16 +58,16 @@
     "role_frontend": "Frontend · Individual project",
     "role_frontend_team": "Frontend · Team project",
     "contribution_label": "My contribution",
-    "contribution_videoflix": "I implemented the Django/DRF backend with account activation, password reset, JWT authentication through HTTP-only cookies and protected HLS streaming. Asynchronous video conversion uses ffmpeg, Redis and RQ, with PostgreSQL and Docker providing the infrastructure. The frontend was supplied by Developer Akademie. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
-    "contribution_quizly": "I implemented the REST API and processing pipeline from a YouTube URL through yt-dlp and Whisper to quiz generation with Gemini. This includes JWT cookies, user-specific CRUD, ownership checks and automated API tests. The frontend was supplied by Developer Akademie. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
-    "contribution_coderr": "I implemented the marketplace API with customer and business roles, profiles, three-tier offers, orders and reviews. Filtering, pagination and object-level permissions are the main technical focus. The frontend was supplied by Developer Akademie. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
-    "contribution_kanmind": "I implemented the API for boards, tasks and comments, including token authentication, member roles and object-level permissions. I optimised database access with select_related and prefetch_related. The frontend was supplied by Developer Akademie. Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.",
+    "contribution_videoflix": "I implemented the Django/DRF backend with account activation, password reset, JWT authentication through HTTP-only cookies and protected HLS streaming. Asynchronous video conversion uses ffmpeg, Redis and RQ, with PostgreSQL and Docker providing the infrastructure. The frontend was provided and used to integrate the API.",
+    "contribution_quizly": "I implemented the REST API and processing pipeline from a YouTube URL through yt-dlp and Whisper to quiz generation with Gemini. This includes JWT cookies, user-specific CRUD, ownership checks and automated API tests. The frontend was provided and used to integrate the API.",
+    "contribution_coderr": "I implemented the marketplace API with customer and business roles, profiles, three-tier offers, orders and reviews. Filtering, pagination and object-level permissions are the main technical focus. The frontend was provided and used to integrate the API.",
+    "contribution_kanmind": "I implemented the API for boards, tasks and comments, including token authentication, member roles and object-level permissions. I optimised database access with select_related and prefetch_related. The frontend was provided and used to integrate the API.",
     "contribution_join": "Frontend implementation as a team project with a shared Git workflow and task organisation.",
     "contribution_el_pollo_loco": "Independent frontend implementation using object-oriented JavaScript.",
-    "description_videoflix": "Django backend for a video streaming platform with account activation, JWT in HTTP-only cookies, uploads, asynchronous HLS transcoding through Redis/RQ and protected media delivery.",
-    "description_quizly": "REST backend that processes YouTube audio, transcribes it with Whisper and uses Gemini to generate user-specific quizzes, including authentication, CRUD, ownership and API tests.",
-    "description_coderr": "Marketplace API with customer and business roles, profiles, tiered offers, orders, reviews, search, filtering and role-based permissions.",
-    "description_kanmind": "Kanban API for boards, tasks and comments with member roles, guest access, object-level permissions and optimised database queries.",
+    "description_videoflix": "A Django backend for video streaming with JWT authentication, asynchronous HLS transcoding, Redis/RQ and protected media delivery.",
+    "description_quizly": "A Django backend that transcribes YouTube audio with Whisper and uses Gemini to generate user-specific quizzes.",
+    "description_coderr": "A REST API for a freelance marketplace with roles, profiles, tiered offers, orders, reviews and object-level permissions.",
+    "description_kanmind": "A Kanban REST API for boards, tasks and comments with member roles, guest access and object-level permissions.",
     "description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "description_el_pollo_loco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
   },
@@ -75,7 +75,6 @@
     "coming_soon": "Coming soon",
     "github": "GitHub",
     "backend_github": "Backend on GitHub",
-    "frontend_template": "Frontend template",
     "live_test": "Live demo",
     "close": "Close dialog"
   },
@@ -98,11 +97,6 @@
     "roles": {
       "project_partner": "Project partner",
       "frontend_developer": "Frontend developer"
-    },
-    "contexts": {
-      "collaborative_development": "Collaborative development",
-      "efficient_project_work": "Efficient project work",
-      "collaboration_code_quality": "Collaboration & code quality"
     }
   },
   "contact": {

@@ -41,10 +41,6 @@ export class PortfolioComponent implements OnInit, OnDestroy {
           label: 'buttons.backend_github',
           url: 'https://github.com/DennisDumin/videoflix_backend',
         },
-        {
-          label: 'buttons.frontend_template',
-          url: 'https://github.com/Developer-Akademie-Backendkurs/project.Videoflix',
-        },
       ],
     },
     {
@@ -59,10 +55,6 @@ export class PortfolioComponent implements OnInit, OnDestroy {
         {
           label: 'buttons.backend_github',
           url: 'https://github.com/DennisDumin/quizly_backend',
-        },
-        {
-          label: 'buttons.frontend_template',
-          url: 'https://github.com/Developer-Akademie-Backendkurs/project.Quizly',
         },
       ],
     },
@@ -79,10 +71,6 @@ export class PortfolioComponent implements OnInit, OnDestroy {
           label: 'buttons.backend_github',
           url: 'https://github.com/DennisDumin/coderr_backend',
         },
-        {
-          label: 'buttons.frontend_template',
-          url: 'https://github.com/Developer-Akademie-Backendkurs/project.Coderr',
-        },
       ],
     },
     {
@@ -97,10 +85,6 @@ export class PortfolioComponent implements OnInit, OnDestroy {
         {
           label: 'buttons.backend_github',
           url: 'https://github.com/DennisDumin/KanMind',
-        },
-        {
-          label: 'buttons.frontend_template',
-          url: 'https://github.com/Developer-Akademie-Backendkurs/project.KanMind',
         },
       ],
     },
